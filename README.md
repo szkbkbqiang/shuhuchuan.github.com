@@ -1,2 +1,2 @@
-# GitTest
-这是一个测试用的仓库.
+# Shu Huchuan's Home Page
+个人介绍.
