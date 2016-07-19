@@ -89,12 +89,16 @@ body,html{
 	background: #00e4ff;
 	border-radius: 5px;
 	margin: 0 auto;
+	position: relative;
 	overflow: hidden;
 }
 .loadarticle div{
 	height: 4px;
     background: -webkit-linear-gradient(top, #fc98a9 0%,#ed4048 100%);
     background: linear-gradient(to bottom, #fc98a9 0%,#ed4048 100%);
+    position: absolute;
+    top: 0;
+    left: -100%
 }
 .loadtext{
 	font-size: 12px;
