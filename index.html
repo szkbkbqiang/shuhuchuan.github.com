@@ -178,7 +178,7 @@
 var timer = null;
 var unnum = 0;
 timer = setInterval(function(){
-	unnum += parseInt(Math.random()*10);
+	unnum += parseInt(Math.random()*20);
 	if(unnum >95){unnum =95; clearInterval(timer);}
 	$('.loadingdeg').css('width',unnum+'%');
 	$('.carbox').css('transform','translate3d('+unnum+'%,0,0)');
