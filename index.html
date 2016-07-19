@@ -97,7 +97,7 @@
 	</div>
 
 	<!-- car start -->
-	<div class="carausbox" style="dipslay:none">
+	<div class="carausbox" style="display:none">
 		<div class="cartitleimg"><img src="images/cartitle.png" alt=""></div>
 		<div id="slideBox" class="slideBox">
 			 <div class="tabindex">
@@ -210,6 +210,7 @@ $(function(){
 	});
 	$('#votetabnext').on('touchstart',function(){
 		$('.rx-livebox').css('transform','translate3d(0,-100%,0)');
+		$('.carausbox').show();
 		$('.carausbox').css('transform','translate3d(0,0%,0)');
 	});
 	$('#cartabnext').on('touchstart',function(){
