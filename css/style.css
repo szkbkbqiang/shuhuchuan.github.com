@@ -127,7 +127,7 @@ body,html{
 	background: url(../images/rxconterlivebj.jpg) #000 left 0.83rem no-repeat;
 	background-size: 100% 100%;
 	overflow: hidden;
-	display: none;
+	/*display: none;*/
 	transition: 1s;
 	transform: translate3d(0,0,0);
 }
@@ -135,6 +135,7 @@ body,html{
 	height: 1.2rem;
 	margin-top: 0.2rem;
 	position: relative;
+	display: none;
 }
 .rx-titleslogan{
 	position: absolute;
@@ -529,7 +530,7 @@ body,html{
 	display: inline-block;
 	width: 130%;
 	margin-left: -15%;
-	-webkit-transform:scale(0.7);
+	-webkit-transform:scale(0.9);
 }
 .slideBox .tabindex li.on{
 	width: 1.08rem;

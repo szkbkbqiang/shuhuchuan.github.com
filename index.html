@@ -6,7 +6,9 @@
 	<title>荣威</title>
 	<script src="js/viewport.js"></script>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/swiper.min.js"></script>
 </head>
 <body>
     <!-- loading -->
@@ -20,9 +22,18 @@
 
 	<!-- poster -->
 	<div class="posterbox"></div>
+<style>
+	.swiper-container{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+</style>
 
+<div class="swiper-container">
+    <div class="swiper-wrapper">
 	<!-- rx-conrer-live -->
-	<div class="rx-livebox">
+	<div class="rx-livebox swiper-slide">
 		<div class="rx-titlebox">
 			<div class="rx-titleslogan"><img src="images/rxslogan.png" alt=""></div>
 			<div class="rx-titlepp"><img src="images/livetitle.png" alt=""></div>
@@ -32,7 +43,7 @@
 			<div class="livepaly">
 				<!-- <iframe class="livelink"></iframe> -->
 				
-				<video preload="preload" autoplay="autoplay" controls="controls" webkit-playsinline="">
+				<video class="livelink" preload="preload" autoplay="autoplay" controls="controls" webkit-playsinline="">
 						<source src="http://mudu.tv/?a=index&c=show&id=12569&type=mobile">
 				</video> 
 			</div>
@@ -100,7 +111,7 @@
 	</div>
 
 	<!-- car start -->
-	<div class="carausbox">
+	<div class="carausbox swiper-slide">
 		<div class="cartitleimg"><img src="images/cartitle.png" alt=""></div>
 		<div id="slideBox" class="slideBox">
 			 <div class="tabindex">
@@ -159,7 +170,7 @@
 	</div>
 
 	<!-- reserve start -->
-	<div class="reservebox">
+	<div class="reservebox swiper-slide">
 		<div class="reservetitle"><img src="images/reservetitle1.png" alt=""></div>
 		<div class="reservelist">
 			<ul>
@@ -176,7 +187,7 @@
 				返回直播
 		</div>
 	</div>
-
+</div></div>
 <script type="text/javascript">
 var timer = null;
 var unnum = 0;
@@ -201,16 +212,22 @@ window.onload = function(){
 		$('.posterbox').show();
 		setTimeout(function(){
 			$('.posterbox').hide();
-			$('.rx-livebox').show();
+			$('.rx-titlebox').show();
 		},5000);
 	},1500);
 };
 $(function(){
-	$('.popbtnli').on('click',function(){
-		$('.votepopbox').show();
+	$('.rx-livebox').on('click','.popbtnli',function(){
+		$('.livelink').hide();
+		setTimeout(function(){
+			$('.votepopbox').show();
+		},100)
 	});
-	$('.votepopclose').on('click',function(){
+	$('.rx-livebox').on('click','.votepopclose',function(){
 		$('.votepopbox').hide();
+		setTimeout(function(){
+			$('.livelink').show();
+		},100)	
 	});
 	$('#votetabnext').on('touchstart',function(){
 		$('.rx-livebox').css('transform','translate3d(0,-100%,0)');
@@ -224,6 +241,12 @@ $(function(){
 		$('.reservebox').css('transform','translate3d(0,-300%,0)');
 		$('.rx-livebox').css('transform','translate3d(0,0%,0)');	
 	})
+
+  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',
+    loop: true,
+    longSwipesRatio:0.2
+  })    
 
 })
 
