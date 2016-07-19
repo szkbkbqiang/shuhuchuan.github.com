@@ -428,7 +428,7 @@ body,html{
 	left: 0;
 	top: 0;
 	transition: 1s;
-	transform: translateY(100%);
+	transform: translate3d(0,100%,0);
 }
 
 .cartitleimg{
@@ -538,7 +538,7 @@ body,html{
 	left: 0;
 	top: 0;
 	transition: 1s;
-	transform: translateY(100%);
+	transform: translate3d(0,100%,0);
 }
 .reservetitle{
 	width: 5.55rem;
