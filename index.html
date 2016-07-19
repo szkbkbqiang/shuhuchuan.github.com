@@ -97,7 +97,7 @@
 	</div>
 
 	<!-- car start -->
-	<div class="carausbox" style="display:none">
+	<div class="carausbox">
 		<div class="cartitleimg"><img src="images/cartitle.png" alt=""></div>
 		<div id="slideBox" class="slideBox">
 			 <div class="tabindex">
@@ -156,7 +156,7 @@
 	</div>
 
 	<!-- reserve start -->
-	<div class="reservebox" style="display:none">
+	<div class="reservebox">
 		<div class="reservetitle"><img src="images/reservetitle1.png" alt=""></div>
 		<div class="reservelist">
 			<ul>
@@ -210,12 +210,10 @@ $(function(){
 	});
 	$('#votetabnext').on('touchstart',function(){
 		$('.rx-livebox').css('transform','translate3d(0,-100%,0)');
-		$('.carausbox').show();
 		$('.carausbox').css('transform','translate3d(0,0%,0)');
 	});
 	$('#cartabnext').on('touchstart',function(){
 		$('.carausbox').css('transform','translate3d(0,-100%,0)');
-		$('.reservebox').show();
 		$('.reservebox').css('transform','translate3d(0,0%,0)');
 	})
 	$('#backvote').on('touchstart',function(){
