@@ -243,10 +243,16 @@ $(function(){
 		},100)	
 	});
 	$('.hdgz_btn').on('click',function(){
-		$('.hdgz_popbox').show();
+		$('.livelink').hide();
+		setTimeout(function(){
+			$('.hdgz_popbox').show();
+		},100)
 	});
 	$('.hdgz_popclose').on('click',function(){
 		$('.hdgz_popbox').hide();
+		setTimeout(function(){
+			$('.livelink').show();
+		},100)	
 	});
 	$('#votetabnext').on('touchstart',function(){
 		$('.rx-livebox').css('transform','translate3d(0,-100%,0)');
