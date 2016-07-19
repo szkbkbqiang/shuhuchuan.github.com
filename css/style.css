@@ -68,10 +68,11 @@ body,html{
 	margin-top: -0.9rem;
 }
 .loadingdeg{
-	/*transition: 1s;*/
+	transition: 1s;
 }
 .carbox{
 	width: 70%;
+	transition: 1s;
 	transform: translate3d(0,0,0);
 }
 .carbox img{
