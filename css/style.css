@@ -72,7 +72,6 @@ body,html{
 
 .carbox{
 	width: 72%;
-	transition: .6s;
 	transform: translate3d(0,0,0);
 }
 .carbox img{
@@ -101,7 +100,6 @@ body,html{
 }
 .loadingdeg{
 	transform: translate3d(0,0,0);
-	transition: .6s;
 }
 .loadtext{
 	font-size: 12px;
