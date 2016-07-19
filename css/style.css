@@ -73,7 +73,7 @@ body,html{
 	transition: .6s;
 }
 .carbox{
-	width: 70%;
+	width: 75%;
 	transition: .6s;
 	transform: translate3d(0,0,0);
 }

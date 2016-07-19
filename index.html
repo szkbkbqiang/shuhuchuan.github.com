@@ -13,7 +13,7 @@
 	<div class="loading">
 		<div class="loadconter">
 			<div class="carbox"><img src="images/load_car.png" alt=""></div>
-			<div class="loadarticle"><div class="loadingdeg" style="width:0%;"></div></div>
+			<div class="loadarticle"><div class="loadingdeg" style="width:100%;"></div></div>
 			<div class="loadtext">Loading... <span class="loadingnum">0</span>%</div>
 		</div>
 	</div>
@@ -180,13 +180,13 @@ var unnum = 0;
 timer = setInterval(function(){
 	unnum += parseInt(Math.random()*20);
 	if(unnum >95){unnum =95; clearInterval(timer);}
-	$('.loadingdeg').css('width',unnum+'%');
+	$('.loadingdeg').css('transform','translate3d('+unnum+'%,0,0)');
 	$('.carbox').css('transform','translate3d('+unnum+'%,0,0)');
 	$('.loadingnum').html(unnum);
 },100)
 window.onload = function(){
 	clearInterval(timer);
-	$('.loadingdeg').css('width',100+'%');
+	$('.loadingdeg').css('transform','translate3d('+unnum+'%,0,0)');
 	$('.carbox').css('transform','translate3d('+100+'%,0,0)');
 	// $('.carbox img').css('transform','translate3d(-'+80+'%,0,0)');
 	$('.loadingnum').html(100);
