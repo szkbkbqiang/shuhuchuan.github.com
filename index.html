@@ -43,9 +43,9 @@
 			<div class="livepaly">
 				<!-- <iframe class="livelink"></iframe> -->
 				
-				<video class="livelink" preload="preload" autoplay="autoplay" controls="controls" webkit-playsinline="">
-						<source src="http://mudu.tv/?a=index&c=show&id=12569&type=mobile">
-				</video> 
+				<!-- <video class="livelink" preload="preload" autoplay="autoplay" controls="controls" webkit-playsinline=""> -->
+						<!-- <source src="http://mudu.tv/?a=index&c=show&id=12569&type=mobile"> -->
+				<!-- </video>  -->
 			</div>
 			<div class="livelist">
 				<ul>
@@ -63,6 +63,7 @@
 				<img class="titleimg" src="images/votetitle.png" alt="">
 				<img class="rgjtimg" src="images/votejt.png" alt="">
 			</div>
+			<p class="hdgz_btn" style="padding: 0.1rem 0;">活动规则</p>
 			<div class="voteqabox">Q: 本期直播主播们的终极大奖会是...？</div>
 			<div class="selectvotebox">
 				<div class="selectleft">
@@ -181,13 +182,25 @@
 				<li><span>选择经销商</span></li>
 				<li><a class="reservesubmit" href="javascript:;">提交</a></li>
 			</ul>
+			<p class="hdgz_btn">活动规则</p>
 		</div>
 		<div class="tabnext reservebot" id="backvote">
 				<img src="images/tabnext.png" alt="">
 				返回直播
 		</div>
 	</div>
-</div></div>
+</div>
+<div class="hdgz_popbox">
+	<div class="hdgz_popcenter">
+		<div class="hdgz_popclose"></div>
+		<div class="hdgz_poptitle">活动规则</div>
+		<div class="hdgz_popms">
+			填写个人信息并参与抽奖<br>
+			有机会获得xxxxxxx
+		</div>
+	</div>
+</div>
+</div>
 <script type="text/javascript">
 var timer = null;
 var unnum = 0;
@@ -228,6 +241,12 @@ $(function(){
 		setTimeout(function(){
 			$('.livelink').show();
 		},100)	
+	});
+	$('.hdgz_btn').on('click',function(){
+		$('.hdgz_popbox').show();
+	});
+	$('.hdgz_popclose').on('click',function(){
+		$('.hdgz_popbox').hide();
 	});
 	$('#votetabnext').on('touchstart',function(){
 		$('.rx-livebox').css('transform','translate3d(0,-100%,0)');
