@@ -119,6 +119,8 @@ body,html{
 	left: 0;
 	top: 0;
 	display: none;
+	transition: 1s;
+	transform: translate3d(0,0,0);
 }
 .rx-titlebox{
 	height: 1.2rem;
@@ -424,7 +426,9 @@ body,html{
 	overflow: hidden;
 	position: absolute;
 	left: 0;
-	top: 100%;
+	top: 0;
+	transition: 1s;
+	transform: translate3d(0,100%,0);
 }
 
 .cartitleimg{
@@ -532,7 +536,9 @@ body,html{
 	overflow: hidden;
 	position: absolute;
 	left: 0;
-	top: 100%;
+	top: 0;
+	transition: 1s;
+	transform: translate3d(0,100%,0);
 }
 .reservetitle{
 	width: 5.55rem;
