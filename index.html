@@ -210,14 +210,14 @@ $(function(){
 	});
 	$('#votetabnext').on('touchstart',function(){
 		$('.rx-livebox').css('transform','translate3d(0,-100%,0)');
-		$('.carausbox').css('transform','translate3d(0,0%,0)');
+		$('.carausbox').css('transform','translate3d(0,-100%,0)');
 	});
 	$('#cartabnext').on('touchstart',function(){
-		$('.carausbox').css('transform','translate3d(0,-100%,0)');
-		$('.reservebox').css('transform','translate3d(0,0%,0)');
+		$('.carausbox').css('transform','translate3d(0,-200%,0)');
+		$('.reservebox').css('transform','translate3d(0,-200%,0)');
 	})
 	$('#backvote').on('touchstart',function(){
-		$('.reservebox').css('transform','translate3d(0,-100%,0)');
+		$('.reservebox').css('transform','translate3d(0,-300%,0)');
 		$('.rx-livebox').css('transform','translate3d(0,0%,0)');	
 	})
 

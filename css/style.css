@@ -115,9 +115,6 @@ body,html{
 	background: url(../images/rxconterlivebj.jpg) #000 left 0.83rem no-repeat;
 	background-size: 100% 100%;
 	overflow: hidden;
-	position: absolute;
-	left: 0;
-	top: 0;
 	display: none;
 	transition: 1s;
 	transform: translate3d(0,0,0);
@@ -424,11 +421,8 @@ body,html{
 	background: url(../images/carboxbg.jpg) left top no-repeat;
 	background-size: 100% 100%;
 	overflow: hidden;
-	position: absolute;
-	left: 0;
-	top: 0;
 	transition: 1s;
-	transform: translate3d(0,100%,0);
+	transform: translate3d(0,0%,0);
 }
 
 .cartitleimg{
@@ -534,11 +528,9 @@ body,html{
 	background: url(../images/carboxbg.jpg) left top no-repeat;
 	background-size: 100% 100%;
 	overflow: hidden;
-	position: absolute;
-	left: 0;
-	top: 0;
+
 	transition: 1s;
-	transform: translate3d(0,100%,0);
+	transform: translate3d(0,0%,0);
 }
 .reservetitle{
 	width: 5.55rem;
