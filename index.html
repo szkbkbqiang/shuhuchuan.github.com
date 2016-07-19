@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>荣威</title>
+	<script src="js/viewport.js"></script>
 	<link rel="stylesheet" href="css/style.css">
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
     <!-- loading -->
@@ -95,7 +97,7 @@
 	</div>
 
 	<!-- car start -->
-	<div class="carausbox">
+	<div class="carausbox" style="dipslay:none">
 		<div class="cartitleimg"><img src="images/cartitle.png" alt=""></div>
 		<div id="slideBox" class="slideBox">
 			 <div class="tabindex">
@@ -154,7 +156,7 @@
 	</div>
 
 	<!-- reserve start -->
-	<div class="reservebox">
+	<div class="reservebox" style="display:none">
 		<div class="reservetitle"><img src="images/reservetitle1.png" alt=""></div>
 		<div class="reservelist">
 			<ul>
@@ -172,8 +174,6 @@
 		</div>
 	</div>
 
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/viewport.js"></script>
 <script type="text/javascript">
 var timer = null;
 var unnum = 0;
@@ -209,16 +209,17 @@ $(function(){
 		$('.votepopbox').hide();
 	});
 	$('#votetabnext').on('touchstart',function(){
-		$('.rx-livebox').css('transform','translateY(-100%)');
-		$('.carausbox').css('transform','translateY(0%)');
+		$('.rx-livebox').css('transform','translate3d(0,-100%,0)');
+		$('.carausbox').css('transform','translate3d(0,0%,0)');
 	});
 	$('#cartabnext').on('touchstart',function(){
-		$('.carausbox').css('transform','translateY(-100%)');
-		$('.reservebox').css('transform','translateY(0%)');
+		$('.carausbox').css('transform','translate3d(0,-100%,0)');
+		$('.reservebox').show();
+		$('.reservebox').css('transform','translate3d(0,0%,0)');
 	})
 	$('#backvote').on('touchstart',function(){
-		$('.reservebox').css('transform','translateY(-100%)');
-		$('.rx-livebox').css('transform','translateY(0%)');	
+		$('.reservebox').css('transform','translate3d(0,-100%,0)');
+		$('.rx-livebox').css('transform','translate3d(0,0%,0)');	
 	})
 
 })
