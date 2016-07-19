@@ -71,7 +71,7 @@ body,html{
 }
 
 .carbox{
-	width: 75%;
+	width: 72%;
 	transition: .6s;
 	transform: translate3d(0,0,0);
 }
@@ -92,6 +92,7 @@ body,html{
 }
 .loadarticle div{
 	height: 4px;
+	border-radius: 5px;
     background: -webkit-linear-gradient(top, #fc98a9 0%,#ed4048 100%);
     background: linear-gradient(to bottom, #fc98a9 0%,#ed4048 100%);
     position: absolute;
