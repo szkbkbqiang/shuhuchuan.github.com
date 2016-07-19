@@ -425,6 +425,7 @@ body,html{
 	background-size: 100% 100%;
 	overflow: hidden;
 	position: absolute;
+	display: none;
 	left: 0;
 	top: 0;
 	transition: 1s;
@@ -535,6 +536,7 @@ body,html{
 	background-size: 100% 100%;
 	overflow: hidden;
 	position: absolute;
+	display: none;
 	left: 0;
 	top: 0;
 	transition: 1s;
