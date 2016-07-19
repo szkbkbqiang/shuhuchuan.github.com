@@ -119,8 +119,6 @@ body,html{
 	left: 0;
 	top: 0;
 	display: none;
-	transition: 1s;
-	transform: translate3d(0,0,0);
 }
 .rx-titlebox{
 	height: 1.2rem;
