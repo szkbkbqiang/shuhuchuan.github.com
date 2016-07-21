@@ -127,8 +127,8 @@ body,html{
 	background-size: 100%;
 }
 .poster_logo{
-	width: 5.98rem;
-	height: 0.89rem;
+	width: 5.82rem;
+	height: 0.9rem;
 	margin-top: 1rem;
 	animation-delay:1s;
 	-webkit-animation-delay:1s;
@@ -150,8 +150,8 @@ body,html{
 	left: 3.73rem;
 	top: 0;
 	position: absolute;
-	animation:tran3d 4s 1,tranlunzi 1.5s linear infinite;
-	-webkit-animation:tran3d 4s 1,tranlunzi 1.5s linear infinite;
+	animation:tran3ds 2s ease-in 1,tranlunzi 1.5s linear infinite;
+	-webkit-animation:tran3ds 2s ease-in 1,tranlunzi 1.5s linear infinite;
 }
 .poster_text2{
 	width: 3.69rem;
@@ -603,7 +603,8 @@ body,html{
 .reservetitle{
 	width: 5.55rem;
 	height: 0.95rem;
-	float: right;
+	float: left;
+	margin-left: 0.3rem;
 	margin-top: 0.3rem;
 }
 .reservelist {
@@ -811,6 +812,7 @@ body,html{
 	50% {transform: translateX(10px) rotateY(180deg); opacity: 1;}
 	100% {transform: translateX(20px) rotateY(180deg); opacity: 0;}
 }
+
 @keyframes tran3d
 {
 	from {transform: translate3d(800px,0,0); opacity: 0;}
@@ -834,7 +836,17 @@ body,html{
 	0% {transform: rotateZ(0deg);}
     100% {transform:  rotateZ(360deg);}
 }
+@keyframes tran3ds
+{
+	from {transform: translateX(800px) rotateZ(0deg); opacity: 0;}
+	to {transform: translateX(0px) rotateZ(360deg); opacity: 1;}
+}
 
+@-webkit-keyframes tran3ds /*Safari and Chrome*/
+{
+	from {transform: translateX(800px) rotateZ(0deg); opacity: 0;}
+	to {transform: translateX(0px) rotateZ(360deg); opacity: 1;}
+}
 
 @keyframes hxdtran
 {
