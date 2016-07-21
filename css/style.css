@@ -133,12 +133,15 @@ body,html{
 	animation-delay:1s;
 	-webkit-animation-delay:1s;
 	animation:tran3d .5s 1;
+	position: relative;
+	z-index: 8;
 	-webkit-animation:tran3d .5s 1;
 }
 .poster_text{
 	position: absolute;
 	top: 1.5rem;
 	left: 0;
+	z-index: 7;
 	animation-delay:2s;
 	-webkit-animation-delay:2s;
 	animation:tran3d 1s 1;
@@ -150,8 +153,8 @@ body,html{
 	left: 3.73rem;
 	top: 0;
 	position: absolute;
-	-webkit-animation:tran3ds 2s linear 1,tranlunzi 2.5s linear infinite;
-	animation:tran3ds 2s linear 1,tranlunzi 2.5s linear infinite;
+	-webkit-animation:tran3ds 3.5s linear 1,tranlunzi 3s linear infinite;
+	animation:tran3ds 3.5s linear 1,tranlunzi 3s linear infinite;
 	/*-webkit-animation:tran3ds 2s ease-in-out 1,tranlunzi 2.5s linear infinite;*/
 }
 .poster_text2{
