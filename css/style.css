@@ -108,6 +108,11 @@ body,html{
 	margin-top: 13px;
 }
 
+.swiper-container{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
 /*poster start*/
 .posterbox{
 	width: 100%;
