@@ -150,10 +150,10 @@ body,html{
 	left: 3.73rem;
 	top: 0;
 	position: absolute;
-	animation-delay:2s;
-	-webkit-animation-delay:2s;
-	animation:tran3d 2s 1,tranlunzi 3s infinite;
-	-webkit-animation:tran3d 2s 1,tranlunzi 3s infinite;
+	animation-delay:3s;
+	-webkit-animation-delay:3s;
+	animation:tran3d 4s 1,tranlunzi 1.5s infinite;
+	-webkit-animation:tran3d 4s 1,tranlunzi 1.5s infinite;
 }
 .poster_text2{
 	width: 3.69rem;
@@ -688,16 +688,16 @@ body,html{
 	display: none;
 }
 .hdgz_popcenter{
-	width: 5.7rem;
-	height: 6.3rem;
+	width: 6.4rem;
+	height: 9rem;
 	border: 1px solid #1d77bd;
 	box-sizing: border-box;
 	background: #000;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-left: -2.85rem;
-	margin-top: -3.15rem;
+	margin-left: -3.2rem;
+	margin-top: -4.5rem;
 }
 .hdgz_popclose{
 	width: 0.35rem;
@@ -715,10 +715,11 @@ body,html{
 	margin-left: 0.4rem;
 }
 .hdgz_popms{
-	font-size: 0.24rem;
+	font-size: 0.2rem;
 	color: #fff;
 	margin-top: 0.33rem;
 	margin-left: 0.4rem;
+	width: 90%;
 	line-height: 0.34rem;
 }
 
@@ -826,13 +827,15 @@ body,html{
 
 @keyframes tranlunzi
 {
-	0% {transform: rotateZ(0);}
+	0% {transform: rotateZ(360);}
+    50% {transform:  rotateZ(0deg);}
     100% {transform:  rotateZ(360deg);}
 }
 
 @-webkit-keyframes tranlunzi /*Safari and Chrome*/
 {
-	0% {transform: rotateZ(0);}
+	0% {transform: rotateZ(360);}
+    50% {transform:  rotateZ(0deg);}
     100% {transform:  rotateZ(360deg);}
 }
 
