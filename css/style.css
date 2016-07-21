@@ -149,10 +149,11 @@ body,html{
 	height: 1.28rem;
 	left: 3.73rem;
 	top: 0;
-	display: none;
 	position: absolute;
 	animation-delay:2s;
 	-webkit-animation-delay:2s;
+	animation:tran3d 2s 1,tranlunzi 3s infinite;
+	-webkit-animation:tran3d 2s 1,tranlunzi 3s infinite;
 }
 .poster_text2{
 	width: 3.69rem;
@@ -825,15 +826,14 @@ body,html{
 
 @keyframes tranlunzi
 {
-	0% {transform: translate3d(100%,0,0); opacity: 0.8;}
-    50% {transform:  translate3d(100%,0,0); opacity: .2;}
-	100% {transform:  translate3d(100%,0,0); opacity: 1;}
+	0% {transform: rotateZ(0);}
+    100% {transform:  rotateZ(360deg);}
 }
 
 @-webkit-keyframes tranlunzi /*Safari and Chrome*/
 {
-	0% {transform: translate3d(100%,0,0); opacity: 0.8;}
-    50% {transform:  translate3d(100%,0,0); opacity: .2;}
+	0% {transform: rotateZ(0);}
+    100% {transform:  rotateZ(360deg);}
 }
 
 
