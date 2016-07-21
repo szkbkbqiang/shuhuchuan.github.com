@@ -150,8 +150,9 @@ body,html{
 	left: 3.73rem;
 	top: 0;
 	position: absolute;
-	animation:tran3ds 2s ease-in-out 1,tranlunzi 2.5s linear infinite;
-	-webkit-animation:tran3ds 2s ease-in-out 1,tranlunzi 2.5s linear infinite;
+	-webkit-animation:tran3ds 2s linear 1,tranlunzi 2.5s linear infinite;
+	animation:tran3ds 2s linear 1,tranlunzi 2.5s linear infinite;
+	/*-webkit-animation:tran3ds 2s ease-in-out 1,tranlunzi 2.5s linear infinite;*/
 }
 .poster_text2{
 	width: 3.69rem;
@@ -842,14 +843,14 @@ body,html{
 }
 @keyframes tran3ds
 {
-	from {transform: translateX(800px) rotateZ(0deg); opacity: 0;}
-	to {transform: translateX(0px) rotateZ(360deg); opacity: 1;}
+	from {transform: translateX(500px) rotateZ(0deg);}
+	to {transform: translateX(0px) rotateZ(360deg);}
 }
 
 @-webkit-keyframes tran3ds /*Safari and Chrome*/
 {
-	from {transform: translateX(800px) rotateZ(0deg); opacity: 0;}
-	to {transform: translateX(0px) rotateZ(360deg); opacity: 1;}
+	from {transform: translateX(500px) rotateZ(0deg);}
+	to {transform: translateX(0px) rotateZ(360deg);}
 }
 
 @keyframes hxdtran
