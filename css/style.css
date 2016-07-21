@@ -154,8 +154,8 @@ body,html{
 	top: 0;
 	position: absolute;
 	transform: translateX(500px);
-	-webkit-animation:tran3ds 3.5s linear 1,tranlunzi 3s linear infinite;
-	animation:tran3ds 3.5s linear 1,tranlunzi 3s linear infinite;
+	-webkit-animation:tranlunzi 3s linear infinite,tran3ds 3.5s linear 1;
+	/*animation:tran3ds 3.5s linear 1,tranlunzi 3s linear infinite;*/
 	/*-webkit-animation:tran3ds 2s ease-in-out 1,tranlunzi 2.5s linear infinite;*/
 }
 .poster_text2{
