@@ -263,13 +263,13 @@ window.onload = function(){
 	},1500);
 };
 $(function(){
-	$('.rx-livebox').on('click','.popbtnli',function(){
+	$('.popbtnli').on('click',function(){
 		$('.livelink').hide();
 		setTimeout(function(){
 			$('.votepopbox').show();
 		},100)
 	});
-	$('.rx-livebox').on('click','.votepopclose',function(){
+	$('.votepopclose').on('click',function(){
 		$('.votepopbox').hide();
 		setTimeout(function(){
 			$('.livelink').show();
