@@ -121,7 +121,13 @@ body,html{
 	margin: 0 auto;
 	background: #151e2c;
 	display: none;
+	background: url(../images/posterimg.jpg) center center no-repeat;
+	background-size: 100% 100%;
 }
+
+
+
+
 
 /*rx-conter start*/
 .rx-livebox{
