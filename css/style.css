@@ -150,10 +150,8 @@ body,html{
 	left: 3.73rem;
 	top: 0;
 	position: absolute;
-	animation-delay:3s;
-	-webkit-animation-delay:3s;
-	animation:tran3d 4s 1,tranlunzi 1.5s infinite;
-	-webkit-animation:tran3d 4s 1,tranlunzi 1.5s infinite;
+	animation:tran3d 4s 1,tranlunzi 1.5s linear infinite;
+	-webkit-animation:tran3d 4s 1,tranlunzi 1.5s linear infinite;
 }
 .poster_text2{
 	width: 3.69rem;
@@ -827,15 +825,13 @@ body,html{
 
 @keyframes tranlunzi
 {
-	0% {transform: rotateZ(360);}
-    50% {transform:  rotateZ(0deg);}
+    0% {transform:  rotateZ(0deg);}
     100% {transform:  rotateZ(360deg);}
 }
 
 @-webkit-keyframes tranlunzi /*Safari and Chrome*/
 {
-	0% {transform: rotateZ(360);}
-    50% {transform:  rotateZ(0deg);}
+	0% {transform: rotateZ(0deg);}
     100% {transform:  rotateZ(360deg);}
 }
 
