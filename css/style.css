@@ -244,6 +244,7 @@ body,html{
 .votetitle{
 	height: 0.4rem;
 	text-align: center;
+	transform:translate3d(0,0,0);
 }
 .votetitle .titleimg{
 	width: 3.24rem;
@@ -278,6 +279,7 @@ body,html{
 	line-height: 0.92rem;
 	background-size: 100%;
 	margin: 0 auto;
+	transform:translate3d(0,0,0);
 }
 .selectvotebox{
 	margin-top: 0.2rem;
@@ -626,6 +628,7 @@ body,html{
 	color: #3f9ad6;
 	padding-top: 0.6rem;
 	text-align: center;
+	transform:translate3d(0,0,0);
 }
 
 .hdgz_popbox{
