@@ -153,6 +153,7 @@ body,html{
 	left: 3.73rem;
 	top: 0;
 	position: absolute;
+	transform: translateX(500px);
 	-webkit-animation:tran3ds 3.5s linear 1,tranlunzi 3s linear infinite;
 	animation:tran3ds 3.5s linear 1,tranlunzi 3s linear infinite;
 	/*-webkit-animation:tran3ds 2s ease-in-out 1,tranlunzi 2.5s linear infinite;*/
