@@ -242,7 +242,13 @@ timer = setInterval(function(){
 	$('.loadingdeg').css('transform','translate3d('+unnum+'%,0,0)');
 	$('.carbox').css('transform','translate3d('+unnum+'%,0,0)');
 	$('.loadingnum').html(unnum);
-},100)
+},100);
+function hengshuping() {
+    if (window.orientation == 90 || window.orientation == -90) {
+        alert("横屏体验不是很好，请将手机竖过来操作");
+    }
+}
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
 window.onload = function(){
 	clearInterval(timer);
 	$('.loadingdeg').css('transform','translate3d('+100+'%,0,0)');
@@ -259,12 +265,7 @@ window.onload = function(){
 		},5000);
 	},1500);
 };
-function hengshuping() {
-    if (window.orientation == 90 || window.orientation == -90) {
-        alert("横屏体验不是很好，请将手机竖过来操作");
-    }
-}
-window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+
 
 $(function(){
 	// $('.linklive').on('click',function(){
