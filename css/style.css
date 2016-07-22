@@ -316,6 +316,7 @@ body,html{
 	width: 3.24rem;
 	height: 0.37rem;
 	vertical-align: top;
+	transform:translate3d(0,0,0);
 }
 .votetitle .jtimg{
 	width: 0.28rem;
