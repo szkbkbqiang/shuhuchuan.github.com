@@ -265,6 +265,7 @@ $(function(){
 	// });
 	$('.popbtnli').on('click',function(){
 		$('.livelink').hide();
+		$('.livelink').css('opacity',0);
 		setTimeout(function(){
 			$('.votepopbox').show();
 		},100)
@@ -273,10 +274,12 @@ $(function(){
 		$('.votepopbox').hide();
 		setTimeout(function(){
 			$('.livelink').show();
+			$('.livelink').css('opacity',1);
 		},100)	
 	});
 	$('.hdgzlivebtn').on('click',function(){
 		$('.livelink').hide();
+		$('.livelink').css('opacity',0);
 		setTimeout(function(){
 			$('.hdgzlive').show();
 		},100)
@@ -285,6 +288,7 @@ $(function(){
 		$('.hdgzlive').hide();
 		setTimeout(function(){
 			$('.livelink').show();
+			$('.livelink').css('opacity',1);
 		},100)	
 	});
 	$('.hdgztt').on('click',function(){
