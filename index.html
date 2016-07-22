@@ -263,39 +263,39 @@ $(function(){
 	// 	$(this).hide();
 	// 	$('.livelink').attr('src','http://mudu.tv/?a=index&c=show&id=12569&type=mobile');
 	// });
-	$('.popbtnli').on('click',function(){
-		$('.livelink').hide();
-		$('.livelink').css('opacity',0);
+	$('.popbtnli').on('touchstart',function(){
+		$('.livelink').css('transform','translate3d(-1000px,0,0)');
+		$('.livelink').css('left','-10rem');
 		setTimeout(function(){
 			$('.votepopbox').show();
 		},100)
 	});
-	$('.votepopclose').on('click',function(){
+	$('.votepopclose').on('touchstart',function(){
 		$('.votepopbox').hide();
 		setTimeout(function(){
-			$('.livelink').show();
-			$('.livelink').css('opacity',1);
+			$('.livelink').css('transform','translate3d(0px,0,0)');
+			$('.livelink').css('left','0.15rem');
 		},100)	
 	});
-	$('.hdgzlivebtn').on('click',function(){
-		$('.livelink').hide();
-		$('.livelink').css('opacity',0);
+	$('.hdgzlivebtn').on('touchstart',function(){
+		$('.livelink').css('transform','translate3d(-1000px,0,0)');
+		$('.livelink').css('left','-10rem');
 		setTimeout(function(){
 			$('.hdgzlive').show();
 		},100)
 	});
-	$('.hdgzliveclose').on('click',function(){
+	$('.hdgzliveclose').on('touchstart',function(){
 		$('.hdgzlive').hide();
 		setTimeout(function(){
-			$('.livelink').show();
-			$('.livelink').css('opacity',1);
+			$('.livelink').css('transform','translate3d(0px,0,0)');
+			$('.livelink').css('left','0.15rem');
 		},100)	
 	});
-	$('.hdgztt').on('click',function(){
+	$('.hdgztt').on('touchstart',function(){
 			$('.hdgzyy').show();
 
 	});
-	$('.hdgzclose').on('click',function(){
+	$('.hdgzclose').on('touchstart',function(){
 		$('.hdgzyy').hide();
 	});
 
