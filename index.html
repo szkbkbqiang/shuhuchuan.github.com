@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/swiper.min.js"></script>
+	
 </head>
 <body>
     <!-- loading -->
@@ -258,6 +259,13 @@ window.onload = function(){
 		},5000);
 	},1500);
 };
+function hengshuping() {
+    if (window.orientation == 90 || window.orientation == -90) {
+        alert("横屏体验不是很好，请将手机竖过来操作");
+    }
+}
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+
 $(function(){
 	// $('.linklive').on('click',function(){
 	// 	$(this).hide();
