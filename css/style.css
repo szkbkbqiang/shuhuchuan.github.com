@@ -153,10 +153,13 @@ body,html{
 	left: 3.73rem;
 	top: 0;
 	position: absolute;
-	transform: translate3d(500px,0,0);
-	-webkit-animation:tranlunzi 3s linear infinite,tran3ds 3.5s linear 1;
-	/*animation:tran3ds 3.5s linear 1,tranlunzi 3s linear infinite;*/
-	/*-webkit-animation:tran3ds 2s ease-in-out 1,tranlunzi 2.5s linear infinite;*/
+	/*transform: translate3d(500px,0,0);*/
+	-webkit-animation:tran3ds 3.5s linear 1;
+	animation:tran3ds 3.5s linear 1;
+}
+.lunzi2{
+	-webkit-animation:tranlunzi 2s linear infinite;
+	animation:tranlunzi 2s linear infinite;
 }
 .poster_text2{
 	width: 3.69rem;
@@ -847,14 +850,14 @@ body,html{
 }
 @keyframes tran3ds
 {
-	from {transform: translateX(500px) rotateZ(0deg);}
-	to {transform: translateX(0px) rotateZ(360deg);}
+	from {transform: translateX(500px)}
+	to {transform: translateX(0px)}
 }
 
 @-webkit-keyframes tran3ds /*Safari and Chrome*/
 {
-	from {transform: translateX(500px) rotateZ(0deg);}
-	to {transform: translateX(0px) rotateZ(360deg);}
+	from {transform: translateX(500px)}
+	to {transform: translateX(0px)}
 }
 
 @keyframes hxdtran
