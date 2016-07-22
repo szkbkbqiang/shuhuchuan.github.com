@@ -45,11 +45,8 @@
 		</div>
 		<div class="livebox">
 			<div class="livepaly">
-				<!-- <iframe class="livelink"></iframe> -->
-				
-				<video class="livelink" preload="preload" autoplay="autoplay" controls="controls" webkit-playsinline="">
-						<source src="http://mudu.tv/?a=index&c=show&id=12569&type=mobile">
-				</video> 
+				<a class="linklive" href="javascript:;"></a>
+				<iframe class="livelink"></iframe>
 			</div>
 			<div class="livelist">
 				<ul>
@@ -254,7 +251,6 @@ window.onload = function(){
 		$('.loading').hide();
 	},1500);
 	setTimeout(function(){
-		// $('.livelink').attr('src','http://mudu.tv/?a=index&c=show&id=12569&type=mobile');
 		$('.posterbox').show();
 		setTimeout(function(){
 			$('.posterbox').hide();
@@ -263,6 +259,10 @@ window.onload = function(){
 	},1500);
 };
 $(function(){
+	$('.linklive').on('click',function(){
+		$(this).hide();
+		$('.livelink').attr('src','http://mudu.tv/?a=index&c=show&id=12569&type=mobile');
+	});
 	$('.popbtnli').on('click',function(){
 		$('.livelink').hide();
 		setTimeout(function(){

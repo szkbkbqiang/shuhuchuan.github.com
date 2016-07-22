@@ -246,12 +246,24 @@ body,html{
 	margin-left: 0.3rem;
 	overflow: hidden;
 }
+
 .livepaly{
 	width: 5.8em;
 	height: 4.38rem;
 	float: left;
 	background: url(../images/livepalybg.png) center center no-repeat;
 	background-size: 100%;
+	position: relative;
+}
+.linklive{
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	background: url(../images/livepaly.png) #000 center center no-repeat;
+	background-size: 1rem;
+	left: 10%;
+	top: 10%;
+	z-index: 6;
 }
 .livepaly video{
 	width: 5.47rem;
