@@ -123,7 +123,7 @@ body,html{
 	position: relative;
 	display: none;
 	overflow: hidden;
-	background: url(../images/posterimg.jpg) center center no-repeat;
+	background: url(../images/posterimg1.jpg) center center no-repeat;
 	background-size: 100%;
 }
 .poster_logo{
@@ -168,10 +168,30 @@ body,html{
 	left: 0.4rem;
 	opacity: 0.8;
 	top: 3rem;
-	animation-delay:3s;
-	-webkit-animation-delay:3s;
+	animation-delay:4s;
+	-webkit-animation-delay:4s;
 	animation:tran3d 1.5s 1;
 	-webkit-animation:tran3d 1.5s 1;
+}
+.textposter{
+	width: 6.49rem;
+	height: 4rem;
+	top: 1.9rem;
+	left: 0.5rem;
+	position: absolute;
+	-webkit-animation-delay:3s;
+	animation-delay:3s;
+	animation:trantext 3s 1;
+	-webkit-animation:trantext 3s 1;
+}
+.textposterdeta{
+	width: 4.48rem;
+	height: 0.79rem;
+	position: absolute;
+	top: 6.4rem;
+	left: 0.5rem;
+	animation:trantext 2s 1;
+	-webkit-animation:trantext 2s 1;
 }
 
 /*rx-conter start*/
@@ -889,6 +909,17 @@ body,html{
     50% {transform: scale(1.2); opacity: 1;}
 	100% {transform: scale(1); opacity: .3;}
 }
+
+
+@-webkit-keyframes trantext{
+  0%{-webkit-transform:translateX(-320px) skew(0deg);}
+  20%{-webkit-transform:translateX(50px) skew(-20deg);}
+  40%{-webkit-transform:translateX(-50px) skew(20deg);}
+  60%{-webkit-transform:translateX(25px) skew(-8deg);}
+  80%{-webkit-transform:translateX(-15px) skew(8deg);}
+  100%{-webkit-transform:translateX(0px) skew(0deg);}
+}
+
 
 @keyframes tranopacity
 {
