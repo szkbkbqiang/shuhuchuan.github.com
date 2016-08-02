@@ -129,7 +129,7 @@ body,html{
 .poster_logo{
 	width: 5.82rem;
 	height: 0.9rem;
-	margin-top: 1rem;
+	margin-top: 0.3rem;
 	animation-delay:1s;
 	-webkit-animation-delay:1s;
 	animation:tran3d .5s 1;
@@ -139,7 +139,7 @@ body,html{
 }
 .poster_text{
 	position: absolute;
-	top: 1.5rem;
+	top: 1rem;
 	left: 0;
 	z-index: 7;
 	animation-delay:2s;
@@ -167,7 +167,7 @@ body,html{
 	position: absolute;
 	left: 0.4rem;
 	opacity: 0.8;
-	top: 3rem;
+	top: 2.2rem;
 	animation-delay:3s;
 	-webkit-animation-delay:3s;
 	animation:tran3d 1.5s 1;
@@ -178,7 +178,7 @@ body,html{
 .textposter{
 	width: 7.08rem;
 	height: 2.13rem;
-	top: 2.5rem;
+	top: 1.7rem;
 	left: 0.2rem;
 	position: absolute;
 /*	-webkit-animation-delay:3s;
@@ -190,7 +190,7 @@ body,html{
 	width: 4.43rem;
 	height: 0.79rem;
 	position: absolute;
-	top: 5.4rem;
+	top: 4rem;
 	left: 1.6rem;
 /*	animation:trantext 2s 1;
 	-webkit-animation:trantext 2s 1;*/
@@ -200,7 +200,7 @@ body,html{
 	position: absolute;
 	width: 5.72rem;
 	height: 3.29rem;
-	top: 3.18rem;
+	top: 1.9rem;
 	left: 1.05rem;
 	z-index: 8;
 }
