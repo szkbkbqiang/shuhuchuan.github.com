@@ -139,6 +139,7 @@ function initVedio() {
     else if (nowtime > new Date(startTime2) && nowtime < new Date(endTime2)) {
         $('.livelink').attr("src", "http://mudu.tv/?a=index&c=show&id=12569&type=mobile");
         $('.livelist').find("li").eq(1).html('Vol.1<br>正在直播 ');
+		   $('.livelist').find("li").eq(0).html('Vol.1<br>精彩回放');
         $('.livelist').find("li").eq(1).addClass("whilevideo").siblings().removeClass("whilevideo");
         tempnum = 1;
         getVote(1, 16979, 16980);
@@ -156,6 +157,8 @@ function initVedio() {
 
         $('.livelink').attr("src", "http://mudu.tv/?a=index&c=show&id=12569&type=mobile");
         $('.livelist').find("li").eq(2).html('Vol.1<br>正在直播 ');
+		$('.livelist').find("li").eq(0).html('Vol.1<br>精彩回放');
+		$('.livelist').find("li").eq(1).html('Vol.1<br>精彩回放');
         $('.livelist').find("li").eq(2).addClass("whilevideo").siblings().removeClass("whilevideo");
         getVote(1, 16981, 16982);
         tempnum = 2;
@@ -173,6 +176,9 @@ function initVedio() {
 
         $('.livelink').attr("src", "http://mudu.tv/?a=index&c=show&id=12569&type=mobile");
         $('.livelist').find("li").eq(3).html('Vol.1<br>正在直播 ');
+		   $('.livelist').find("li").eq(0).html('Vol.1<br>精彩回放');
+		      $('.livelist').find("li").eq(1).html('Vol.1<br>精彩回放');
+			     $('.livelist').find("li").eq(2).html('Vol.1<br>精彩回放');
         $('.livelist').find("li").eq(3).addClass("whilevideo").siblings().removeClass("whilevideo");
         getVote(1, 16983, 16984);
         tempnum = 3;
@@ -190,6 +196,10 @@ function initVedio() {
 
         $('.livelink').attr("src", "http://mudu.tv/?a=index&c=show&id=12569&type=mobile");
         $('.livelist').find("li").eq(4).html('Vol.1<br>正在直播 ');
+		$('.livelist').find("li").eq(0).html('Vol.1<br>精彩回放');
+        $('.livelist').find("li").eq(1).html('Vol.1<br>精彩回放');
+        $('.livelist').find("li").eq(2).html('Vol.1<br>精彩回放');
+        $('.livelist').find("li").eq(3).html('Vol.1<br>精彩回放');
         $('.livelist').find("li").eq(4).addClass("whilevideo").siblings().removeClass("whilevideo");
         getVote(1, 16985, 16986);
         tempnum = 4;

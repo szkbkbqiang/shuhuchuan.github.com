@@ -44,8 +44,8 @@
     });
 
     wx.ready(function () {
-        var wx_title = "荣威RX5 纵容我的非分之享"; // 分享标题
-        var wx_desc = "RX5实力碾压套路 真人直播秀"; // 分享描述
+        var wx_title = "正在直播：RX5实力碾压套路"; // 分享标题
+        var wx_desc = "奶油冰块化身智慧女神，解救RX-MAN"; // 分享描述
         var wx_link = "http://www.bitauto.com/zhuanti/ad_topic/rongwei_live/?t=" + Math.random();  // 分享链接
         var wx_imgUrl = "http://www.bitauto.com/zhuanti/ad_topic/rongwei_live/images/share.png"; // 分享图标
         var wx_type = ""; // 分享类型,music、video或link，不填默认为link
