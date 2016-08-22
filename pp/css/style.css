@@ -123,7 +123,7 @@ body,html{
 	position: relative;
 	display: none;
 	overflow: hidden;
-	background: url(../images/posterimg4.jpg) center center no-repeat;
+	background: url(../images/posterimg5.jpg) center center no-repeat;
 	background-size: 100%;
 }
 .poster_logo{
@@ -177,23 +177,23 @@ body,html{
 
 .textposter{
 	width: 7.08rem;
-	height: 3rem;
-	top: 1.9rem;
-	left: 0.6rem;
+	height: 3.2rem;
+	top: 1.4rem;
+	left: 0.2rem;
 	position: absolute;
-	background: url(../images/showguang.png) -0.3rem 94% no-repeat;
-	background-size: 100%;
+	/*background: url(../images/showguang.png) -0.3rem 94% no-repeat;*/
+	/*background-size: 100%;*/
 /*	-webkit-animation-delay:3s;
 	animation-delay:3s;
 	animation:trantext 3s 1;
 	-webkit-animation:trantext 3s 1;*/
 }
 .textposterdeta{
-	width: 4.43rem;
+	width: 4.1rem;
 	height: 0.79rem;
 	position: absolute;
-	top: 4.8rem;
-	left: 1.6rem;
+	top: 5.4rem;
+	left: 3.2rem;
 	z-index: 7;
 /*	animation:trantext 2s 1;
 	-webkit-animation:trantext 2s 1;*/
@@ -1346,4 +1346,46 @@ body,html{
 }.bounceInLeft {
 	-webkit-animation-name:bounceInLeft;
 	animation-name:bounceInLeft
+}
+
+
+
+
+@-webkit-keyframes zoomOutUp {
+	40% {
+	opacity:1;
+	-webkit-transform:scale3d(.475,.475,.475) translate3d(0,60px,0);
+	transform:scale3d(.475,.475,.475) translate3d(0,60px,0);
+	-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);
+	animation-timing-function:cubic-bezier(0.55,.055,.675,.19)
+}
+100% {
+	opacity:0;
+	-webkit-transform:scale3d(.1,.1,.1) translate3d(0,-2000px,0);
+	transform:scale3d(.1,.1,.1) translate3d(0,-2000px,0);
+	-webkit-transform-origin:center bottom;
+	transform-origin:center bottom;
+	-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);
+	animation-timing-function:cubic-bezier(0.175,.885,.32,1)
+}
+}@keyframes zoomOutUp {
+	40% {
+	opacity:1;
+	-webkit-transform:scale3d(.475,.475,.475) translate3d(0,60px,0);
+	transform:scale3d(.475,.475,.475) translate3d(0,60px,0);
+	-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);
+	animation-timing-function:cubic-bezier(0.55,.055,.675,.19)
+}
+100% {
+	opacity:0;
+	-webkit-transform:scale3d(.1,.1,.1) translate3d(0,-2000px,0);
+	transform:scale3d(.1,.1,.1) translate3d(0,-2000px,0);
+	-webkit-transform-origin:center bottom;
+	transform-origin:center bottom;
+	-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);
+	animation-timing-function:cubic-bezier(0.175,.885,.32,1)
+}
+}.zoomOutUp {
+	-webkit-animation-name:zoomOutUp;
+	animation-name:zoomOutUp
 }

@@ -46,12 +46,12 @@
             <img src="images/postertext_02.png" alt="">
             <div class="lunzi">
                 <img class="lunzi2" src="images/lunzi.png" alt=""></div>
-            <div class="textposter pulse animated">
-                <img src="images/textposter4.png" alt=""></div>
+            <div class="textposter zoomOutUp animated">
+                <img src="images/textposter5.png" alt=""></div>
         </div>
         <!-- <div class="showyg"><img src="images/showyg.png" alt=""></div> -->
         <div class="textposterdeta bounceInLeft animated infinite">
-            <img src="images/textposterdeta4.png" alt=""></div>
+            <img src="images/textposterdeta5.png" alt=""></div>
         <div class="poster_text2">
             <img src="images/postertext21.png" alt=""></div>
     </div>
@@ -101,13 +101,13 @@
                         活动规则
                     </div>
                     <div class="voteqabox">
-                        Q: 您认为本期哪组高颜值CP能够最终获胜？    
+                        Q: 你觉得本期整蛊“大”明星是否能成功？    
                     </div>
                     <div class="selectvotebox">
                         <div class="selectleft">
                             <ul>
                                 <li>A.</li>
-                                <li>A组</li>
+                                <li>能</li>
                                 <li><a class="popbtnli" href="javascript:;">＋我选这个</a></li>
                                 <li id="now_voteid_a">
                                    
@@ -117,7 +117,7 @@
                         <div class="selectright">
                             <ul>
                                 <li>B.</li>
-                                <li>B组</li>
+                                <li>不能</li>
                                 <li><a class="popbtnli" href="javascript:;">＋我选这个</a></li>
                                 <li id="now_voteid_b">
                                     
@@ -326,7 +326,7 @@
             setTimeout(function () {
                 $('.posterbox').show();
                 setTimeout(function () {
-                    $('.posterbox').hide();
+                    // $('.posterbox').hide();
                     $('.rx-titlebox').show();
                 }, 5000);
             }, 1500);
@@ -338,7 +338,9 @@
                 $('.swiper-wrapper').css('transform', 'translate3d(0px, 0px, 0px)');
             });
 
-
+            $('.zoomOutUp').on('webkitAnimationEnd',function(){
+                $(this).removeClass('zoomOutUp');
+            });
 
             $('.votepopclose').on('touchstart', function () {
                 $('.votepopbox').hide();
