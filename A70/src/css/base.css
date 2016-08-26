@@ -1,0 +1,64 @@
+@CHARSET "utf-8";
+/*
+* @Author: Meta
+* @Date:   2016-04-28 17:40:41
+* @Last Modified by:   liuyuanyuan
+* @Last Modified time: 2016-07-25 18:23:30
+*/
+*{
+	margin:0;padding:0;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-text-size-adjust:100%;
+	-webkit-user-select:none;
+    font-weight:normal;
+    font-style:normal;
+    box-sizing:border-box;
+	-webkit-box-sizing:border-box; /* Safari */
+    -moz-box-sizing:border-box; /* Firefox */
+	-ms-text-size-adjust: 100%;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-overflow-scrolling: touch;
+}
+::-webkit-search-cancel-button { display: none;}
+html{font:20px/1.25'å¾®è½¯é›…é»‘',Arial,sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body,p,form,input,button,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;overflow-x:hidden;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+input,textarea,select{-webkit-user-select:text;-ms-user-select:text;user-select:text;-webkit-appearance:none;}
+textarea{resize:none;}
+table{border-collapse:collapse;}
+input,select,textarea{outline:none;border:none;background:none;font-size:0.7rem;font-family:"å¾®è½¯é›…é»‘"}
+a{text-decoration:none;-WebKit-touch-callout:none;outline:0;cursor:pointer;color:#666;}
+em,i{font-style:normal;}
+li,ol{list-style:none;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block;overflow:hidden;clear:both;height:0;visibility:hidden;content:".";}
+body{margin:0 auto;width:100%;background-color:#f4f4f4;color:#666;font-size:0.7rem;}
+img{border:none;width:100%;vertical-align:top;}
+::-webkit-scrollbar{width: 0;height: 0;}
+::-webkit-scrollbar-track {background-color: transparent;} /* æ»šåŠ¨æ¡çš„æ»‘è½¨èƒŒæ™¯é¢œè‰² */
+::-webkit-scrollbar-thumb {background-color: transparent;} /* æ»‘å—é¢œè‰² */
+::-webkit-scrollbar-button {background-color: transparent;} /* æ»‘è½¨ä¸¤å¤´çš„ç›‘å¬æŒ‰é’®é¢œè‰² */
+::-webkit-scrollbar-corner {background-color: transparent;} /* æ¨ªå‘æ»šåŠ¨æ¡å’Œçºµå‘æ»šåŠ¨æ¡ç›¸äº¤å¤„å°–è§’çš„é¢œè‰² */
+
+
+/*-------------------------------------------------------------*/
+@media screen and (min-width: 320px) {html{font-size:106.6666%;}}
+@media screen and (min-width: 360px) {html{font-size:120%;}}
+@media screen and (min-width: 375px) {html{font-size:125%;}}
+@media screen and (min-width: 400px) {html{font-size:133.3333%;}}
+@media screen and (min-width: 414px) {html{font-size:138%;}}
+@media screen and (min-width: 440px) {html{font-size:146.6666%;}}
+@media screen and (min-width: 480px) {html{font-size:160%;}}
+@media screen and (min-width: 520px) {html{font-size:173.3333%;}}
+@media screen and (min-width: 560px) {html{font-size:186.6666%;}}
+@media screen and (min-width: 600px) {html{font-size:200%;}}
+@media screen and (min-width: 640px) {html{font-size:213.3333%;}}
+@media screen and (min-width: 680px) {html{font-size:226.6666%;}}
+@media screen and (min-width: 720px) {html{font-size:240%;}}
+@media screen and (min-width: 760px) {html{font-size:253.3333%;}}
+@media screen and (min-width: 800px) {html{font-size:266.6666%;}}
+@media screen and (min-width: 1200px) {html{font-size:400%;}}
+@media screen and (min-width: 1280px) {html{font-size:426.6666%;}}
+
+
