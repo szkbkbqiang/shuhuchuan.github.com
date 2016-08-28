@@ -53,7 +53,7 @@ background-size: 100%;}
 .start-compass,.yanzhi-compass,.yanzhi-compass2 { width: 2.0rem; height: 2.0rem; position: absolute; right: 7.35rem; top: 0.45rem; -webkit-animation: compass 10s linear infinite; animation: compass 10s linear infinite;}
 .yanzhi-compass2 { width: 3.5rem; height: 3.5rem; left: 5%; margin-left: 0.5rem; margin-top: .135rem;}
 .yanzhi-compass { width: 3rem; height: 3rem; right: 1.15rem; top: .8rem;}
-.start-circle,.start-line { position: absolute; width: 8.0rem; height: 8.0rem; top: .8rem; -webkit-animation: spin 50s linear infinite; -ms-animation: spin 50s linear infinite; animation: spin 50s linear infinite;}
+.start-circle,.start-line { position: absolute; width: 8.0rem; height: 8.0rem; top: .5rem; -webkit-animation: spin 50s linear infinite; -ms-animation: spin 50s linear infinite; animation: spin 50s linear infinite;}
 /*.animated.infinite { animation-iteration-count: 1;}*/
 .start-line {-webkit-animation: down2 10s linear infinite;-ms-animation: down2 10s linear infinite;animation: down2 10s linear infinite; top: 4rem;}
 .start-btn { width: 6.75rem; height: 3.15rem; position: absolute; right: 8%; top: 4.95rem;}
