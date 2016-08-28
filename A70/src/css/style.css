@@ -48,7 +48,7 @@ background-size: 100%; /*padding: .5rem 0;*/}
 .activity-box { padding: 0.525rem; font-size: 0.55rem; line-height: 1.7rem; color: #fff;} 
 .activity-box span { text-decoration: underline;}
 .activity-box button { font-size: 0.55rem; font-weight: bold; width: 3.7rem; height: 1.25rem; border: 2px solid #667d97; box-shadow: none; text-align: center; color: #667d97; background: none; margin-left: .6rem; border-radius: 0.625rem; margin-right: 0.35rem;}
-.home-start { position: absolute; left: 5%; top: 16.065rem; z-index: 2; width: 16.875rem; height: 7.8525rem; margin: 0 auto; background: url(../../img/home_04.png) 0 0 no-repeat; -webkit-background-size: 100%;
+.home-start { position: absolute; left: 5%; top: 16.065rem; z-index: 2; width: 16.875rem; height: 7.8525rem; margin: 1rem auto; background: url(../../img/home_04.png) 0 0 no-repeat; -webkit-background-size: 100%;
 background-size: 100%;}
 .start-compass,.yanzhi-compass,.yanzhi-compass2 { width: 2.0rem; height: 2.0rem; position: absolute; right: 7.35rem; top: 0.45rem; -webkit-animation: compass 10s linear infinite; animation: compass 10s linear infinite;}
 .yanzhi-compass2 { width: 3.5rem; height: 3.5rem; left: 5%; margin-left: 0.5rem; margin-top: .135rem;}
