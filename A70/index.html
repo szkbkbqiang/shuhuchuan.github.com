@@ -36,16 +36,18 @@
           if(v <= 99){
               setSB(v, el);
               window.setTimeout("fakeProgress(" + (++v) + ", document.all['" + el.id + "'])", 10);
-            }else if(v > 99 && loadEnd){
-              setSB(100, el);
-              el.parentNode.remove();
-              $('.a70-kv').show();
-              setTimeout(function () {
-                $('.a70-kv').remove();
-
-                $('#a70Home').show();
-              },2000);
             }
+            setInterval(function () {
+              if(v > 99 && loadEnd){
+                setSB(100, el);
+                el.parentNode.remove();
+                $('.a70-kv').show();
+                setTimeout(function () {
+                  $('.a70-kv').remove();
+                  $('#a70Home').show();
+                },2000);                
+              }
+            },100);
         }
         fakeProgress(0, bs);
       </script> 
