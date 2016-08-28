@@ -15,8 +15,20 @@ define(function(require, exports, module){
 			window.onload=function () {
 				loadEnd = true;
 			};
+			setTimeout(function () {
+				$('.loading').remove();
+			},3000);
 			$('.start-btn').on('click',function () {
 				location.href = 'yanzhi.html'
+			});
+			$('.rule-activity').on('click',function () {
+				$public.alert($public.config.indexArr);
+			});
+			$('.a70-kv').on('click',function () {
+				var _this = $(this);
+				setTimeout(function () {
+					_this.remove();
+				},1000);
 			});
 		},
 	}

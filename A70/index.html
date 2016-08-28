@@ -34,7 +34,7 @@
         function fakeProgress(v, el) {
           if(v <= 99){
               setSB(v, el);
-              window.setTimeout("fakeProgress(" + (++v) + ", document.all['" + el.id + "'])", 5);
+              window.setTimeout("fakeProgress(" + (++v) + ", document.all['" + el.id + "'])", 10);
             }else if(v > 99 && loadEnd){
               setSB(100, el);
               el.parentNode.remove();
@@ -65,7 +65,7 @@
           <b style="color: #0960ff;">[ 人气：2929229 ]</b>
           <span class="icon-stauts pulse animated infinite"></span>
         </div>
-        <p class="home-title-countdown"><i class="icon-triangle"></i>距离直播开始：2天11小时43分22秒</p>
+        <p class="home-title-countdown"><i class="icon-triangle pulse animated infinite"></i>距离直播开始：2天11小时43分22秒</p>
       </div>
       <div class="home-video-bg"><span></span></div>
       <div class="home-video">
@@ -77,7 +77,7 @@
       </div>
       <!-- 活动规则 -->
       <div class="home-activity">
-        <div class="activity-box"><button>>>抢车模</button>直播结束之后开抢！<span>活动规则</span></div>
+        <div class="activity-box"><button>>>抢车模</button>直播结束之后开抢！<span class="rule-activity">活动规则</span></div>
       </div>
       <!-- 刷脸开始按钮 -->
       <div class="home-start">
@@ -92,7 +92,13 @@
         
         <div class="start-btn"><img src="img/home_start.png" alt=""></div>
       </div>
-      <div class="home-tabs home-tabs-left"></div>
+      <div class="home-tabs home-tabs-left">
+        <ul>
+          <li class="a70-live-tab"></li>
+          <li class="a70-high-tab"></li>
+          <li class="a70-drive-tab"></li>
+        </ul>
+      </div>
     </section>
   </section>
 

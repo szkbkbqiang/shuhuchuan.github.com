@@ -5,6 +5,15 @@ seajs.config({
     'bootstrap' : 'bootstrap.min',
     'public' : 'module/public',
     'index' : "module/index",
+    'yanzhi' : "module/yanzhi",
+    'arm' : "module/arm",
+    'highlights' : "module/highlights",
+    'swiper' : "plugin/swiper.jquery.min",
+    'slotmachine' : "plugin/jquery.slotmachine",
+    'tracking' : "plugin/tracking-min",
+    'eye' : "data/eye-min",
+    'face' : "data/face-min",
+    'mouth' : "data/mouth-min",
   },
   preload : ['jquery'],//配置提取预加载模块，全局模块，所有页面都需要使用的模块
   debug : true

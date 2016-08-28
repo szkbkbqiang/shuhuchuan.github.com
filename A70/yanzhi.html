@@ -14,28 +14,36 @@
 <body>
   <section class="a70-box">
     <!-- 颜值测试 -->
-    <section class="a70-yanzhi" style="display:none">
+    <section class="a70-yanzhi">
       <div class="yanzhi-compass"><img src="img/home_luopan.png" alt=""></div>
-      <div class="yanzhi-text" style="display : none">
+      <div class="yanzhi-text">
         <p>偶像包袱抖一抖？看看你的颜值有多少分？</p>
         <p>骏派A70给你答案</p>
       </div>
-      <div class="yanzhi-text">
+      <div class="yanzhi-text" style="display : none">
         <p><b>小骏颜值识别系统正在分析中</b></p>
-        <p><img src="img/yz_jdt.png" alt=""><span>87%...</span></p>
+        <p><img src="img/yz_jdt.png" alt=""><span id="loadNumber">87%...</span></p>
       </div>
-      <div class="yanzhi-circle2"><img src="img/yz_car.png" alt=""></div>
+      <div class="yanzhi-circle2 demo-container"><img src="img/rl.jpg" alt=""></div>
       <div class="yanzhi-circle"><img src="img/kv_03.png" alt=""></div>
       <div class="yanzhi-circle3"></div>
       <div class="yanzhi-line"><img src="img/kv_11.png" alt=""></div>
-      <div class="yanzhi-btn">
-        <div class="yz_btn"><img src="img/yz_btn.png" alt=""></div>
-        <p>活动规则</p>
+      <div class="yanzhi-btn" id="yz_btn">
+        <div class="yz_btn"></div>
+        <!--  accept="image/jpg,image/jpeg" -->
+        <input id="fileId1" type="file" name="file" /><img src="img/yz_btn.png" alt="">
+        <p><span id="rule-yanzhi">活动规则</span></p>
       </div>
-      <div class="home-tabs"></div>
+      <div class="home-tabs">
+        <ul>
+          <li class="a70-live-tab"></li>
+          <li class="a70-high-tab"></li>
+          <li class="a70-drive-tab"></li>
+        </ul>
+      </div>
     </section>
     <!-- 测试结果 -->
-    <section class="a70-yanzhi2">
+    <section class="a70-yanzhi2" style="display:none">
       <div class="yanzhi-text">
         <p><b>刷脸成功！</b></p>
         <p><strong>恭喜获得两次抽奖机会</strong></p>
@@ -53,16 +61,22 @@
       </div>
       <!-- 按钮 -->
       <div class="yanzhi-tips-btn">
-        <span>马上抽奖</span>
-        <span>炫耀一下</span>
+        <span id="luckDraw">马上抽奖</span>
+        <span id="share-show">炫耀一下</span>
       </div>
-      <div class="home-tabs"></div>
+      <div class="home-tabs">
+        <ul>
+          <li class="a70-live-tab"></li>
+          <li class="a70-high-tab"></li>
+          <li class="a70-drive-tab"></li>
+        </ul>
+      </div>
     </section>
   </section>
 
   <script type="text/javascript" src="src/js/sea.js"></script>
   <script type="text/javascript" src="src/js/seajs-preload.js"></script>
   <script type="text/javascript" src="src/js/config.js"></script>
-  <script>seajs.use('index')</script>
+  <script>seajs.use('yanzhi')</script>
 </body>
 </html>
