@@ -1,4 +1,4 @@
-html,body {width: 100%; height: 100%;}
+html,body {width: 100%; height: 100%; overflow: hidden;}
 .a70-box,.a70-yanzhi2 { width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #000 url(../../img/A70_BJ.jpg) top center no-repeat; -webkit-background-size: 100%;
 background-size: 100%;}
 .a70-yanzhi2 { z-index: 9999; background: #000 url(../../img/yz_bj2.jpg) top center no-repeat; -webkit-background-size: 100%;
@@ -13,7 +13,7 @@ background-size: 100%;}
 
 /*KV*/
 .a70-kv { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #000 url(../../img/KV_02.jpg) top center no-repeat; -webkit-background-size: 100%;
-background-size: 100%; overflow: hidden; z-index: 9998; }
+background-size: 100%; overflow: hidden; z-index: 9998; display: none;}
 .kv-liveShow { background: url(../../img/kv_03.png) 0 0 no-repeat; -webkit-background-size: 100%;
 background-size: 100%; width: 15.0rem; height: 15.0rem; position: absolute; top: -6.0rem; left: 50%; margin-left: -7rem; -webkit-animation: spin 50s linear infinite;-ms-animation: spin 50s linear infinite;animation: spin 50s linear infinite;}
 .kv_liveTitle { position: absolute;}
@@ -27,7 +27,7 @@ background-size: 100%; width: 15.0rem; height: 15.0rem; position: absolute; top:
 .kv-modol { position: absolute; right: 1.0rem; bottom: 1.0rem; width: 4.75rem; height: 1.75rem;}
 
 /*home*/
-.a70-home { position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+.a70-home { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;}
 .home-title { width: 90%; margin: 0 auto; height: 4.05rem; background: url(../../img/home_01.png) 0 0 no-repeat; -webkit-background-size: 100%;
 background-size: 100%;}
 .home-title .icon-triangle { margin-right: 0.25rem; width: 0.55rem; height: 0.55rem; background: url(../../img/home_triangle.png) 0 0 no-repeat; -webkit-background-size: 100%;
@@ -41,12 +41,13 @@ background-size: 100%;}
 .home-video-bg span { width: 15.21rem;height: 8.55rem; display: block; margin-left: 0.7875rem; background: #000; margin-top: 0.4rem;}
 .home-video { position: absolute; z-index: 1; background: url(../../img/home_02.png) 0 0 no-repeat; top: 4.05rem; left: 5%; height: 9.315rem; width: 90%; -webkit-background-size: 100%;
 background-size: 100%;}
-.home-paly {width: 15.21rem;height: 8.55rem; display: block; margin-left: 0.7875rem; text-align: center; line-height: 200%; margin-top: 0.4rem;}
-.home-activity { width: 90%; margin: 0 auto; position: absolute; top: 13.365rem; left: 5%; height: 2.7rem; background: url(../../img/home_03.png) 0 0 no-repeat; -webkit-background-size: 100%;
+.home-paly { overflow: hidden; width: 15.21rem;height: 8.55rem; display: block; margin-left: 0.7875rem; text-align: center; line-height: 200%; margin-top: 0.4rem;}
+.home-paly iframe { width: 100%; height: 100%; overflow: hidden;}
+.home-activity { width: 18.75rem; margin: 0 auto; position: absolute; top: 13.365rem; height: 2.7rem; background: url(../../img/home_03.png) 0 0 no-repeat; -webkit-background-size: 100%;
 background-size: 100%; /*padding: .5rem 0;*/}
-.activity-box { padding: 0.4rem; font-size: 0.55rem; line-height: 1.7rem; color: #fff;} 
+.activity-box { padding: 0.525rem; font-size: 0.55rem; line-height: 1.7rem; color: #fff;} 
 .activity-box span { text-decoration: underline;}
-.activity-box button { font-size: 0.55rem; font-weight: bold; width: 3.35rem; height: 1.25rem; border: 2px solid #667d97; box-shadow: none; text-align: center; color: #667d97; background: none; margin-left: .5rem; border-radius: 0.625rem; margin-right: 0.2rem;}
+.activity-box button { font-size: 0.55rem; font-weight: bold; width: 3.7rem; height: 1.25rem; border: 2px solid #667d97; box-shadow: none; text-align: center; color: #667d97; background: none; margin-left: .6rem; border-radius: 0.625rem; margin-right: 0.35rem;}
 .home-start { position: absolute; left: 5%; top: 16.065rem; z-index: 2; width: 16.875rem; height: 7.8525rem; margin: 0 auto; background: url(../../img/home_04.png) 0 0 no-repeat; -webkit-background-size: 100%;
 background-size: 100%;}
 .start-compass,.yanzhi-compass,.yanzhi-compass2 { width: 2.0rem; height: 2.0rem; position: absolute; right: 7.35rem; top: 0.45rem; -webkit-animation: compass 10s linear infinite; animation: compass 10s linear infinite;}
@@ -79,9 +80,11 @@ background-size: 100%; overflow: hidden; z-index: 9997; }
 .yanzhi-line { height: 1rem; -webkit-animation: down2 10s linear infinite; -ms-animation: down2 10s linear infinite;animation: down2 10s linear infinite; top: 12rem; width: 100%; left: 0; margin-left: 0;}
 .yanzhi-circle3,.yanzhi-circle3_1 { z width: 8rem; height: 8rem; background: rgba(0,0,0,.4); position: absolute; left: 50%; top: 8.8rem; border-radius: 100%; margin-left: -4.25rem;}
 .yanzhi-btn { width: 7.85rem; height: 4.5rem; position: absolute; top: 19.5rem; left: 50%; margin-left: -3.925rem; text-align: center; color: #fff; text-decoration: underline; line-height: 2; z-index: 11;}
-/*#fileId1 { position: absolute; top: 0; left: 0; width: 100%; height: 3.0rem; opacity: 0;}*/
-.yanzhi-circle2 { border-radius: 100%; overflow: hidden; width: 9rem; height: 9rem; margin-left: -4.5rem; top: 8.4rem;}
+#fileId1 { position: absolute; top: 0; left: 0; width: 100%; height: 3.0rem; opacity: 0;}
+.yanzhi-circle2 { border-radius: 100%; overflow: hidden; width: 9rem; height: 9rem; margin-left: -4.5rem; top: 8.4rem; background: rgba(0,0,0,.5);}
+.yanzhi-circle2 img,.yanzhi-circle2_1 img { width: 100%; height: 100%;}
 .yanzhi-circle_1,.yanzhi-circle2_1 { width: 9rem; height: 9rem; margin-left: -4.5rem;}
+.yanzhi-circle2_1 { border-radius: 100%; overflow: hidden;background: rgba(0,0,0,.5);}
 .yanzhi-circle3_1 { width: 6.5rem; height: 6.5rem; margin-left: -3.25rem; top: 8rem;}
 .yanzhi-tips { width: 16.875rem; position: absolute; top: 14rem; background: url(../../img/yz_sucess.png) 0 0 no-repeat; height: 6.975rem; left: 5%; -webkit-background-size: 100%;
 background-size: 100%;}
@@ -119,8 +122,8 @@ background-size: 100%; right: -1.2rem;}
 .drive-form { width: 15.0rem; margin-left: 1.875rem; min-height: 5rem; position: absolute; top: 10rem;}
 .drive-form ul li { margin-bottom: 0.5rem; font-size: 0; position: relative;}
 .drive-form ul li div { display: inline-block;}
-.drive-submit { width: 5.0rem; line-height: 1.255rem; margin-left: 5rem; top: 0; font-size: 0.7rem; border: 2px solid #fff; border-radius: 0.725rem; height: 1.45rem; text-align: center; color: #fff; margin-top: 2rem;}
-.ipt { border: 0.1rem solid #27aae1; height: 2rem; border-radius: 0;color: #b1b0b0; padding: 0 .25rem; font-size: 0.75rem;}
+.drive-submit { width: 5.0rem; line-height: 1.255rem; margin-left: 5rem; top: 0; font-size: 0.7rem; border: 2px solid #fff; border-radius: 0.725rem; height: 1.45rem; text-align: center; color: #fff; margin-top: 1.5rem;}
+.ipt { border: 0.1rem solid #27aae1; height: 2.15rem; background: rgba(0,0,0,.5); border-radius: 0;color: #b1b0b0; padding: 0 .25rem; font-size: 0.75rem;}
 .width_1 { width: 8.25rem;}
 .width_2 { width: 6.25rem;}
 .width_100 { width: 15rem;}
@@ -189,10 +192,16 @@ background-size: 100%; }
 .slot3 { background-image: url("../../img/arm/3.png"); }
 .slot4 { background-image: url("../../img/arm/4.png"); }
 
-
-
-
-
+/*
+#highlights,#drive,#a70Home { overflow: hidden; height: 100%; width: 100%;}
+*/
+#yanzhi,#yanzhi2,#armBandit { display:none}
+.rect {
+    border: 2px solid #a64ceb;
+    left: -1000px;
+    position: absolute;
+    top: -1000px;
+  }
 
 
 

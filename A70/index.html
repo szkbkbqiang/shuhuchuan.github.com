@@ -9,6 +9,7 @@
 <title>A70 H5</title>
 <link rel="stylesheet" href="src/css/base.css">
 <link rel="stylesheet" href="src/css/animate.min.css">
+<link rel="stylesheet" href="src/css/swiper.min.css">
 <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
@@ -38,13 +39,15 @@
             }else if(v > 99 && loadEnd){
               setSB(100, el);
               el.parentNode.remove();
+              $('.a70-kv').show();
               setTimeout(function () {
                 $('.a70-kv').remove();
-              },3000);
+
+                $('#a70Home').show();
+              },2000);
             }
         }
         fakeProgress(0, bs);
-
       </script> 
     </section>
     <!-- kv -->
@@ -55,24 +58,23 @@
         <p><img src="img/kv_11.png" alt=""></p>
       </div>
       <div class="kv-propagate"><img class="pulse animated infinite" src="img/kv_01.png" alt=""></div>
-      <div class="kv-logo bounceInLeft animated delay"><img src="img/kv_02.png" alt=""></div>
-      <div class="kv-modol bounceInRight animated delay"><img src="img/kv_04.png" alt=""></div>
+      <div class="kv-logo bounceInLeft animated"><img src="img/kv_02.png" alt=""></div>
+      <div class="kv-modol bounceInRight animated"><img src="img/kv_04.png" alt=""></div>
     </section>
     <!-- home -->
-    <section class="a70-home">
+    <section class="a70-home" id="a70Home">
       <div class="home-title">
         <div class="home-title-stauts">
           <b style="color: #0960ff;">[ 人气：2929229 ]</b>
-          <span class="icon-stauts pulse animated infinite"></span>
+          <span class="icon-stauts"></span>
         </div>
-        <p class="home-title-countdown"><i class="icon-triangle pulse animated infinite"></i>距离直播开始：2天11小时43分22秒</p>
+        <p class="home-title-countdown"><i class="icon-triangle pulse animated infinite"></i><span id="divdown1">距离直播开始：2天11小时43分22秒</span></p>
       </div>
       <div class="home-video-bg"><span></span></div>
       <div class="home-video">
         <div class="home-paly">
         <!-- 此处放置视频文件 -->
-        此处放置视频文件
-          <!-- <video src="http://www.w3school.com.cn/i/movie.mp4"></video> -->
+        <iframe src='http://player.youku.com/embed/XMTU0ODQ2OTkwNA==' frameborder='0' 'allowfullscreen'></iframe>
         </div>
       </div>
       <!-- 活动规则 -->
@@ -93,6 +95,181 @@
         <div class="start-btn"><img src="img/home_start.png" alt=""></div>
       </div>
       <div class="home-tabs home-tabs-left">
+        <ul>
+          <li class="a70-live-tab"></li>
+          <li class="a70-high-tab"></li>
+          <li class="a70-drive-tab"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- 车型亮点 -->
+    <section class="a70-yanzhi a70-highlights" id="highlights">
+      <div class="yanzhi-compass"><img src="img/home_luopan.png" alt=""></div>
+      <div class="high-container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="http://car.bitauto.com/junpaia50/"><img src="img/1.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="http://car.bitauto.com/junpaia50/"><img src="img/2.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="http://car.bitauto.com/junpaia50/"><img src="img/3.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="http://car.bitauto.com/junpaia50/"><img src="img/4.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="http://car.bitauto.com/junpaia50/"><img src="img/5.jpg" alt=""></a></div>
+            </div>
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev icon-stauts pulse animated infinite"></div>
+        <div class="swiper-button-next icon-stauts pulse animated infinite"></div>
+      </div>
+
+            
+      <div class="home-tabs home-tabs-center">
+        <ul>
+          <li class="a70-live-tab"></li>
+          <li class="a70-high-tab"></li>
+          <li class="a70-drive-tab"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- 预约试驾 -->
+    <section class="a70-yanzhi a70-drive" id="drive">
+      <div class="yanzhi-compass"><img src="img/home_luopan.png" alt=""></div>
+      <div class="yanzhi-text">
+        <p>选择离您最近的经销商，留下您的联系方式</p>
+      </div>
+      <div class="drive-form">
+        <form action="">
+          <ul>
+            <li><div><input type="text" value="" class="ipt width_1 ipt-right" placeholder="真实姓名"></div><div class="select"><select class="ipt width_2"><option value="0">性别</option><option value="1">男</option><option value="2">女</option></select></div></li>
+            <li><input type="tel" value="" class="ipt width_100" placeholder="手机号码" maxlength="11"></li>
+            <li><div class="select1"><select class="ipt width_2 ipt-right"><option value="0">省份</option><option value="1">北京</option></select></div><div class="select"><select class="ipt width_1"><option value="0">城市</option><option value="1">北京</option></select></div></li>
+            <li><div class="select"><select class="ipt width_100"><option value="0">选择经销商</option><option value="1">经销商一</option></select></div></li>
+            <li><div class="drive-submit">提交</div></li>
+          </ul>
+        </form>
+      </div>
+      <div class="home-tabs home-tabs-right">
+        <ul>
+          <li class="a70-live-tab"></li>
+          <li class="a70-high-tab"></li>
+          <li class="a70-drive-tab"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- 颜值测试 -->
+    <section class="a70-yanzhi" id="yanzhi">
+      <div class="yanzhi-compass"><img src="img/home_luopan.png" alt=""></div>
+      <div class="yanzhi-text">
+        <p>偶像包袱抖一抖？看看你的颜值有多少分？</p>
+        <p>骏派A70给你答案</p>
+      </div>
+      <div class="yanzhi-text" style="display : none">
+        <p><b>小骏颜值识别系统正在分析中</b></p>
+        <p><img src="img/yz_jdt.png" alt=""><span id="loadNumber">87%...</span></p>
+      </div>
+      <div class="yanzhi-circle2 demo-container"></div>
+      <div class="yanzhi-circle"><img src="img/kv_03.png" alt=""></div>
+      <div class="yanzhi-circle3"></div>
+      <div class="yanzhi-line"><img src="img/kv_11.png" alt=""></div>
+      <div class="yanzhi-btn" id="yz_btn">
+        <div class="yz_btn"></div>
+        <!--  accept="image/jpg,image/jpeg" -->
+        <input id="fileId1" type="file" name="fileId1" accept="image/*" capture/>
+
+        <img src="img/yz_btn.png" alt="">
+        <p><span id="rule-yanzhi">活动规则</span></p>
+      </div>
+      <div class="home-tabs">
+        <ul>
+          <li class="a70-live-tab"></li>
+          <li class="a70-high-tab"></li>
+          <li class="a70-drive-tab"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- 测试结果 -->
+    <section class="a70-yanzhi2" id="yanzhi2">
+      <div class="yanzhi-text">
+        <p><b>刷脸成功！</b></p>
+        <p><strong>恭喜获得两次抽奖机会</strong></p>
+      </div>
+      <div class="yanzhi-circle2_1"><img id="updateImg" src="img/yz_car.png" alt=""></div>
+      <div class="yanzhi-circle_1"><img src="img/kv_03.png" alt=""></div>
+      <div class="yanzhi-circle3_1"></div>
+      <!-- 刷脸信息 -->
+      <div class="yanzhi-tips">
+        <div class="yanzhi-compass2"><img src="img/home_luopan.png" alt=""></div>
+        <div class="yanzhi-tips-text">
+          <p>您的颜值99分！</p>
+          <p>您的颜值是从娘胎里带出来的，颜值爆表！小鲜肉</p>
+        </div>
+      </div>
+      <!-- 按钮 -->
+      <div class="yanzhi-tips-btn">
+        <span id="luckDraw">马上抽奖</span>
+        <span id="share-show">炫耀一下</span>
+      </div>
+      <div class="home-tabs">
+        <ul>
+          <li class="a70-live-tab"></li>
+          <li class="a70-high-tab"></li>
+          <li class="a70-drive-tab"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 测试结果 -->
+    <section class="a70-yanzhi a70-arm" id="armBandit">
+      <div class="yanzhi-compass"><img src="img/home_luopan.png" alt=""></div>
+      <div class="yanzhi-text">
+        <p><strong style="color:#fff;">您有<span id="click-num">3</span>次抽奖机会</strong></p>
+      </div>
+      <div class="arm-lhj">
+        <div class="arm-ears">
+          <div class="arm-ears-left icon-stauts pulse animated infinite"></div>
+          <div class="arm-ears-left-ok icon-stauts pulse animated infinite"></div>
+          <div class="arm-ears-right icon-stauts pulse animated infinite"></div>
+          <div class="arm-ears-right-ok icon-stauts pulse animated infinite"></div>
+        </div>
+        <!-- 抽奖内容 -->
+        <div class="arm-eyes">
+          <div class="line">
+            <div class="content">
+              <div class="clear">
+                <div id="machine1" class="slotMachine">
+                  <div class="slot slot1"></div>
+                  <div class="slot slot2"></div>
+                  <div class="slot slot3"></div>
+                  <div class="slot slot4"></div>
+                </div>
+                <div id="machine2" class="slotMachine">
+                  <div class="slot slot1"></div>
+                  <div class="slot slot2"></div>
+                  <div class="slot slot3"></div>
+                  <div class="slot slot4"></div>
+                </div>
+                <div id="machine3" class="slotMachine">
+                  <div class="slot slot1"></div>
+                  <div class="slot slot2"></div>
+                  <div class="slot slot3"></div>
+                  <div class="slot slot4"></div>
+                </div>
+                <!-- <div id="slotMachineButton1" class="slotMachineButton">GO!</div> -->
+              </div>
+           <!--    <div class="clear">
+                <div id="machine1Result" class="slotMachine noBorder" style="text-align:left">Index: 0</div>
+                <div id="machine2Result" class="slotMachine noBorder" style="text-align:left">Index: 1</div>
+                <div id="machine3Result" class="slotMachine noBorder" style="text-align:left">Index: 2</div>
+                <div class="slotMachine noBorder"></div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <!-- alert-tips -->
+        <div class="arm-play icon-stauts pulse animated infinite">试试手气</div>
+      </div>
+      <div class="arm-more">更多优惠</div>
+      <div class="home-tabs">
         <ul>
           <li class="a70-live-tab"></li>
           <li class="a70-high-tab"></li>

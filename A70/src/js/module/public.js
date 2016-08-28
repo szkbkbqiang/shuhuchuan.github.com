@@ -1,4 +1,5 @@
 define(function(require,exports,module){
+	require('swiper');
 	var $public = function () {
 		this.init.apply(this,arguments);
 	};
@@ -18,7 +19,7 @@ define(function(require,exports,module){
 			<p><small>●	</small>网友所填写的姓名、手机号码等信息均将作为参与本次活动的身份核实标准，具有唯一性，如因网友提交信息有误，导致无法参与或兑奖，易车网将不予承担责任。</p>\
 			<p><small>●	</small>在发奖期间，因个人手机停机或注销等原因，未能联系到中奖网友的，将视此网友为弃权，不予补发。请中奖网友保持手机畅通，以便能够联系到您。</p>\
 			<p><small>●	</small>本次活动严禁利用作弊器等一切违反活动规则的作弊行为，对于违背活动公平性的作弊者将直接取消其参与机会及获奖资格。</p>\
-			<p><small>●	</small>λ	网友如有疑问可咨询易车网客服4000-168-168。</p>',
+			<p><small>●	</small>网友如有疑问可咨询易车网客服4000-168-168。</p>',
 			yanzhiArr : '<h2>活动规则</h2>\
 			<p><span>活动时间：</span>2016年9月12日-2016年9月21日</p>\
 			<p><span>游戏规则：</span>网友进入页面参与刷脸测颜值，注册报名后即可参与老虎机赢大奖游戏，每名网友均有两次抽奖机会，奖品采取随机抽取的方式获得，奖品数量有限，先到先得。</p>\
@@ -33,18 +34,27 @@ define(function(require,exports,module){
 			<p><small>●	</small>本次活动严禁利用作弊器等一切违反活动规则的作弊行为，对于违背活动公平性的作弊者将直接取消其参与机会及获奖资格。</p>\
 			<p><small>●	</small>网友如有疑问可咨询易车网客服4000-168-168。</p>',
 			earsStr : '<div class="sEars"><p>我的天呐！这张照片好像没有人脸噢！<br />你在逗小骏玩吗？</p><p>这会大大降低您的颜值得分噢！</p></div>',
-
+			interval : 1000
 		},
 		bingEvent : function () {
+			var _self = this;
 			$('.home-tabs .a70-drive-tab').on('click',function () {
-				location.href = 'drive.html'
+				// location.href = 'drive.html'
+				$('.a70-box').find('section').hide();
+				$('#drive').show();
+				
 			});
 			$('.home-tabs .a70-high-tab').on('click',function () {
-				location.href = 'highlights.html'
+				// location.href = 'highlights.html'
+				$('.a70-box').find('section').hide();
+				$('#highlights').show();
 			});
 			$('.home-tabs .a70-live-tab').on('click',function () {
-				location.href = 'index.html'
+				// location.href = 'index.html'
+				$('.a70-box').find('section').hide();
+				$('#a70Home').show();
 			});
+			window.setInterval(function(){_self.ShowCountDown(2016,9,21,'divdown1');}, _self.config.interval);
 		},
 		alert : function (arr) {
 			var html = [];
@@ -58,6 +68,7 @@ define(function(require,exports,module){
 			});
 		},
 		alert : function (str) {
+			$('iframe').hide();
 			var html = [];
 			html.push('<div class="alert-prompt">');
 			html.push('<div class="alert-prompt-box"><div class="close"></div><div class="alert_main">'+str+'</div></div>');
@@ -65,7 +76,8 @@ define(function(require,exports,module){
 			if($('alert-prompt').length > 0)return;
 			$('body').append(html.join('\n'));
 			$('.alert-prompt .close').on('click',function () {
-				$(this).parent().parent().remove();				
+				$(this).parent().parent().remove();
+				$('iframe').show();				
 			});
 		},
 		alertTips : function (json) {
@@ -85,7 +97,12 @@ define(function(require,exports,module){
 				$('.a70-yanzhi2').show();	
 			});
 			$('.alert-tips .alert-btn button:eq(1)').on('click',function () {
-				location.reload();
+				$('.alert-tips').remove();
+				$('#yz_btn').show();
+				$('#yanzhi .yanzhi-text').eq(0).show().end().eq(1).hide();
+				$('.demo-container').html('');
+				$('.a70-box').find('section').hide();
+				$('#yanzhi').show();
 			});
 		},
 		alertShowOff : function () {
@@ -115,10 +132,31 @@ define(function(require,exports,module){
 			}
 			$('.alert-dis').fadeIn();
 			$('.arm-btn-back').on('click',function () {
-				// $('.alert-dis').remove();
-				location.reload();
+				$('.alert-dis').remove();
+			
 			});
-		}
+		},
+		ShowCountDown : function (year,month,day,divname) {
+			var _self = this;
+			var now = new Date(); 
+			var endDate = new Date(year, month-1, day); 
+			var leftTime=endDate.getTime()-now.getTime(); 
+			var leftsecond = parseInt(leftTime/1000); 
+			//var day1=parseInt(leftsecond/(24*60*60*6)); 
+			var day1=Math.floor(leftsecond/(60*60*24)); 
+			var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+			var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+			var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+			var cc = document.getElementById(divname); 
+			cc.innerHTML = "距离直播开始："+ _self.todou(day1)+"天"+_self.todou(hour)+"小时"+_self.todou(minute)+"分"+_self.todou(second)+"秒"; 
+		},
+		todou : function (num) {
+			if(num > 10){
+				return '' + num;
+			}else {
+				return '0' + num; 
+			}
+		} 
 	}
 	module.exports = new $public();
 });

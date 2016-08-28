@@ -235,7 +235,7 @@
 			if( count===undefined ){
 				
 				//Set animation effects
-				_setAnimationFX("fast", true);
+				_setAnimationFX(100, true);
 				
 				delay /= 2;
 				

@@ -1,6 +1,5 @@
 define(function(require, exports, module){
 	var $public = require('public');
-	require('swiper');
 	var $highlights = function () {
 		this.init.apply(this,arguments);
 	};
