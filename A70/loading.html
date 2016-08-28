@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta content="telephone=no" name="format-detection" />
+<title>A70 H5</title>
+<link rel="stylesheet" href="src/css/base.css">
+<link rel="stylesheet" href="src/css/animate.min.css">
+<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <section class="a70-box">
+    <!-- loading -->
+    <section class="loading">
+      <div class="loading-line" id="bs">
+        <div class="loading-line-hover"></div>
+        <div style="font-size: 9pt; width: 100%; text-align: center; margin-top:20px; color:#fff">loading... <span></span></DIV>
+        <div class="loading-car"><img src="img/Loading_06.png" alt=""></div>
+        <div class="loading-img"><img src="img/Loading_03.png" alt=""></div>
+      </div>
+      <script>
+        window.loadEnd = false;
+        function setSB(v, el) {
+            filterEl = el.children[0];
+            valueEl = el.children[1].children[0];
+            carEl = el.children[2];
+            filterEl.style.width = v + "%";
+            valueEl.innerText = v + "%";
+            carEl.style.left = 4.225 + 0.1475*v +'rem';
+        }
+        function fakeProgress(v, el) {
+          if(v <= 99){
+              setSB(v, el);
+              window.setTimeout("fakeProgress(" + (++v) + ", document.all['" + el.id + "'])", 10);
+            }else if(v > 99 && loadEnd){
+              setSB(100, el);
+              el.parentNode.remove();
+              $('.a70-kv').show();
+              setTimeout(function () {
+                location.href = 'index.html';
+              },2000);
+            }
+        }
+        fakeProgress(0, bs);
+      </script> 
+    </section>
+    <!-- kv -->
+    <section class="a70-kv">
+      <div class="kv-liveShow"></div>
+      <div class="kv-liveTitle">
+        <div class="liveshow"><img src="img/kv_07.png" alt="" class="bounceIn animated duration"></div>
+        <p><img src="img/kv_11.png" alt=""></p>
+      </div>
+      <div class="kv-propagate"><img class="pulse animated infinite" src="img/kv_01.png" alt=""></div>
+      <div class="kv-logo bounceInLeft animated delay"><img src="img/kv_02.png" alt=""></div>
+      <div class="kv-modol bounceInRight animated delay"><img src="img/kv_04.png" alt=""></div>
+    </section>
+   
+  </section>
+
+  <script type="text/javascript" src="src/js/sea.js"></script>
+  <script type="text/javascript" src="src/js/seajs-preload.js"></script>
+  <script type="text/javascript" src="src/js/config.js"></script>
+  <script>seajs.use('index')</script>
+</body>
+</html>
