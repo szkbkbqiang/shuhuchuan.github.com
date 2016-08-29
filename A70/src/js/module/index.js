@@ -150,12 +150,36 @@ define(function(require, exports, module){
 			    if (!this.files.length) return;
 			    $('#yanzhi .yanzhi-text').eq(0).hide().end().eq(1).show();
 				$('.yanzhi-btn').hide();
-				setTimeout(function () {
-					_self.config.loading = true;
-					_self.config.backEars = true;
-				},2000);
-			    _self.config.files = Array.prototype.slice.call(this.files);
-			    _self.filesReader();
+				var oFReader = new FileReader();
+		        oFReader.readAsDataURL(this.files[0]);
+		        oFReader.onload = function (oFREvent) {
+					//  图片上传到后端，返回图片地址给前端使用
+					$.ajax({
+						'url':'www.yduob.com/start',
+						'type':'POST',
+						'data':{'imgurl':oFREvent.target.result},
+						'dataType':'json',
+						'success':function(data){
+							//  请求成功返回状态err_code = 0,图片链接imgrul
+							if(data.err_code == 0){
+								setTimeout(function () {
+									_self.config.loading = true;
+									_self.config.backEars = true;
+								},2000);
+							    _self.config.files = Array.prototype.slice.call(this.files);
+							   
+							    //   data.imgurl  图片链接地址
+							    _self.filesReader(data.imgurl);
+							}else{
+								alert('图片上传失败,请重新上传！');
+								return;
+							}
+						},
+						'error':function(){
+							alert('服务器错误，图片上传失败！');
+						}
+					})
+				};
 			}
 		},
 		getLoading : function (callback) {
@@ -188,7 +212,7 @@ define(function(require, exports, module){
 		setSB: function (v, el) {
 		    $(el).html(v+'%');
 		},
-		filesReader : function () {
+		filesReader : function (result) {
 			var _self = this;
 			// var files;
 		    _self.config.files.forEach(function(file, i) {
@@ -200,7 +224,7 @@ define(function(require, exports, module){
 		      image.id = 'imgs';
 		      $(".demo-container").append($(image));
 		      reader.onload = function() {
-		        var result = this.result;
+		        var result = result;
 		        var img = new Image();
 		        
 		        img.src = result;
