@@ -25,7 +25,11 @@ define(function(require, exports, module){
 			loading : false,
 			backEars : '',
 			files : '',
-			isRunning : true
+			isRunning : true,
+			// 请求链接，一个图片，一个抽奖，需要再copy一份
+			url : $('#arm-play-url').val() + new Date().getTime(),
+			// 商品名称
+			prize : ''
 		},
 		bingEvent : function () {
 			var _self = this;
@@ -52,6 +56,7 @@ define(function(require, exports, module){
 				setTimeout(function () {
 					// location.href = 'index.html';
 					_this.remove();
+					$('#a70Home').show();
 				},1000);
 			});
 			/*****	抽奖  *****/
@@ -76,35 +81,43 @@ define(function(require, exports, module){
 				$('.arm-play').on('click',function () {
 					if($('#click-num').text() > 0 && flag){
 						flag = false;
+						//抽奖请求
+						$.get( _self.config.url, '', function(data) {
+							_self.config.armOk = data.success = true;
+							_self.config.prize = data.value = '京东优惠券';
+							var num = $('#click-num').text();
+							$('#click-num').text(--num);
+							// 抽奖
+							machine1.shuffle(3, onComplete);
+							setTimeout(function(){
+								machine2.shuffle(3, onComplete);
+							}, 500);
+							setTimeout(function(){
+								machine3.shuffle(3, onComplete);
+							}, 1000);
+							if($('#click-num').text() <= 0){
+								$('.arm-play').addClass('disable');
+								$('.arm-more').show();
+							}
+							setInterval(function () {
+								if(!machine1.isRunning() && !machine2.isRunning() && !machine3.isRunning() && _self.config.isRunning){
+									_self.config.isRunning = false;
+									setTimeout(function () {
+										flag = true;
+										if(!_self.config.armOk){
+											$public.alertFail({title : '<div class="notWinning">非常遗憾，您未中奖！</div>'});
+										}else {
+											$public.alertFail({title : '<div class="winning"><p>恭喜获得</p><p>'+ _self.config.prize +'</p></div><div class="winningtips">中奖信息将发送至您预留的手机号<br />请留意短信通知</div>',more : true});
+										}
+									},500);
+								}
+							},10);
+						} );
+						
 						_self.config.isRunning = true;
 						console.log('抽奖');
-						var num = $('#click-num').text();
-						$('#click-num').text(--num);
-						// 抽奖
-						machine1.shuffle(3, onComplete);
-						setTimeout(function(){
-							machine2.shuffle(3, onComplete);
-						}, 500);
-						setTimeout(function(){
-							machine3.shuffle(3, onComplete);
-						}, 1000);
-						if($('#click-num').text() <= 0){
-							$('.arm-play').addClass('disable');
-							$('.arm-more').show();
-						}
-						setInterval(function () {
-							if(!machine1.isRunning() && !machine2.isRunning() && !machine3.isRunning() && _self.config.isRunning){
-								_self.config.isRunning = false;
-								setTimeout(function () {
-									flag = true;
-									if(_self.config.armOk){
-										$public.alertFail({title : '<div class="notWinning">非常遗憾，您未中奖！</div>'});
-									}else {
-										$public.alertFail({title : '<div class="winning"><p>恭喜获得</p><p>京东电子券</p></div><div class="winningtips">中奖信息将发送至您预留的手机号<br />请留意短信通知</div>',more : true});
-									}
-								},500);
-							}
-						},10);
+						console.log($('#arm-play-url').val());
+						
 					}
 				});
 			}else {
@@ -155,11 +168,11 @@ define(function(require, exports, module){
 		  //       oFReader.onload = function (oFREvent) {
 				// 	//  图片上传到后端，返回图片地址给前端使用
 				// 	$.ajax({
-				// 		'url':'www.yduob.com/start',
+				// 		'url':_self.config.url,
 				// 		'type':'POST',
 				// 		'data':{'imgurl':oFREvent.target.result},
 				// 		'dataType':'json',
-				// 		'success':function(data){
+				// 		success:function(data){
 				// 			//  请求成功返回状态err_code = 0,图片链接imgrul
 				// 			if(data.err_code == 0){
 				// 				setTimeout(function () {
@@ -175,7 +188,7 @@ define(function(require, exports, module){
 				// 				return;
 				// 			}
 				// 		},
-				// 		'error':function(){
+				// 		error:function(err){
 				// 			alert('服务器错误，图片上传失败！');
 				// 		}
 				// 	})
@@ -221,7 +234,7 @@ define(function(require, exports, module){
 		setSB: function (v, el) {
 		    $(el).html(v+'%');
 		},
-		filesReader : function (result) {
+		filesReader : function () {
 			var _self = this;
 			// var files;
 		    _self.config.files.forEach(function(file, i) {
@@ -233,58 +246,71 @@ define(function(require, exports, module){
 		      image.id = 'imgs';
 		      $(".demo-container").append($(image));
 		      reader.onload = function() {
+		      	// 上传 base64  图
 		        var result = this.result;
-		        var img = new Image();
-		        console.log(result);
-		        img.src = result;
-		        $('#updateImg').attr('src',result);
-		        $(image).attr("src",  result);
-		        _self.getLoading(function () {
-		        	if (img.complete) {
-		        	  callback(img);
-		        	} else {
-		        	  img.onload = callback;
-		        	}
-		        	function callback(img) {
-		        	  var imgs = document.getElementById('imgs');
-		        	  var tracker = new tracking.ObjectTracker(['face','eye','mouth']);
-		        	  tracker.setStepSize(1.7);
-		        	  console.log(tracker)
-		        	  tracking.track('#imgs', tracker);
-		        	  tracker.on('track', function(event) {
-		        	    if(event.data.length === 0){
-		        	      // alert('你TM在逗我吗?你的脸了？');
-		        	      // return
-		        	      $public.alertTips({
-		        	      	title : $public.config.earsStr
-		        	      });
-		        	    }else{
-		        	      event.data.forEach(function(rect) {
-		        	      	$('.a70-yanzhi2').show();
-		        	        // alert('啊啊啊， 帅哥啊！')
-		        	        window.plot(rect.x, rect.y, rect.width, rect.height);
-		        	      });
-		        	    }
-		        	  });
+		         // 图片上传到后端，返回图片地址给前端使用
+				$.ajax({
+					'url':_self.config.url,
+					'type':'POST',
+					'data':{'imgurl': result},
+					'dataType':'json',
+					success:function(data){
+						//  请求成功返回状态err_code = 0,图片链接imgrul
+						if(data.err_code == 0){
+							var img = new Image();
+							// data.result 返回的图片链接
+					        img.src = data.result;
+					        $('#updateImg').attr('src',data.result);
+					        $(image).attr("src",  data.result);
+					        _self.getLoading(function () {
+					        	if (img.complete) {
+					        	  callback(img);
+					        	} else {
+					        	  img.onload = callback;
+					        	}
+					        	function callback(img) {
+					        	  var imgs = document.getElementById('imgs');
+					        	  var tracker = new tracking.ObjectTracker(['face','eye','mouth']);
+					        	  tracker.setStepSize(1.7);
+					        	  tracking.track('#imgs', tracker);
+					        	  tracker.on('track', function(event) {
+					        	  	// 没有找到人脸
+					        	    if(event.data.length === 0){
+					        	      $public.alertTips({
+					        	      	title : $public.config.earsStr
+					        	      });
+					        	    }else{
+					        	      event.data.forEach(function(rect) {
+					        	      	$('.a70-yanzhi2').show();
+					        	        window.plot(rect.x, rect.y, rect.width, rect.height);
+					        	      });
+					        	    }
+					        	  });
 
-		        	  plot = function(x, y, w, h) {
-		        	  	console.log(1)
-	        	          var rect = document.createElement('div');
-	        	          document.querySelector('.demo-container').appendChild(rect);
-	        	          rect.classList.add('rect');
-	        	          rect.style.width = w + 'px';
-	        	          rect.style.height = h + 'px';
-	        	          rect.style.left = (imgs.offsetLeft + x) + 'px';
-	        	          rect.style.top = (imgs.offsetTop + y) + 'px';
-	        	          rect.style.position = 'absolute';
-	        	        };
-		        	
-		        	}
-		        });
-		        // return
-				//      图片加载完毕之后进行压缩，然后上传
-		        
-		      };
+					        	  plot = function(x, y, w, h) {
+				        	          var rect = document.createElement('div');
+				        	          document.querySelector('.demo-container').appendChild(rect);
+				        	          rect.classList.add('rect');
+				        	          rect.style.width = w + 'px';
+				        	          rect.style.height = h + 'px';
+				        	          rect.style.left = (imgs.offsetLeft + x) + 'px';
+				        	          rect.style.top = (imgs.offsetTop + y) + 'px';
+				        	          rect.style.position = 'absolute';
+				        	        };
+					        	
+					        	}
+					        });
+						}else{
+							alert('图片上传失败,请重新上传！');
+							return;
+						}
+					},
+					error:function(err){
+						alert('服务器错误，图片上传失败！');
+					}
+				});
+			  };
+		      
 		      reader.readAsDataURL(file);
 		    });
 		}
