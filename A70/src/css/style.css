@@ -30,8 +30,10 @@ background-size: 100%; width: 15.0rem; height: 15.0rem; position: absolute; top:
 .a70-home { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;}
 .home-title { width: 90%; margin: 0 auto; height: 4.05rem; background: url(../../img/home_01.png) 0 0 no-repeat; -webkit-background-size: 100%;
 background-size: 100%;}
-.home-title .icon-triangle { margin-right: 0.25rem; width: 0.55rem; height: 0.55rem; background: url(../../img/home_triangle.png) 0 0 no-repeat; -webkit-background-size: 100%;
-background-size: 100%; display: inline-block;}
+.home-title .icon-triangle { margin-right: 0.25rem; width: 0.55rem; height: 0.55rem; background: url(../../img/home_triangle2.png) 0 0 no-repeat; -webkit-background-size: 100%;
+background-size: 100%; display: inline-block;	animation:hxdtran 3s infinite;
+	-webkit-animation:hxdtran 3s infinite;}
+.home-title .imgtriangle{position: absolute; margin-right: 0.25rem; width: 0.55rem; height: 0.55rem;top: 0.13rem;}
 .home-title-stauts { width: 5rem; position: absolute; top: 0.5rem; right: 2.5%; font-size: 0.5rem; text-align: center; }
 .home-title-stauts b { width: 100%;font-weight: bold; color: #0960ff;}
 .home-title-stauts span.icon-stauts { background: url(../../img/home_stauts.png) 0 0 no-repeat; width: 3.6rem; height: 1.8rem; -webkit-background-size: 100%; display: block; margin: 0 auto;
@@ -382,4 +384,18 @@ background-size: 100%; }
     -webkit-transform: translate3d(0,-3rem,0);
     transform: translate3d(0,-3rem,0);
   }
+}
+
+@keyframes hxdtran
+{
+	0% {transform: scale(1); opacity: 0.3;}
+    50% {transform: scale(1.5); opacity: 1;}
+	100% {transform: scale(1); opacity: .3;}
+}
+
+@-webkit-keyframes hxdtran /*Safari and Chrome*/
+{
+	0% {transform: scale(1); opacity: 0.3;}
+    50% {transform: scale(1.5); opacity: 1;}
+	100% {transform: scale(1); opacity: .3;}
 }
