@@ -399,3 +399,14 @@ background-size: 100%; }
     50% {transform: scale(1.5); opacity: 1;}
 	100% {transform: scale(1); opacity: .3;}
 }
+.swiper-slide{
+	position: relative;
+}
+.swiper-slide a{
+	width: 4.4rem;
+	height: 2rem;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+

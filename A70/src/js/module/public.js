@@ -13,7 +13,7 @@ define(function(require,exports,module){
 			<p><span>活动时间：</span>2016年9月21日</p>\
 			<p><span>游戏规则：</span>网友观看直播结束后，在注册报名后可参与直播抽奖，每名网友均有一次抽奖机会，奖品采取随机抽取的方式获得，奖品数量有限，先到先得。</p>\
 			<p><span>奖品设置</span></p>\
-			<p><b>天津一汽原厂车模</b>30个</p>\
+			<p><b>天津一汽原厂车模</b>&nbsp;&nbsp;30&nbsp;&nbsp;个</p>\
 			<p><span>活动说明:</span></p>\
 			<p><small>●	</small>奖品将于活动结束后30个工作日内，由易车网工作人员通过电话核实收奖地址后安排发放。</p>\
 			<p><small>●	</small>网友所填写的姓名、手机号码等信息均将作为参与本次活动的身份核实标准，具有唯一性，如因网友提交信息有误，导致无法参与或兑奖，易车网将不予承担责任。</p>\
@@ -24,8 +24,8 @@ define(function(require,exports,module){
 			<p><span>活动时间：</span>2016年9月12日-2016年9月21日</p>\
 			<p><span>游戏规则：</span>网友进入页面参与刷脸测颜值，注册报名后即可参与老虎机赢大奖游戏，每名网友均有两次抽奖机会，奖品采取随机抽取的方式获得，奖品数量有限，先到先得。</p>\
 			<p><span>奖品设置</span></p>\
-			<p><b>50元京东电子券</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150个</p>\
-			<p><b>2D/3D通兑电子版电影票</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200个</p>\
+			<p><b>50元京东电子券</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150个</p>\
+			<p><b>2D/3D通兑电子版电影票</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200个</p>\
 			<p><b>爱奇艺会员账号（一个月)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200个</p>\
 			<p><span>活动说明:</span></p>\
 			<p><small>●	</small>电影票、京东券和爱奇艺会员账号均为电子版，奖品将于活动结束后30个工作日内以短信的方式发给获奖网友。</p>\
