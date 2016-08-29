@@ -27,7 +27,8 @@ define(function(require, exports, module){
 			files : '',
 			isRunning : true,
 			// 请求链接，一个图片，一个抽奖，需要再copy一份
-			url : $('#arm-play-url').val() + new Date().getTime(),
+			armurl : $('#arm-play-url').val() + new Date().getTime(),//抽奖的url
+			imgurl : '上传图片的url',
 			// 商品名称
 			prize : ''
 		},
@@ -81,10 +82,13 @@ define(function(require, exports, module){
 				$('.arm-play').on('click',function () {
 					if($('#click-num').text() > 0 && flag){
 						flag = false;
-						//抽奖请求
-						$.get( _self.config.url, '', function(data) {
+
+						//发送抽奖请求
+						$.get( _self.config.armurl, '', function(data) {
+
 							_self.config.armOk = data.success = true;
 							_self.config.prize = data.value = '京东优惠券';
+							
 							var num = $('#click-num').text();
 							$('#click-num').text(--num);
 							// 抽奖
@@ -163,36 +167,6 @@ define(function(require, exports, module){
 			    if (!this.files.length) return;
 			    $('#yanzhi .yanzhi-text').eq(0).hide().end().eq(1).show();
 				$('.yanzhi-btn').hide();
-				// var oFReader = new FileReader();
-		  //       oFReader.readAsDataURL(this.files[0]);
-		  //       oFReader.onload = function (oFREvent) {
-				// 	//  图片上传到后端，返回图片地址给前端使用
-				// 	$.ajax({
-				// 		'url':_self.config.url,
-				// 		'type':'POST',
-				// 		'data':{'imgurl':oFREvent.target.result},
-				// 		'dataType':'json',
-				// 		success:function(data){
-				// 			//  请求成功返回状态err_code = 0,图片链接imgrul
-				// 			if(data.err_code == 0){
-				// 				setTimeout(function () {
-				// 					_self.config.loading = true;
-				// 					_self.config.backEars = true;
-				// 				},2000);
-				// 			    _self.config.files = Array.prototype.slice.call(this.files);
-							   
-				// 			    //   data.imgurl  图片链接地址
-				// 			    _self.filesReader(data.imgurl);
-				// 			}else{
-				// 				alert('图片上传失败,请重新上传！');
-				// 				return;
-				// 			}
-				// 		},
-				// 		error:function(err){
-				// 			alert('服务器错误，图片上传失败！');
-				// 		}
-				// 	})
-				// };
 
 				setTimeout(function () {
 					_self.config.loading = true;
@@ -200,7 +174,7 @@ define(function(require, exports, module){
 				},2000);
 			    _self.config.files = Array.prototype.slice.call(this.files);
 			   
-			    //   data.imgurl  图片链接地址
+			    //    图片链接地址
 			    _self.filesReader();
 			}
 		},
@@ -250,7 +224,7 @@ define(function(require, exports, module){
 		        var result = this.result;
 		         // 图片上传到后端，返回图片地址给前端使用
 				$.ajax({
-					'url':_self.config.url,
+					'url':_self.config.imgurl,
 					'type':'POST',
 					'data':{'imgurl': result},
 					'dataType':'json',
