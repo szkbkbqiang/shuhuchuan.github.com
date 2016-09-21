@@ -41,7 +41,7 @@
 				</div>
 				<div class="mapbox">
 					北京市西城区阜成门内大街235号<br>
-					<a href="javascript:;"><img class="mapimg" src="images/mapimg_03.png" alt=""></a>
+					<a href="map.html"><img class="mapimg" src="images/mapimg_03.png" alt=""></a>
 				</div>
             	<img class="topimg" src="images/top_03.png" alt="">
             </div>
@@ -54,7 +54,16 @@
     	var mySwiper = new Swiper('.swiper-container', {
                 direction: 'vertical',
                 loop: false,
-                longSwipesRatio: 0.2
+                longSwipesRatio: 0.2,
+                onTransitionStart:function(swiper){
+                  if(swiper.activeIndex == 1){  //当进入第一页是执行动画
+            		document.querySelector('.list2logo').className = 'logo list2logo bounceInLeft animated';
+            		document.querySelector('.zsimg_list2').className = 'zsimg_list2 bounceInLeft animated animated2';
+            		document.querySelector('.xrimg').className = 'xrimg rotateimg animated animated3';
+            		document.querySelector('.gqwlimg').className = 'gqwlimg bounceInUp animated animated4';
+            		document.querySelector('.rebimg').className = 'rebimg bounceInUp animated animated5';
+                  }
+                }
             })
     </script>
 </body>
