@@ -38,10 +38,7 @@
 		<img class="waiyuan2" src="images/waiyuan2.png" alt="">
 		<a class="text2" href="javascript:;"><img src="images/text2.png" alt=""></a>
 
-
 	</div>
-
-
 
 	<script>
 	// 适配设备
@@ -70,9 +67,6 @@
 		
 	})(document, window);
 	window.onload = function(){
-		
-
-	
 
 		var aVideo = document.querySelector('.video-box');
 
@@ -84,7 +78,11 @@
 			$('.kv-box').show();
 		}
 
-		
+		 var ua = navigator.userAgent;
+		 if (ua.indexOf("Android") > 0) {
+	        aVideo.style.height="120%";
+	        
+        }	
 	}
 
 	</script>
