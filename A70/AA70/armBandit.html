@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta content="telephone=no" name="format-detection" />
+<title>A70 H5</title>
+<link rel="stylesheet" href="src/css/base.css">
+<link rel="stylesheet" href="src/css/animate.min.css">
+<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <section class="a70-box">
+
+    <!-- 测试结果 -->
+    <section class="a70-yanzhi a70-arm">
+      <div class="yanzhi-compass"><img src="img/home_luopan.png" alt=""></div>
+      <div class="yanzhi-text">
+        <p><strong style="color:#fff;">您有<span id="click-num">3</span>次抽奖机会</strong></p>
+      </div>
+      <div class="arm-lhj">
+        <div class="arm-ears">
+          <div class="arm-ears-left icon-stauts pulse animated infinite"></div>
+          <div class="arm-ears-left-ok icon-stauts pulse animated infinite"></div>
+          <div class="arm-ears-right icon-stauts pulse animated infinite"></div>
+          <div class="arm-ears-right-ok icon-stauts pulse animated infinite"></div>
+        </div>
+        <!-- 抽奖内容 -->
+        <div class="arm-eyes">
+          <div class="line">
+            <div class="content">
+              <div class="clear">
+                <div id="machine1" class="slotMachine">
+                  <div class="slot slot1"></div>
+                  <div class="slot slot2"></div>
+                  <div class="slot slot3"></div>
+                  <div class="slot slot4"></div>
+                </div>
+                <div id="machine2" class="slotMachine">
+                  <div class="slot slot1"></div>
+                  <div class="slot slot2"></div>
+                  <div class="slot slot3"></div>
+                  <div class="slot slot4"></div>
+                </div>
+                <div id="machine3" class="slotMachine">
+                  <div class="slot slot1"></div>
+                  <div class="slot slot2"></div>
+                  <div class="slot slot3"></div>
+                  <div class="slot slot4"></div>
+                </div>
+                <!-- <div id="slotMachineButton1" class="slotMachineButton">GO!</div> -->
+              </div>
+           <!--    <div class="clear">
+                <div id="machine1Result" class="slotMachine noBorder" style="text-align:left">Index: 0</div>
+                <div id="machine2Result" class="slotMachine noBorder" style="text-align:left">Index: 1</div>
+                <div id="machine3Result" class="slotMachine noBorder" style="text-align:left">Index: 2</div>
+                <div class="slotMachine noBorder"></div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <!-- alert-tips -->
+        <div class="arm-play icon-stauts pulse animated infinite">试试手气</div>
+      </div>
+      <div class="arm-more">更多优惠</div>
+      <div class="home-tabs">
+        <ul>
+          <li class="a70-live-tab"></li>
+          <li class="a70-high-tab"></li>
+          <li class="a70-drive-tab"></li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+  <script type="text/javascript" src="src/js/sea.js"></script>
+  <script type="text/javascript" src="src/js/seajs-preload.js"></script>
+  <script type="text/javascript" src="src/js/config.js"></script>
+  <script>seajs.use('arm')</script>
+</body>
+</html>

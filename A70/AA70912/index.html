@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="telephone=no" name="format-detection" />
+    <title>天津一汽骏派A70上市互动直播</title>
+    <meta itemprop="image" content="img/shareLogo.jpg">
+    <meta itemprop="name" content="测测你的颜值值多少钱？">
+    <meta name="description" itemprop="description" content="骏派A70邀您拼颜值抢好礼！">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/animate.min.css">
+    <link rel="stylesheet" href="src/css/swiper.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="common/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9543c6ed80949aa120e4bbf760399ef5";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <section class="a70-box">
+        <!-- loading -->
+        <section class="loading">
+            <div class="loading-line" id="bs">
+                <div class="loading-line-hover">
+                </div>
+                <div style="font-size: 9pt; width: 100%; text-align: center; margin-top: 20px; color: #fff">
+                    loading... <span></span>
+                </div>
+                <div class="loading-car">
+                    <img src="img/Loading_06.png" alt=""></div>
+                <div class="loading-img">
+                    <img src="img/Loading_03.png" alt=""></div>
+            </div>
+            <script>
+                window.loadEnd = false;
+                function setSB(v, el) {
+                    filterEl = el.children[0];
+                    valueEl = el.children[1].children[0];
+                    carEl = el.children[2];
+                    filterEl.style.width = v + "%";
+                    valueEl.innerText = v + "%";
+                    carEl.style.left = 4.225 + 0.1475 * v + 'rem';
+                }
+                function fakeProgress(v, el) {
+                    if (v <= 99) {
+                        setSB(v, el);
+                        window.setTimeout("fakeProgress(" + (++v) + ", document.all['" + el.id + "'])", 10);
+                    }
+                    var s = setInterval(function () {
+                        if (v > 99 && loadEnd) {
+                            setSB(100, el);
+                            el.parentNode.remove();
+                            clearInterval(s);
+                            $('.a70-kv').show();
+                            setTimeout(function () {
+                                $('.a70-kv').remove();
+                                $('#a70Home').show();
+                                $('.loading').remove();
+                            }, 2000);
+                        }
+                    }, 100);
+                }
+                fakeProgress(0, bs);
+            </script>
+        </section>
+        <!-- kv -->
+        <section class="a70-kv">
+            <div class="kv-liveShow">
+            </div>
+            <div class="kv-liveTitle">
+                <div class="liveshow">
+                    <img src="img/kv_07.png" alt="" class="bounceIn animated duration"></div>
+                <p>
+                    <img src="img/kv_11.png" alt=""></p>
+            </div>
+            <div class="kv-propagate">
+                <img class="pulse animated infinite" src="img/kv_01.png" alt=""></div>
+            <div class="kv-logo bounceInLeft animated">
+                <img src="img/kv_02.png" alt=""></div>
+            <div class="kv-modol bounceInRight animated">
+                <img src="img/kv_04.png" alt=""></div>
+        </section>
+        <!-- home -->
+        <section class="a70-home" id="a70Home">
+            <div class="home-title bounceInDown animated">
+                <div class="home-title-stauts">
+                    <!--<b style="color: #0960ff;">[ 人气：2929229 ]</b> --><span class="icon-stauts"></span>
+                </div>
+                <p class="home-title-countdown">
+                    <img class="imgtriangle" src="img/home_triangle.png" alt=""><i class="icon-triangle pulse animated infinite"></i><span
+                        id="divdown1">距离直播开始：2天11小时43分22秒</span></p>
+            </div>
+            <div class="home-video-bg">
+                <span></span>
+            </div>
+            <div class="home-video">
+                <div class="home-paly">
+                    <!-- 此处放置视频文件 -->
+                    <!--  <iframe src='http://player.youku.com/embed/XMTU0ODQ2OTkwNA==' frameborder='0'  'allowfullscreen'></iframe>-->
+                    <!--     <iframe src='http://player.youku.com/embed/XMTU0ODQ2OTkwNA=='></iframe>-->
+                    <!--iframe src='vediostart.html'  frameborder='0'  'allowfullscreen' id="zhibo"></iframe>-->
+                   <!-- <iframe src='vediostart.html'   frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="width:336px; height:166px;" 'allowfullscreen' id="zhibo"></iframe>-->
+                    <iframe src='vediostart.html'   frameborder="0" marginheight="0" marginwidth="0" scrolling="no" 'allowfullscreen' id="zhibo"></iframe>
+                </div>
+            </div>
+            <!-- 活动规则 -->
+            <div class="home-activity">
+                <div class="activity-box">
+                    <button id="qiangchemo">
+                        >>抢车模</button>直播结束之后开抢！<span class="rule-activity">活动规则</span></div>
+            </div>
+            <!-- 刷脸开始按钮 -->
+            <div class="home-start">
+                <!-- 罗盘 -->
+                <div class="start-compass">
+                    <img src="img/home_luopan.png" alt=""></div>
+                <div class="start-circle">
+                    <img src="img/kv_03.png" alt=""></div>
+                <div class="start-line">
+                    <img src="img/kv_11.png" alt=""></div>
+                <div class="start-text">
+                    <p>
+                        快来刷一刷你的颜值吧！</p>
+                    <p>
+                        更多惊喜等你拿！</p>
+                </div>
+                <div class="start-btn bounceIn animated">
+                    <img src="img/home_start.png" alt=""></div>
+            </div>
+            <div class="home-tabs home-tabs-left fadeInUp animated">
+                <ul>
+                    <li class="a70-live-tab"></li>
+                    <li class="a70-high-tab"></li>
+                    <li class="a70-drive-tab"></li>
+                </ul>
+            </div>
+        </section>
+        <!-- 车型亮点 -->
+        <section class="a70-yanzhi a70-highlights" id="highlights">
+            <div class="yanzhi-compass">
+                <img src="img/home_luopan.png" alt=""></div>
+            <div class="high-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="http://car.bitauto.com/junpaia50/"></a>
+                            <img src="img/1.jpg" alt=""></div>
+                        <div class="swiper-slide">
+                            <a href="http://car.bitauto.com/junpaia50/"></a>
+                            <img src="img/3.jpg" alt=""></div>
+                        <div class="swiper-slide">
+                            <a href="http://car.bitauto.com/junpaia50/"></a>
+                            <img src="img/4.jpg" alt=""></div>
+                        <div class="swiper-slide">
+                            <a href="http://car.bitauto.com/junpaia50/"></a>
+                            <img src="img/5.jpg" alt=""></div>
+                        <div class="swiper-slide">
+                            <a href="http://car.bitauto.com/junpaia50/"></a>
+                            <img src="img/2.jpg" alt=""></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev icon-stauts pulse animated infinite">
+                </div>
+                <div class="swiper-button-next icon-stauts pulse animated infinite">
+                </div>
+            </div>
+            <div class="home-tabs home-tabs-center">
+                <ul>
+                    <li class="a70-live-tab"></li>
+                    <li class="a70-high-tab"></li>
+                    <li class="a70-drive-tab"></li>
+                </ul>
+            </div>
+        </section>
+        <!-- 预约试驾 -->
+        <section class="a70-yanzhi a70-drive" id="drive">
+            <div class="yanzhi-compass">
+                <img src="img/home_luopan.png" alt=""></div>
+            <div class="yanzhi-text">
+                <p>
+                    选择离您最近的经销商，留下您的联系方式</p>
+            </div>
+            <div class="drive-form">
+                <form action="">
+                <ul>
+                    <li>
+                        <div>
+                            <input type="text" value="" class="ipt width_1 ipt-right" placeholder="真实姓名" id="LoginName"></div>
+                        <div class="select">
+                            <select class="ipt width_2" id="sex">
+                                <option value="-1">性别</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select></div>
+                    </li>
+                    <li>
+                        <input type="tel" value="" class="ipt width_100" placeholder="手机号码" maxlength="11"
+                            id="LoginPhone"></li>
+                    <li>
+                        <div class="select1">
+                            <select class="ipt width_2 ipt-right" id="prov">
+                                <option value="-1">省份</option>
+                            </select></div>
+                        <div class="select">
+                            <select class="ipt width_1" id="city">
+                                <option value="-1">城市</option>
+                            </select></div>
+                    </li>
+                    <li>
+                        <div class="select">
+                            <select class="ipt width_100" id="dealer">
+                                <option value="-1">选择经销商</option>
+                            </select></div>
+                    </li>
+                    <li>
+                        <div class="drive-submit" id="denging">
+                            提交</div>
+                    </li>
+                </ul>
+                </form>
+            </div>
+            <div class="home-tabs home-tabs-right">
+                <ul>
+                    <li class="a70-live-tab"></li>
+                    <li class="a70-high-tab"></li>
+                    <li class="a70-drive-tab"></li>
+                </ul>
+            </div>
+        </section>
+        <!-- 颜值测试 -->
+        <section class="a70-yanzhi" id="yanzhi">
+            <div class="yanzhi-compass">
+                <img src="img/home_luopan.png" alt=""></div>
+            <div class="yanzhi-text">
+                <p>
+                    偶像包袱抖一抖？看看你的颜值有多少分？</p>
+                <p>
+                    骏派A70给你答案</p>
+            </div>
+            <div class="yanzhi-text" style="display: none">
+                <p>
+                    <b>小骏颜值识别系统正在分析中</b></p>
+                <p>
+                    <img src="img/yz_jdt.png" alt=""><span id="loadNumber">5%...</span></p>
+            </div>
+            <div class="yanzhi-circle2 demo-container">
+            <img src="img/rl.jpg" alt="" id="imgs">
+            </div>
+            <div class="yanzhi-circle">
+                <img src="img/kv_03.png" alt=""></div>
+            <div class="yanzhi-circle3">
+            </div>
+            <div class="yanzhi-line">
+                <img src="img/kv_11.png" alt=""></div>
+            <div class="yanzhi-btn" id="yz_btn">
+                <div class="yz_btn">
+                </div>
+                <!--  accept="image/jpg,image/jpeg" -->
+                <input id="fileId1" type="file" name="fileId1" accept="image/*" capture />
+                <img src="img/yz_btn.png" alt="">
+                <p>
+                    <span id="rule-yanzhi">活动规则</span></p>
+            </div>
+            <div class="home-tabs">
+                <ul>
+                    <li class="a70-live-tab"></li>
+                    <li class="a70-high-tab"></li>
+                    <li class="a70-drive-tab"></li>
+                </ul>
+            </div>
+        </section>
+        <!-- 测试结果 -->
+        <section class="a70-yanzhi2" id="yanzhi2">
+            <div class="yanzhi-text">
+                <p>
+                    <b>刷脸成功！</b></p>
+                <p>
+                    <strong id="choujiangnum">恭喜获得2次抽奖机会</strong></p>
+            </div>
+            <div class="yanzhi-circle2_1">
+                <img id="updateImg" src="img/yz_car.png" alt=""></div>
+            <div class="yanzhi-circle_1">
+                <img src="img/kv_03.png" alt=""></div>
+            <div class="yanzhi-circle3_1">
+            </div>
+            <!-- 刷脸信息 -->
+            <div class="yanzhi-tips">
+                <div class="yanzhi-compass2">
+                    <img src="img/home_luopan.png" alt=""></div>
+                <div class="yanzhi-tips-text">
+                    <p>您的颜值99分！</p>
+                    <p>人生赢家</p>
+                    <p>您的颜值是从娘胎里带出来的，颜值爆表！小鲜肉</p>
+                </div>
+            </div>
+            <!-- 按钮 -->
+            <div class="yanzhi-tips-btn">
+                <span id="luckDraw">马上抽奖</span> <span id="share-show">炫耀一下</span>
+            </div>
+            <div class="home-tabs">
+                <ul>
+                    <li class="a70-live-tab"></li>
+                    <li class="a70-high-tab"></li>
+                    <li class="a70-drive-tab"></li>
+                </ul>
+            </div>
+        </section>
+        <!-- 测试结果 -->
+        <section class="a70-yanzhi a70-arm" id="armBandit">
+            <div class="yanzhi-compass">
+                <img src="img/home_luopan.png" alt=""></div>
+            <div class="yanzhi-text">
+                <p>
+                    <strong style="color: #fff;">您有<span id="click-num">2</span>次抽奖机会</strong></p>
+            </div>
+            <div class="arm-lhj">
+                <div class="arm-ears">
+                    <div class="arm-ears-left icon-stauts pulse animated infinite">
+                    </div>
+                    <div class="arm-ears-left-ok icon-stauts pulse animated infinite">
+                    </div>
+                    <div class="arm-ears-right icon-stauts pulse animated infinite">
+                    </div>
+                    <div class="arm-ears-right-ok icon-stauts pulse animated infinite">
+                    </div>
+                </div>
+                <!-- 抽奖内容 -->
+                <div class="arm-eyes">
+                    <div class="line">
+                        <div class="content">
+                            <div class="clear">
+                                <div id="machine1" class="slotMachine">
+                                    <div class="slot slot1">
+                                    </div>
+                                    <div class="slot slot2">
+                                    </div>
+                                    <div class="slot slot3">
+                                    </div>
+                                    <div class="slot slot4">
+                                    </div>
+                                </div>
+                                <div id="machine2" class="slotMachine">
+                                    <div class="slot slot1">
+                                    </div>
+                                    <div class="slot slot2">
+                                    </div>
+                                    <div class="slot slot3">
+                                    </div>
+                                    <div class="slot slot4">
+                                    </div>
+                                </div>
+                                <div id="machine3" class="slotMachine">
+                                    <div class="slot slot1">
+                                    </div>
+                                    <div class="slot slot2">
+                                    </div>
+                                    <div class="slot slot3">
+                                    </div>
+                                    <div class="slot slot4">
+                                    </div>
+                                </div>
+                                <!-- <div id="slotMachineButton1" class="slotMachineButton">GO!</div> -->
+                            </div>
+                            <!--    <div class="clear">
+                <div id="machine1Result" class="slotMachine noBorder" style="text-align:left">Index: 0</div>
+                <div id="machine2Result" class="slotMachine noBorder" style="text-align:left">Index: 1</div>
+                <div id="machine3Result" class="slotMachine noBorder" style="text-align:left">Index: 2</div>
+                <div class="slotMachine noBorder"></div>
+              </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- alert-tips -->
+                <div class="arm-play icon-stauts pulse animated infinite">
+                    试试手气</div>
+            </div>
+            <div class="arm-more">
+                更多优惠</div>
+            <input type="hidden" value="src/js/json/json.json?" id="arm-play-url">
+            <div class="home-tabs">
+                <ul>
+                    <li class="a70-live-tab"></li>
+                    <li class="a70-high-tab"></li>
+                    <li class="a70-drive-tab"></li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    <script type="text/javascript">
+        var bitautoskweburl = "http://www.bitauto.com/zhuanti/adtopic/webapisk/JsConfig20150504/JsCommon20150504/";
+        document.write('<scri' + 'pt src=' + bitautoskweburl + 'config.js type="text/javascript"></s' + 'cript>');
+        document.write('<scri' + 'pt src=' + bitautoskweburl + 'skcommon.js type="text/javascript"></s' + 'cript>');
+    </script>
+    <script src="common/base_market.js" type="text/javascript"></script>
+    <script src="common/wx_base.js" type="text/javascript"></script>
+    <script src="common/wx_method2.js?v=yyy" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="src/js/sea.js"></script>
+    <script type="text/javascript" src="src/js/seajs-preload.js"></script>
+    <script type="text/javascript" src="src/js/config.js"></script>
+    <script>        seajs.use('index')</script>
+    <!--  <script src="src/js/jquery-1.11.1.min.js" type="text/javascript"></script>-->
+    <!--<script src="common/wx_method2.js" type="text/javascript"></script>-->
+    <script src="common/dealer.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://ip.bitauto.com/iplocation/setcookie.ashx"></script>
+    <script type="text/javascript" src="http://g.yccdn.com"></script>
+</body>
+</html>
