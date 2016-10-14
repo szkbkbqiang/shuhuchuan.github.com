@@ -21,7 +21,7 @@
 	
 	<div class="kv-box">
 		<img class="logo" src="images/logo.png" alt="">
-		<img class="banner" src="images/banner.png" alt="">
+		<img class="banner fadeIn animated" src="images/banner.png" alt="">
 
 		<img class="yun1 tranlate" src="images/yun1.png" alt="">
 		<img class="yun2 tranlate2" src="images/yun2.png" alt="">
@@ -30,7 +30,7 @@
 		<img class="yuan1" src="images/yuan1.png" alt="">
 		<img class="yuan1bg" src="images/yuan1bg.png" alt="">
 		<img class="waiyuan1" src="images/waiyuan1.png" alt="">
-		<a class="text1" href="javascript:;"><img src="images/text1.png" alt=""></a>
+		<a class="text1" href="http://terminus.dev.attackt.com/#section01"><img src="images/text1.png" alt=""></a>
 	
 
 		<img class="yuan2" src="images/yuan2.png" alt="">
@@ -45,6 +45,10 @@
 	 if (ua.indexOf("Android") > 0) {
 	 	$('.video-box').css('height','120%');        
     }
+    $('.video-box').css('transform','rotate(90deg)');  
+    // screen.orientation.lock('landscape');
+
+
 	// 适配设备
 	(function (doc, win) {
 		var docEl = doc.documentElement,
