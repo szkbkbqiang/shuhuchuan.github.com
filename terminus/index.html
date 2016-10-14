@@ -11,79 +11,27 @@
 	<meta itemprop="name" content="Terminus特斯联-嗨客小镇">
 	<meta name="description" itemprop="description" content="Terminus特斯联-嗨客小镇!">
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/animated.css">
 	<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 </head>
-<body>
-	<video autoplay class="video-box"  width="100%" webkit-playsinline>
-		<source src="video/terminus.mp4" type="video/mp4" />
+<body style="background:#000">
+	<div class="play"><span></span></div>
+	<video class="video-box"  width="100%" webkit-playsinline style="display:none">
+		<source src="video/WeChatSight43.mp4" type="video/mp4" />
 	</video>
-	
-	<div class="kv-box">
-		<img class="logo" src="images/logo.png" alt="">
-		<img class="banner fadeIn animated" src="images/banner.png" alt="">
-
-		<img class="yun1 tranlate" src="images/yun1.png" alt="">
-		<img class="yun2 tranlate2" src="images/yun2.png" alt="">
-		<img class="yun3 tranlate3" src="images/yun3.png" alt="">
-
-		<img class="yuan1" src="images/yuan1.png" alt="">
-		<img class="yuan1bg" src="images/yuan1bg.png" alt="">
-		<img class="waiyuan1" src="images/waiyuan1.png" alt="">
-		<a class="text1" href="http://terminus.dev.attackt.com/#section01"><img src="images/text1.png" alt=""></a>
-	
-
-		<img class="yuan2" src="images/yuan2.png" alt="">
-		<img class="yuan2bg" src="images/yuan2bg.png" alt="">
-		<img class="waiyuan2" src="images/waiyuan2.png" alt="">
-		<a class="text2" href="javascript:;"><img src="images/text2.png" alt=""></a>
-
-	</div>
-
 	<script>
-	 var ua = navigator.userAgent;
-	 if (ua.indexOf("Android") > 0) {
-	 	$('.video-box').css('height','120%');        
-    }
-    $('.video-box').css('transform','rotate(90deg)');  
-    // screen.orientation.lock('landscape');
-
-
-	// 适配设备
-	(function (doc, win) {
-		var docEl = doc.documentElement,
-		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-		recalc = function () {
-			var clientWidth = docEl.clientWidth;
-			if (!clientWidth) return;
-			var fs = 100 * (clientWidth / 750);
-			fs > 100 ? fs = 100 : "";
-			docEl.style.fontSize = fs.toFixed(2) + 'px';
-			doc.getElementsByTagName("body")[0].style.opacity = "1";
-			
-			var oSearchbtn = doc.querySelector('.searchInput');
-			if(oSearchbtn){
-				oSearchbtn.addEventListener('touchstart',function(){
-					window.location.href = '/medicine/search';
-				},false);
-			};
-		};
-
-		if (!doc.addEventListener) return;
-		win.addEventListener(resizeEvt, recalc, false);
-		doc.addEventListener('DOMContentLoaded', recalc, false);
-		
-	})(document, window);
 	window.onload = function(){
-
 		var aVideo = document.querySelector('.video-box');
-
+		var aplay = document.querySelector('.play');
+		document.addEventListener('click', function(){
+			aplay.style.display = "none";
+			aVideo.style.display = "block";
+			aVideo.webkitEnterFullScreen();
+			aVideo.play();
+		}, false)
 		aVideo.onended = function(){
 			setTimeout(function(){
-
-			})
-			this.style.display = "none";
-			$('.kv-box').show();
+				window.location.href = 'kv.html'
+			},10)
 		}	
 	}
 
