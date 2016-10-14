@@ -12,7 +12,25 @@
 	<meta name="description" itemprop="description" content="Terminus特斯联-嗨客小镇!">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/animated.css">
-	<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+	// 适配设备
+	(function (doc, win) {
+		var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+			var clientWidth = docEl.clientWidth;
+			if (!clientWidth) return;
+			var fs = 100 * (clientWidth / 750);
+			fs > 100 ? fs = 100 : "";
+			docEl.style.fontSize = fs.toFixed(2) + 'px';
+			doc.getElementsByTagName("body")[0].style.opacity = "1";
+		};
+
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	</script>
 </head>
 <body style="background:#000">
 	<div class="kv-box">
@@ -34,28 +52,13 @@
 		<a class="text2" href="http://u848122.viewer.maka.im/k/6N6B021C?DSCKID=47901eaa-223d-4f6c-a682-907cc0037532&DSTIMESTAMP=1476423862573"><img src="images/text2.png" alt=""></a>
 
 	</div>
-
 	<script>
-	// 适配设备
-	(function (doc, win) {
-		var docEl = doc.documentElement,
-		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-		recalc = function () {
-			var clientWidth = docEl.clientWidth;
-			if (!clientWidth) return;
-			var fs = 100 * (clientWidth / 750);
-			fs > 100 ? fs = 100 : "";
-			docEl.style.fontSize = fs.toFixed(2) + 'px';
-			doc.getElementsByTagName("body")[0].style.opacity = "1";
-		};
-
-		if (!doc.addEventListener) return;
-		win.addEventListener(resizeEvt, recalc, false);
-		doc.addEventListener('DOMContentLoaded', recalc, false);
+	window.onload = function(){
+		var kvbox = document.querySelector('.kv-box');
 		setTimeout(function(){
-			$('.kv-box').show();
+			kvbox.style.display= "block";
 		},100)
-	})(document, window);
+	}
 	</script>
 </body>
 </html>
