@@ -15,17 +15,18 @@
 </head>
 <body style="background:#000">
 	<div class="play"><span></span></div>
-	<video class="video-box"  width="100%" webkit-playsinline style="display:none">
+	<video class="video-box"  width="100%" style="display:none">
 		<source src="video/WeChatSight43.mp4" type="video/mp4" />
 	</video>
 	<script>
 	window.onload = function(){
 		var aVideo = document.querySelector('.video-box');
 		var aplay = document.querySelector('.play');
-		document.addEventListener('click', function(){
-			aplay.style.display = "none";
-			aVideo.style.display = "block";
+
+		aplay.addEventListener('click', function(){
 			aVideo.webkitEnterFullScreen();
+			this.style.display = "none";
+			aVideo.style.display = "block";
 			aVideo.play();
 		}, false)
 		aVideo.onended = function(){
