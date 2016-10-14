@@ -41,6 +41,10 @@
 	</div>
 
 	<script>
+	 var ua = navigator.userAgent;
+	 if (ua.indexOf("Android") > 0) {
+	 	$('.video-box').css('height','120%');        
+    }
 	// 适配设备
 	(function (doc, win) {
 		var docEl = doc.documentElement,
@@ -76,13 +80,7 @@
 			})
 			this.style.display = "none";
 			$('.kv-box').show();
-		}
-
-		 var ua = navigator.userAgent;
-		 if (ua.indexOf("Android") > 0) {
-	        aVideo.style.height="120%";
-	        
-        }	
+		}	
 	}
 
 	</script>
