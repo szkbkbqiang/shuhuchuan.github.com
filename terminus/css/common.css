@@ -111,17 +111,18 @@ html,body{width: 100%;height: 100%;overflow: hidden;}
 .link-a{
 	position: absolute;
 	/*background:#000;*/
-	width: 1.5rem;
-	height: 1.5rem;
-	left: 5.55rem;
-	top: 4.5rem;
+	width: 2rem;
+	height: 2rem;
+	left: 5rem;
+	top: 4rem;
+	z-index: 8;
 }
 .yuan1, .yuan1bg, .yuan2, .yuan2bg{
 	width: 0.94rem;
 	height: 0.94rem;
 	position: absolute;
-	top: 0rem;
-	left: 0rem;
+	top: 4.5rem;
+	left: 5.55rem;
 	transform:translate3d(0,0,0);
 }
 .yuan1bg, .yuan2bg{
@@ -129,34 +130,32 @@ html,body{width: 100%;height: 100%;overflow: hidden;}
 	-webkit-animation:hxdtran 3s infinite linear;
 	transform:translate3d(0,0,0);
 }
-.link-a2{
-	top: 6.5rem;
-	left: 0.85rem;
-	/*background: #000;*/
-}
 .yuan2, .yuan2bg{
-	left: 0rem;
-	top: 0rem;
+	left: 0.85rem;
+	top: 6.5rem;
 	transform:translate3d(0,0,0);
 }
 .waiyuan1, .waiyuan2{
 	position: absolute;
 	width: 1.14rem;
 	height: 1.14rem;
-	top: -0.1rem;
-	left: -0.1rem;
+	top: 4.39rem;
+	left: 5.45rem;
 	animation:spin 3s infinite linear;
 	-webkit-animation:spin 3s infinite linear;
 	transform:translate3d(0,0,0);
 }
 .waiyuan2{
-	top: -0.1rem;
-	left: -0.1rem;
+	top: 6.4rem;
+	left: 0.75rem;
 	animation:spin2 3s infinite linear;
 	-webkit-animation:spin2 3s infinite linear;
 	transform:translate3d(0,0,0);
 }
-
+.link-a2{
+	top: 6rem;
+	left: 0.2rem;
+}
 
 
 .text1, .text2{
