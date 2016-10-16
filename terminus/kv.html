@@ -12,6 +12,7 @@
 	<meta name="description" itemprop="description" content="Terminus特斯联-嗨客小镇!">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/animated.css">
+	<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script>
 	// 适配设备
 	(function (doc, win) {
@@ -76,16 +77,25 @@
 
 		setTimeout(function(){
 			kvbox.style.display= "block";
-		},100)
+		},100);
+
+		var str = $('.cnzz-box a').eq(1).html();
+		$('.cnzz-box a').hide()
+		$('.cnzz-box a').eq(1).show().html(str.split('|')[2]);
 	}
 	</script>
 	<div class="cnzz-box">
 		<script type="text/javascript">
-		var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260606670'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260606670%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+			// www.yduob.com
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260606670'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260606670%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+			// http://static.tslsmart.com/projects/haike/
+			//var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260606793'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260606793%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
 		</script>
 	</div>
 	<style>
-		.cnzz-box{font-size: 0.12rem; text-align: right; transform: scale(0.7); ;color: #fff; position: absolute !important; bottom: 0rem; left: 0rem;}
+		.cnzz-box{font-size: 0.12rem; text-align: right; transform: scale(0.7); ;color: #fff; position: absolute !important; bottom: 0rem; right: 0rem;}
 		.cnzz-box a{color: #fff;}
 		..cnzz-box span a:nth-child(0){display: block; color: #ccc}
 	</style>
