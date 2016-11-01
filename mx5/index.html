@@ -137,7 +137,6 @@
     </div>
 
     <script type="text/javascript">
-
         var timer = null;
         var unnum = 0;
         timer = setInterval(function () {
@@ -173,48 +172,13 @@
             }, 1500);
         };
 
-
         $(function () {
-        //     $('.reservebot').on('touchstart', function () {
-        //         $('.swiper-wrapper').css('transform', 'translate3d(0px, 0px, 0px)');
-        //     });
-
-        //     $('.zoomOutUp').on('webkitAnimationEnd',function(){
-        //         $(this).removeClass('zoomOutUp');
-        //     });
-
-        //     $('.votepopclose').on('touchstart', function () {
-        //         $('.votepopbox').hide();
-        //         setTimeout(function () {
-        //             $('.livelink').css('transform', 'translate3d(0px,0,0)');
-        //             $('.livelink').css('left', '0.15rem');
-        //         }, 100)
-        //     });
-        //     $('.hdgzlivebtn').on('touchstart', function () {
-        //         $('.livelink').css('transform', 'translate3d(-1000px,0,0)');
-        //         $('.livelink').css('left', '-10rem');
-        //         setTimeout(function () {
-        //             $('.hdgzlive').show();
-        //         }, 100)
-        //     });
-        //     $('.hdgzliveclose').on('touchstart', function () {
-        //         $('.hdgzlive').hide();
-        //         setTimeout(function () {
-        //             $('.livelink').css('transform', 'translate3d(0px,0,0)');
-        //             $('.livelink').css('left', '0.15rem');
-        //         }, 100)
-        //     });
-        //     $('.hdgztt').on('touchstart', function () {
-        //         $('.hdgzyy').show();
-
-        //     });
-        //     $('.hdgzclose').on('touchstart', function () {
-        //         $('.hdgzyy').hide();
-        //     });
+            // 下拉选择
             $('.reg_select').change(function(){
                 $(this).parent().find('span').text($(this).find("option:selected").text());
             });
 
+            // 提交预约表单
             $('.reservesubmit').on('touchstart',function(){
                 var user_name = $('#user_name').val();
                 var user_sex = $('#sex_select').val();
@@ -249,7 +213,8 @@
             });
 
         })
-
+        
+        //  车型table切换
         TouchSlide({
             slideCell: "#slideBox",
             titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
