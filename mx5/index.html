@@ -53,8 +53,8 @@
         </div>
         <div class="index_ct_slogan"><img src="images/index_16.png" alt=""></div>
         <div class="index_btn_box">
-            <a href="javascript:;">车型亮点</a>
-            <a href="javascript:;">驾享幸福</a>
+            <a class="caraus_btn_left" href="javascript:;">车型亮点</a>
+            <a class="reserve_btn_left" href="javascript:;">驾享幸福</a>
         </div>
         <div class="votebox_logo">
             <img src="images/indexlogo_03.jpg" alt="">
@@ -181,6 +181,39 @@
         };
 
         $(function () {
+            var _touchslide = null;
+            var _isbok = true;
+            $('.caraus_btn_left').on('touchstart',function(){
+                //  车型table切换
+                if(_isbok){
+                    _touchslide = TouchSlide({
+                        slideCell: "#slideBox",
+                        titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+                        mainCell: ".bd ul",
+                        effect: "leftLoop",
+                        interTime: 5000,
+                        delayTime: 1000,
+                        autoPage: true, //自动分页
+                        autoPlay: true //自动播放
+                     });
+                }
+                _isbok = false;
+                $('.carausbox').addClass('left_translate');
+            });
+
+            $('.reserve_btn_left').on('touchstart',function(){
+                $('.reservebox').addClass('left_translate');
+            });
+
+            $('.close_btn_tab').on('touchstart',function(){
+                $('.carausbox').removeClass('left_translate');
+            });
+
+             $('.back_btn').on('touchstart',function(){
+                $('.reservebox').removeClass('left_translate');
+            });
+            
+
             // 下拉选择
             $('.reg_select').change(function(){
                 $(this).parent().find('span').text($(this).find("option:selected").text());
@@ -188,12 +221,13 @@
 
             // 提交预约表单
             $('.reservesubmit').on('touchstart',function(){
-                var user_name = $('#user_name').val();
+                var user_name = $.trim($('#user_name').val());
                 var user_sex = $('#sex_select').val();
                 var user_phone = $('#user_phone').val();
                 var user_province = $('#province_select').val();
                 var user_city = $('#city_select').val();
                 var user_pin = $('#pin_select').val();
+                var phone_reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
                 if(!user_name){
                     alert('姓名不能为空');
                     return false;
@@ -204,6 +238,10 @@
                 }
                 if(!user_phone){
                     alert('手机号码不能为空');
+                    return false;
+                }
+                if (!phone_reg.test(user_phone)) {
+                    alert('手机号码输入有误');
                     return false;
                 }
                 if(user_province < 0){
@@ -222,17 +260,7 @@
 
         })
         
-        //  车型table切换
-        TouchSlide({
-            slideCell: "#slideBox",
-            titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-            mainCell: ".bd ul",
-            effect: "leftLoop",
-            interTime: 5000,
-            delayTime: 1000,
-            autoPage: true, //自动分页
-            autoPlay: true //自动播放
-        });
+        
     </script>
     
 </body>

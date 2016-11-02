@@ -594,15 +594,15 @@ body,html{
 .carausbox{
 	width: 100%;
 	height: 100%;
-	display: none;
 	background: rgba(0,0,0,0.8);
 	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left:0;
 	transition: 1s;
-	transform: translate3d(0,0%,0);
+	transform: translate3d(100%,0,0);
 }
+
 .close_btn_tab{
 	width: 0.58rem;
 	height: 0.58rem;
@@ -675,9 +675,8 @@ body,html{
 	overflow: hidden;
 	left: 0;
 	top: 0;
-	display: none;
 	transition: 1s;
-	transform: translate3d(0,0%,0);
+	transform: translate3d(100%,0,0);
 }
 .index_logo_top{
 	width: 4.6rem;
@@ -819,6 +818,10 @@ body,html{
 	transform: rotate3d(0,180deg,0);
 	animation:mymovetwo 1.5s infinite;
 	-webkit-animation:mymovetwo 1.5s infinite;
+}
+.left_translate{
+	transition: 1s;
+	transform: translate3d(0%,0,0);
 }
 .hdgz_btn{
 	font-size: 0.3rem;
