@@ -46,11 +46,14 @@ input[type=button],input[type=search]{
 body,html{
 	width: 100%;
 	height: 100%;
-	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow: hidden;
 	background: #000;
 }
-
+.index_box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
 /*loading start*/
 
 .loading{
@@ -322,7 +325,7 @@ body,html{
 .index_btn_box{
 	position: absolute;
 	text-align: center;
-	bottom: 1.2rem;
+	bottom: 1.3rem;
 	left: 0;
 	width: 100%;
 }
