@@ -46,7 +46,8 @@ input[type=button],input[type=search]{
 body,html{
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
 	background: #000;
 }
 
