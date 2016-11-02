@@ -50,8 +50,9 @@ body,html{
 	background: #000;
 }
 .index_box{
-	width: 100%;
+	width: 7.5rem;
 	height: 100%;
+	margin: 0 auto;
 	overflow: hidden;
 }
 /*loading start*/
