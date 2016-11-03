@@ -604,7 +604,8 @@ body,html{
 	position: absolute;
 	top: 0;
 	left:0;
-	transition: 1s;
+	display: none;
+	transition: .5s;
 	transform: translate3d(100%,0,0);
 }
 
@@ -680,7 +681,8 @@ body,html{
 	overflow: hidden;
 	left: 0;
 	top: 0;
-	transition: 1s;
+	display: none;
+	transition: .5s;
 	transform: translate3d(100%,0,0);
 }
 .index_logo_top{
@@ -825,7 +827,7 @@ body,html{
 	-webkit-animation:mymovetwo 1.5s infinite;
 }
 .left_translate{
-	transition: 1s;
+	transition: .6s;
 	transform: translate3d(0%,0,0);
 }
 .hdgz_btn{
