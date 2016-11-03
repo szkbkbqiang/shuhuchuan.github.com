@@ -7,6 +7,7 @@
     <meta name="x5-orientation" content="portrait">
     <title>郑州日产MX5上市预热直播</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/viewport.js"></script>
     
@@ -36,24 +37,26 @@
        </div> 
     </div>
     <!-- rx-conrer-live -->
-    <div class="index_box">
     <div class="rx-livebox">
-        <div class="index_logo_top"><img src="images/indextoplogo.png" alt=""></div>
-        <div class="index_renshu">人气：<span>299789</span></div>
-        <div class="index_logo_mx5"><img src="images/indexmx5.png" alt=""></div>
-        <div class="index_slogan_r"><img src="images/indexslogan.png" alt=""></div>
+        <div class="index_logo_top bounceInLeft animated"><img src="images/indextoplogo.png" alt=""></div>
+        <div class="index_renshu  bounceInRight animated">人气：<span>299789</span></div>
+        <div class="index_logo_mx5 fadeIn animated2 animated"><img src="images/indexmx5.png" alt=""></div>
+        <div class="index_slogan_r fadeIn animated2 animated">
+            <img class="indexsloganlive sloganlive animated" src="images/indexsloganlive.png" alt="">
+            <img src="images/indexslogan.png" alt="">
+        </div>
         <div class="livebox">
-            <div class="livepaly">
+            <div class="livepaly fadeIn animated3 animated">
                 <!-- <iframe class="livelink" id="zhibo_link" src="vedio.html" width="345" height="194"
                     frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no">
                 </iframe> -->
                 <img src="images/indexlive.png" alt="">
             </div>
         </div>
-        <div class="index_ct_slogan"><img src="images/index_16.png" alt=""></div>
+        <div class="index_ct_slogan rollIn animated4 animated"><img src="images/index_16.png" alt=""></div>
         <div class="index_btn_box">
-            <a class="caraus_btn_left" href="javascript:;">车型亮点</a>
-            <a class="reserve_btn_left" href="javascript:;">驾享幸福</a>
+            <a class="caraus_btn_left bounceInUp animated6 animated" href="javascript:;">车型亮点</a>
+            <a class="reserve_btn_left  bounceInUp animated6 animated" href="javascript:;">驾享幸福</a>
         </div>
         <div class="votebox_logo">
             <img src="images/indexlogo_03.jpg" alt="">
@@ -145,7 +148,6 @@
             </ul>
         </div>
     </div>
-</div>
     <script type="text/javascript">
         var timer = null;
         var unnum = 0;
@@ -177,7 +179,7 @@
                 $('.posterbox').show();
                 setTimeout(function () {
                     $('.posterbox').hide();
-                    $('.rx-titlebox').show();
+                    $('.rx-livebox').show();
                 }, 5000);
             }, 1500);
         };
