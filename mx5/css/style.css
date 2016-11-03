@@ -269,7 +269,7 @@ body,html{
 	position: absolute;
 	width: 1.72rem;
 	height: 0.47rem;
-	top: 0.1rem;
+	top: 0.13rem;
 	left: 0;
 }
 .rx-titlepp{
@@ -339,7 +339,7 @@ body,html{
 	display: inline-block;
 	width: 2.66rem;
 	height: 0.6rem;
-	line-height: 0.8rem;
+	line-height: 0.7rem;
 	text-align: center;
 	border-radius: 20px;
 	border: 1px solid #fff;
@@ -618,7 +618,7 @@ body,html{
 	width: 0.58rem;
 	height: 0.58rem;
 	position: absolute;
-	top:0.4rem;
+	top:0.2rem;
 	right:0.8rem;
 	z-index: 9;
 }
