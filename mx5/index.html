@@ -121,12 +121,14 @@
                         <span>省份</span>
                         <select class="reg_select" id="province_select" name="province_select">
                             <option value="-1">省份</option>
+                            <option value="1">北京</option>
                         </select>
                     </span>
                      <span class="input_text city_select_box">
                         <span>城市</span>
                         <select class="reg_select" id="city_select" name="city_select">
                             <option value="-1">城市</option>
+                            <option value="1">北京</option>
                         </select>
                     </span>
                 </li>
@@ -135,6 +137,7 @@
                         <span>选择经销商</span>
                         <select class="reg_select dealer" id="pin_select" name="pin_select">
                             <option value="-1">选择经销商</option>
+                            <option value="1">mx5朝阳专卖店</option>
                         </select>
                     </span>  
                 </li>
@@ -239,39 +242,60 @@
                 var user_city = $('#city_select').val();
                 var user_pin = $('#pin_select').val();
                 var phone_reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
-                if(!user_name){
-                    alert('姓名不能为空');
-                    return false;
-                }
-                if(user_sex < 0){
-                    alert('请选择性别');
-                    return false;
-                }
-                if(!user_phone){
-                    alert('手机号码不能为空');
-                    return false;
-                }
-                if (!phone_reg.test(user_phone)) {
-                    alert('手机号码输入有误');
-                    return false;
-                }
-                if(user_province < 0){
-                    alert('请选择省份');
-                    return false;
-                }
-                if(user_city < 0){
-                    alert('请选择城市');
-                    return false;
-                }
-                if(user_pin < 0){
-                    alert('请选择经销商');
-                    return false;
-                }
-            });
-
-        })
-        
-        
+                if(isform()){
+                    $.ajax({
+                        url: 'data/formjson.json',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {'user_name': user_name,'user_sex':user_sex,'user_phone':user_phone,'user_province':user_province,'user_city':user_city,'user_pin':user_pin},
+                        success : function(data) {
+                            console.log(data);
+                            if(data.error_code == 1){
+                                alert(data.error_msg);
+                            }else{
+                                alert(data.error_msg);
+                            }
+                        },
+                        error : function() {
+                            alert("服务器连接失败,请重新提交");
+                        }
+                    });                    
+                }      
+                // 验证
+                function isform(){  
+                    if(!user_name){
+                        alert('姓名不能为空');
+                        return false;
+                    }
+                    if(user_sex < 0){
+                        alert('请选择性别');
+                        return false;
+                    }
+                    if(!user_phone){
+                        alert('手机号码不能为空');
+                        return false;
+                    }
+                    if (!phone_reg.test(user_phone)) {
+                        alert('手机号码输入有误');
+                        return false;
+                    }
+                    if(user_province < 0){
+                        alert('请选择省份');
+                        return false;
+                    }
+                    if(user_city < 0){
+                        alert('请选择城市');
+                        return false;
+                    }
+                    if(user_pin < 0){
+                        alert('请选择经销商');
+                        return false;
+                    }
+                    return true;
+                };   
+                       
+            });            
+        });  
     </script>
     
 </body>
