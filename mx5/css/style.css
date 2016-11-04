@@ -653,6 +653,7 @@ body,html{
 	top:0.2rem;
 	right:0.8rem;
 	z-index: 999;
+	transform: translate3d(0,0,0);
 }
 
 .slideBox .hd {
@@ -664,6 +665,7 @@ body,html{
 	z-index: 999; 
 	text-align: center;
 	width: 100%;
+	transform: translate3d(0,0,0);
 }
 .slideBox .hd li {
 	display: inline-block;
@@ -674,10 +676,12 @@ body,html{
 	overflow: hidden;
 	margin: 0 6px;
 	border-radius: 50%;
+	transform: translate3d(0,0,0);
 }
 
 .slideBox .hd li.on {
 	background: #fed700;
+	transform: translate3d(0,0,0);
 }
 
 /*reserve start*/
