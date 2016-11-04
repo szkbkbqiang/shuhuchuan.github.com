@@ -650,7 +650,7 @@ body,html{
 	width: 0.58rem;
 	height: 0.58rem;
 	position: absolute;
-	top:0.4rem;
+	top:0.6rem;
 	right:0.8rem;
 	z-index: 999;
 	transform: translate3d(0,0,0);
@@ -660,7 +660,7 @@ body,html{
 	position: absolute;
 	height: 28px;
 	line-height: 28px;
-	bottom: 0.4rem;
+	bottom: 0.3rem;
 	right: 0;
 	z-index: 999; 
 	text-align: center;
