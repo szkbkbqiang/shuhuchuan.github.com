@@ -53,7 +53,7 @@
                 <img src="images/indexlive.png" alt="">
             </div>
         </div>
-        <div class="index_ct_slogan rollIn animated4 animated"><img src="images/index_16.png" alt=""></div>
+        <div class="index_ct_slogan fadeInLeft animated4 animated"><img src="images/index_16.png" alt=""></div>
         <div class="index_btn_box">
             <a class="caraus_btn_left bounceInUp animated6 animated" href="javascript:;">车型亮点</a>
             <a class="reserve_btn_left  bounceInUp animated6 animated" href="javascript:;">驾享幸福</a>
@@ -231,7 +231,7 @@
             
 
             // 下拉选择
-            $('.reg_select').change(function(){
+            $('.reg_select').on('change',function(){
                 $(this).parent().find('span').text($(this).find("option:selected").text());
             });
 
