@@ -211,6 +211,7 @@
             var _touchslide = null;
             var _isbok = true;
             $('.caraus_btn_left').on('touchstart',function(){
+                $('.livelink').css('transform','translate(-150%)');
                 //  车型table切换
                 $('.carausbox').css('display','block');
                 if(_isbok){
@@ -232,6 +233,7 @@
             });
 
             $('.reserve_btn_left').on('touchstart',function(){
+                $('.livelink').css('transform','translate(-150%)');
                 $('.reservebox').css('display','block');
                 setTimeout(function(){
                     $('.reservebox').addClass('left_translate');
@@ -243,6 +245,7 @@
                 setTimeout(function(){
                     $('.carausbox').css('display','none');;
                 }, 600)
+                $('.livelink').css('transform','translate(0%)');
             });
 
              $('.back_btn').on('touchstart',function(){
@@ -250,6 +253,7 @@
                 setTimeout(function(){
                     $('.reservebox').css('display','none');;
                 }, 600)
+                $('.livelink').css('transform','translate(0%)');
             });
             
 
