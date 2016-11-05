@@ -228,7 +228,7 @@ body,html{
 	height: 100%;
 	max-width: 750px;
 	margin: 0 auto;
-	background: url(../images/indexbg_02.jpg) #000 left top no-repeat;
+	background: url(../images/indexbg_02.jpg) #000 left bottom no-repeat;
 	background-size: cover;
 	overflow: hidden;
 	display: none;
@@ -987,4 +987,10 @@ body,html{
 	border-radius: 20px;
 	opacity: .8;
 }
+
+.slogan_imgindex{
+	width: 3.4rem;
+	margin-top: -0.5rem;
+}
+
 
