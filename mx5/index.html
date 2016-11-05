@@ -200,10 +200,11 @@
             }, 1500);
             setTimeout(function () {
                 $('.posterbox').show();
-                setTimeout(function () {
+                $('.posterbox').on('touchstart',function(){
                     $('.posterbox').hide();
                     $('.rx-livebox').show();
-                }, 5000);
+                })
+                
             }, 1500);
         };
 

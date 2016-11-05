@@ -325,7 +325,7 @@ body,html{
 	width: 3.5rem;
 	height: 1.86rem;
 	position: absolute;
-	top: 7rem;
+	top: 7.5rem;
 	right: 0.2rem;
 }
 .index_btn_box{
@@ -650,8 +650,8 @@ body,html{
 	width: 0.58rem;
 	height: 0.58rem;
 	position: absolute;
-	top:0.2rem;
-	right:0.8rem;
+	top:-0.1rem;
+	right:0.6rem;
 	z-index: 999;
 	transform: translate3d(0,0,0);
 }
@@ -660,7 +660,7 @@ body,html{
 	position: absolute;
 	height: 28px;
 	line-height: 28px;
-	bottom: 0.2rem;
+	bottom: 0.5rem;
 	right: 0;
 	z-index: 999; 
 	text-align: center;
@@ -920,7 +920,7 @@ body,html{
 	height: 0.75rem;
 }
 .indexkvtime2{
-	top: 4rem;
+	top: 4.2rem;
 }
 
 
@@ -929,11 +929,11 @@ body,html{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 0.4rem;
-	height: 0.4rem;
-	margin-left: -0.15rem;
-	margin-top: 0.05rem;
-	background: url(../images/s_icon.png) no-repeat;
+	width: 0.6rem;
+	height: 0.6rem;
+	margin-left: -0.2rem;
+	margin-top: 0.1rem;
+	background: url(../images/s_icon.png) center center no-repeat;
 	background-size: 100%;
 }
 .hover_href:after{
@@ -945,8 +945,8 @@ body,html{
 	border-radius: 50%;
 	border:2px solid #fff;
 	content: "";
-	margin-top: -0.25rem;
-	margin-left: -0.17rem;
+	margin-top: -0.35rem;
+	margin-left: -0.2rem;
 	-webkit-animation:bd_anim 1.5s infinite linear ;
 	animation:bd_anim 1.5s infinite linear ;
 }
