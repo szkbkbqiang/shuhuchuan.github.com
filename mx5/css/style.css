@@ -322,8 +322,8 @@ body,html{
 	left:0.25rem;
 }
 .index_ct_slogan{
-	width: 3.84rem;
-	height: 2.04rem;
+	width: 3.5rem;
+	height: 1.86rem;
 	position: absolute;
 	top: 7rem;
 	right: 0.2rem;
@@ -368,10 +368,10 @@ body,html{
 	background: #000;
 }*/
 .livelink{
-	width: 5.65rem;
-	height: 3.08rem;
-	top: 0.17rem;
-	left: 0.21rem;
+	width: 7em;
+	height: 3.93rem;
+	top: 0rem;
+	left:0rem;
 	background: #000;
 	border: none;
 	position: absolute;
@@ -635,22 +635,22 @@ body,html{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 6.5rem;
-	height: 10.65rem;
-	margin-left: -3.25rem;
-	margin-top: -5.325rem;
+	width: 6.2rem;
+	height: 10.16rem;
+	margin-left: -3.1rem;
+	margin-top: -5.08rem;
 	z-index: 2;
 }
 .slideBox .bd li img {
-	width: 6.5rem;
-	height: 10.65rem;
+	width: 6.2rem;
+	height: 10.16rem;
 	vertical-align: middle;
 }
 .close_btn_tab{
 	width: 0.58rem;
 	height: 0.58rem;
 	position: absolute;
-	top:0.6rem;
+	top:0.2rem;
 	right:0.8rem;
 	z-index: 999;
 	transform: translate3d(0,0,0);
@@ -660,7 +660,7 @@ body,html{
 	position: absolute;
 	height: 28px;
 	line-height: 28px;
-	bottom: 0.3rem;
+	bottom: 0.2rem;
 	right: 0;
 	z-index: 999; 
 	text-align: center;
@@ -715,6 +715,7 @@ body,html{
 	border-right:3px solid #e60021;
 	padding: 0.02rem 0;
 	top: 0.8rem;
+	color: #fff;
 	padding-right: 0.2rem;
 }
 .index_logo_mx5{
@@ -739,7 +740,7 @@ body,html{
 	margin-top: 0.5rem;
 }
 .reservelist {
-	padding-top: 0.8rem;
+	padding-top: 0.4rem;
 	float: left;
 }
 .reservelist ul{
@@ -790,6 +791,8 @@ body,html{
 }
 .reservelist li .province_select_box{
 	width: 35%;
+	overflow: hidden;
+	height: 0.8rem;
 }
 .reservelist li .city_select_box{
 	width: 60%;
@@ -898,3 +901,89 @@ body,html{
 	width: 90%;
 	line-height: 0.34rem;
 }
+.indexkvmx{
+	width: 4.5rem;
+	height: 0.9rem;
+	top: 1.9rem;
+}
+.indexkvyure{
+	top: 3.2rem;
+	right: 0;
+	left: 0.4rem;
+}
+
+.indexkvtime1, .indexkvtime2{
+	position: absolute;
+	top: 3.2rem;
+	right: 0.5rem;
+	width: 3.05rem;
+	height: 0.75rem;
+}
+.indexkvtime2{
+	top: 4rem;
+}
+
+
+
+.hover_href{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0.4rem;
+	height: 0.4rem;
+	margin-left: -0.15rem;
+	margin-top: 0.05rem;
+	background: url(../images/s_icon.png) no-repeat;
+	background-size: 100%;
+}
+.hover_href:after{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0.15rem;
+	height: 0.15rem;
+	border-radius: 50%;
+	border:2px solid #fff;
+	content: "";
+	margin-top: -0.25rem;
+	margin-left: -0.17rem;
+	-webkit-animation:bd_anim 1.5s infinite linear ;
+	animation:bd_anim 1.5s infinite linear ;
+}
+
+@-webkit-keyframes bd_anim {
+  0% {
+    opacity: 1; transform: scale(1);
+  }
+
+  100% {
+    opacity: 0; transform: scale(1.8);
+  }
+}
+
+@keyframes bd_anim {
+  0%{
+    opacity: 1; transform: scale(1);
+  }
+
+  100% {
+    opacity: 0; transform: scale(1.8);
+  }
+}
+
+.link_live{
+	position: absolute;
+	top: 6.7rem;
+	right: 0.3rem;
+	width: 2.1rem;
+	height: 0.45rem;
+	text-align: center;
+	line-height: 0.5rem;
+	font-size: 0.26rem;
+	color: #fff;
+	border: 1px solid #fff;
+	background: rgba(0,0,0,0.4);
+	border-radius: 20px;
+	opacity: .8;
+}
+

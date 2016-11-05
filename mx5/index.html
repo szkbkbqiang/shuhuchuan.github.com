@@ -16,7 +16,7 @@
     <!-- loading -->
     <div class="loading">
         <div class="loadconter">
-            <div class="loading_text">MX5幸福加载中</div>
+            <!-- <div class="loading_text"></div> -->
             <div class="carbox">
                 <img src="images/load_car.png" alt=""></div>
             <div class="loadarticle">
@@ -24,15 +24,24 @@
                 </div>
             </div>
             <div class="loadtext">
-                Loading... <span class="loadingnum">0</span>%
+                MX5幸福加载中... <span class="loadingnum">0</span>%
             </div>
         </div>
     </div>
 
     <!-- poster --> 
     <div class="posterbox">
-        <!-- <div class="index_logo_top bounceInLeft animated"><img src="images/indextoplogo.png" alt=""></div> -->
-        <!-- <div class="index_ct_slogan fadeInLeft animated4 animated"><img src="images/index_16.png" alt=""></div> -->
+        <div class="index_logo_top bounceInLeft animated"><img src="images/indextoplogo.png" alt=""></div>
+        <div class="index_logo_mx5 indexkvmx fadeIn animated2 animated"><img src="images/indexkvmx.png" alt=""></div>
+        <div class="index_slogan_r indexkvyure fadeIn animated2 animated">
+            <img src="images/indexkvslogan.png" alt="">
+        </div>
+        <div class="index_ct_slogan fadeInLeft animated4 animated"><img src="images/index_16.png" alt=""></div>
+        <div class="indexkvtime1 fadeInLeft animated4 animated">
+            <img src="images/indexkvtime1.png" alt="">
+            <span class="hover_href"></span>
+        </div>
+        <div class="indexkvtime2 fadeInLeft animated5 animated"><img src="images/indexkvtime2.png" alt=""></div>
         <div class="votebox_logo">
            <img src="images/indexlogo_03.jpg" alt="">
         </div> 
@@ -41,19 +50,20 @@
     <div class="rx-livebox">
         <div class="index_logo_top bounceInLeft animated"><img src="images/indextoplogo.png" alt=""></div>
         <div class="index_renshu  bounceInRight animated">人气：<span>299789</span></div>
-        <div class="index_logo_mx5 fadeIn animated2 animated"><img src="images/indexmx5.png" alt=""></div>
+        <div class="index_logo_mx5 fadeIn animated2 animated"><img src="images/indexkvmx.png" alt=""></div>
         <div class="index_slogan_r fadeIn animated2 animated">
-            <img class="indexsloganlive sloganlive animated" src="images/indexsloganlive.png" alt="">
             <img src="images/indexslogan.png" alt="">
         </div>
         <div class="livebox">
             <div class="livepaly fadeIn animated3 animated">
-                <!-- <iframe class="livelink" id="zhibo_link" src="vedio.html" width="345" height="194"
+                <iframe class="livelink" id="zhibo_link" src="http://player.youku.com/embed/XMTcxMDg1MzE2OA==" width="645" height="294"
                     frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no">
-                </iframe> -->
-                <img src="images/indexlive.png" alt="">
+                </iframe>
+                <!-- <iframe class="livelink" height=498 width=510 src='http://player.youku.com/embed/XMTcxMDg1MzE2OA==' frameborder=0 'allowfullscreen'></iframe> -->
+                <!-- <img src="images/indexlive.png" alt=""> -->
             </div>
         </div>
+        <div class="link_live fadeIn animated3 animated">了解更多详情 ></div>
         <div class="index_ct_slogan fadeInLeft animated4 animated"><img src="images/index_16.png" alt=""></div>
         <div class="index_btn_box">
             <a class="caraus_btn_left bounceInUp animated6 animated" href="javascript:;">车型亮点</a>
@@ -142,6 +152,18 @@
                         <select class="reg_select dealer" id="pin_select" name="pin_select">
                             <option value="-1">选择经销商</option>
                             <option value="1">mx5朝阳专卖店</option>
+                        </select>
+                    </span>  
+                </li>
+                <li>
+                    <span class="input_text pin_select">
+                        <span>意向车型</span>
+                        <select class="reg_select dealer" id="pin_select" name="pin_select">
+                            <option value="-1">请选择意向车型</option>
+                            <option value="1">1.4T 手动时尚版</option>
+                            <option value="2">1.4T 手动豪华版</option>
+                            <option value="3">2.0L 手动精英版</option>
+                            <option value="4">2.0L 自动旗舰版</option>
                         </select>
                     </span>  
                 </li>
