@@ -30,8 +30,8 @@
     </div>
 
     <!-- poster --> 
-    <div class="posterbox">
-        <div class="index_logo_top bounceInLeft animated"><img src="images/indextoplogo.png" alt=""></div>
+    <div class="posterbox animatedout">
+        <div class="index_logo_top fadeInLeft animated"><img src="images/indextoplogo.png" alt=""></div>
         <div class="index_logo_mx5 indexkvmx fadeIn animated2 animated"><img src="images/indexkvmx.png" alt=""></div>
         <div class="index_slogan_r indexkvyure fadeIn animated2 animated">
             <img src="images/indexkvslogan.png" alt="">
@@ -47,9 +47,9 @@
         </div> 
     </div>
     <!-- rx-conrer-live -->
-    <div class="rx-livebox">
-        <div class="index_logo_top bounceInLeft animated"><img src="images/indextoplogo.png" alt=""></div>
-        <div class="index_renshu  bounceInRight animated">人气：<span>299789</span></div>
+    <div class="rx-livebox animatedout">
+        <div class="index_logo_top fadeInLeft animated"><img src="images/indextoplogo.png" alt=""></div>
+        <div class="index_renshu  fadeInRight animated">人气：<span>299789</span></div>
         <div class="index_logo_mx5 fadeIn animated2 animated"><img src="images/indexkvmx.png" alt=""></div>
         <div class="index_slogan_r fadeIn animated2 animated">
             <img src="images/indexslogan.png" alt="">
@@ -66,15 +66,15 @@
         <a href="javascript:;" class="link_live fadeIn animated3 animated">了解更多详情 ></a>
         <div class="index_ct_slogan fadeInLeft animated4 animated"><img class="slogan_imgindex" src="images/index_16.png" alt=""></div>
         <div class="index_btn_box">
-            <a class="caraus_btn_left bounceInUp animated6 animated" href="javascript:;">车型亮点</a>
-            <a class="reserve_btn_left  bounceInUp animated6 animated" href="javascript:;">驾享幸福</a>
+            <a class="caraus_btn_left fadeIn animated6 animated" href="javascript:;">车型亮点</a>
+            <a class="reserve_btn_left  fadeIn animated6 animated" href="javascript:;">驾享幸福</a>
         </div>
         <div class="votebox_logo">
             <img class="fadeIn animated2 animated" src="images/indexlogo_03.jpg" alt="">
         </div>  
     </div>
     <!-- car start -->
-    <div class="carausbox">
+    <div class="carausbox animatedout">
         <a class="close_btn_tab" href="javascript:;"><img src="images/closeicon_03.png" alt=""></a>
         <div id="slideBox" class="slideBox">
             <div class="bd">
@@ -108,7 +108,7 @@
         </div>        
     </div>
     <!-- reserve start -->
-    <div class="reservebox">
+    <div class="reservebox animatedout">
         <div class="reser_top">
             <p class="back_btn"><a href="javascript:;">< 返回</a></p>
             <p><img src="images/form_text_logo_03.png" alt=""></p>
@@ -201,13 +201,17 @@
             setTimeout(function () {
                 $('.posterbox').show();
                 $('.posterbox').on('touchstart',function(){
-                    $('.posterbox').hide();
-                    $('.rx-livebox').show();
+                    $('.posterbox').addClass('fadeOut').hide();
+                    $('.rx-livebox').addClass('fadeIn').show();
+                    // setTimeout(function(){
+                    //     $('.posterbox').hide();
+                    // },1000)
+                    
                 })
-                setTimeout(function () {
-                    $('.posterbox').hide();
-                    $('.rx-livebox').show();
-                }, 5000);
+                // setTimeout(function () {
+                //     $('.posterbox').hide();
+                //     $('.rx-livebox').show();
+                // }, 5000);
             }, 1500);
         };
 
@@ -215,7 +219,7 @@
             var _touchslide = null;
             var _isbok = true;
             $('.caraus_btn_left').on('touchstart',function(){
-                $('.livelink').css('transform','translate(-150%)');
+                $('.livelink').addClass('transform','translate(-150%)');
                 //  车型table切换
                 $('.carausbox').css('display','block');
                 if(_isbok){
@@ -232,7 +236,7 @@
                 }
                 _isbok = false;
                 setTimeout(function(){
-                    $('.carausbox').addClass('left_translate');
+                    $('.carausbox').addClass('fadeIn');
                 }, 200)                
             });
 
@@ -240,12 +244,12 @@
                 $('.livelink').css('transform','translate(-150%)');
                 $('.reservebox').css('display','block');
                 setTimeout(function(){
-                    $('.reservebox').addClass('left_translate');
+                    $('.reservebox').addClass('fadeIn');
                 }, 200)    
             });
 
             $('.close_btn_tab').on('touchstart',function(){
-                $('.carausbox').removeClass('left_translate');
+                $('.carausbox').removeClass('fadeIn');
                 setTimeout(function(){
                     $('.carausbox').css('display','none');;
                 }, 600)
@@ -253,7 +257,7 @@
             });
 
              $('.back_btn').on('touchstart',function(){
-                $('.reservebox').removeClass('left_translate');
+                $('.reservebox').removeClass('fadeIn');
                 setTimeout(function(){
                     $('.reservebox').css('display','none');;
                 }, 600)
