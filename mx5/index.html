@@ -56,11 +56,11 @@
         </div>
         <div class="livebox">
             <div class="livepaly fadeIn animated3 animated">
-                <iframe class="livelink" id="zhibo_link" src="" width="645" height="294"
+                <iframe class="livelink" id="zhibo_link" src="http://player.youku.com/embed/XMTcxMDg1MzE2OA==" width="645" height="294"
                     frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no">
                 </iframe>
                 <!-- <iframe class="livelink" height=498 width=510 src='http://player.youku.com/embed/XMTcxMDg1MzE2OA==' frameborder=0 'allowfullscreen'></iframe> -->
-                <img class="play_box" src="images/indexlive.jpg" alt="">
+                <!-- <img src="images/indexlive.png" alt=""> -->
             </div>
         </div>
         <a href="javascript:;" class="link_live fadeIn animated3 animated">了解更多详情 ></a>
@@ -200,23 +200,19 @@
             }, 1500);
             setTimeout(function () {
                 $('.posterbox').show();
-                $('.posterbox').on('touchstart',function(){
+                $('.posterbox').on('click',function(){
                     $('.posterbox').addClass('fadeOut').hide();
-                    $('.rx-livebox').addClass('fadeIn').show();
-                    // setTimeout(function(){
-                    //     $('.posterbox').hide();
-                    // },1000)
+                    $('.rx-livebox').addClass('fadeIn');
+                    setTimeout(function(){
+                        $('.rx-livebox').show();
+                    },200)
                     
                 })
-                setTimeout(function () {
-                    $('.posterbox').hide();
-                    $('.rx-livebox').show();
-                }, 5000);
+                // setTimeout(function () {
+                //     $('.posterbox').hide();
+                //     $('.rx-livebox').show();
+                // }, 5000);
             }, 1500);
-
-            $('.play_box').on('click',function(){
-                $('.livelink').attr('src','http://player.youku.com/embed/XMTcxMDg1MzE2OA==').show();
-            })
         };
 
         $(function () {
