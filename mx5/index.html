@@ -216,7 +216,7 @@
 
            var interval = 1000;
            var time = null;
-           function ShowCountDown(year,month,day,divname){ 
+           function ShowCountDown(year,month,day){ 
                var now = new Date(); 
                var endDate = new Date(year, month-1, day, 10,19,59); 
                var leftTime=endDate.getTime()-now.getTime(); 
@@ -227,7 +227,7 @@
                }
             }
             time = setInterval(function(){
-                ShowCountDown(2016,11,11,'divdown1');
+                ShowCountDown(2016,11,18);
             }, interval); 
         };
 
