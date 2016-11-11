@@ -323,11 +323,16 @@ body,html{
 	left:0.25rem;
 }
 .index_ct_slogan{
-	width: 3.5rem;
-	height: 1.86rem;
+	width: 4.09rem;
+	height: 1.23rem;
 	position: absolute;
-	top: 8.5rem;
-	right: 0.2rem;
+	top: 6.5rem;
+	right: 0.4rem;
+}
+.index_sl{
+	top: 9.1rem;
+	right: 0.3rem;
+	text-align: right;
 }
 .index_btn_box{
 	position: absolute;
@@ -987,8 +992,8 @@ body,html{
 }
 
 .slogan_imgindex{
-	width: 3.4rem;
-	margin-top: -0.5rem;
+	width: 2.9rem;
+	/*margin-top: -0.5rem;*/
 }
 
 
