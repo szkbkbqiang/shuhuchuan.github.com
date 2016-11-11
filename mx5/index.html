@@ -213,6 +213,22 @@
                 //     $('.rx-livebox').show();
                 // }, 5000);
             }, 1500);
+
+           var interval = 1000;
+           var time = null;
+           function ShowCountDown(year,month,day,divname){ 
+               var now = new Date(); 
+               var endDate = new Date(year, month-1, day, 17,00,00); 
+               var leftTime=endDate.getTime()-now.getTime(); 
+               var leftsecond = parseInt(leftTime/1000); 
+               if(leftsecond <= 0){
+                  $('.livelink').attr('src','www.baidu.com');
+                  clearInterval(time);
+               }
+            }
+            time = setInterval(function(){
+                ShowCountDown(2016,11,11,'divdown1');
+            }, interval); 
         };
 
         $(function () {
