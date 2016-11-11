@@ -242,9 +242,9 @@
 
             $('.reserve_btn_left').on('touchstart',function(){
                 $('.livelink').css('transform','translate(-150%)');
-                $('.reservebox').css('display','block');
+                $('.reservebox').addClass('fadeIn');
                 setTimeout(function(){
-                    $('.reservebox').addClass('fadeIn');
+                    $('.reservebox').css('display','block');
                 }, 200)    
             });
 
