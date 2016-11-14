@@ -995,5 +995,12 @@ body,html{
 	width: 2.9rem;
 	/*margin-top: -0.5rem;*/
 }
+.index_kv_bt{
+	width: 2.24rem;
+	height: 0.78rem;
+	position:absolute;
+	bottom:1.4rem;
+	right: 0.44rem;
+}
 
 

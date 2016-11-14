@@ -42,6 +42,7 @@
             <span class="hover_href fadeIn animated6 animated"></span>
         </a>
         <!-- <a href="javascript:;" class="indexkvtime2 fadeInLeft animated5 animated"><img src="images/indexkvtime2.png" alt=""></a> -->
+        <div class="index_kv_bt fadeInLeft animated6 animated"><img src="images/index_kv_bt.png" alt=""></div>
         <div class="votebox_logo">
            <img  class="fadeIn animated2 animated"  src="images/indexlogo_03.jpg" alt="">
         </div> 
@@ -215,20 +216,38 @@
             }, 1500);
 
             // 定时直播更换链接
+           var live_inow = false;
            var time = null;
-           function ShowCountDown(){ 
+           var time_start_date = '2016,11,18,22,22,00';
+           var live_start_url = 'http://mudu.tv/?c=activity&a=live&id=24241';
+           var time_end = null;
+           var time_end_date = '2016,11,18,22,23,00';
+           var live_end_url = 'http://player.youku.com/embed/XMTcxMDg1MzE2OA==';
+           function ShowCountDown(time_inow,livelink_url){ 
                 var now = new Date();
-                var time_num = '2016,11,18,10,20,00'.split(',');
+                var time_num = time_inow.split(',');
                 var endDate = new Date(parseInt(time_num[0]),parseInt(time_num[1])-1, parseInt(time_num[2]), parseInt(time_num[3]),parseInt(time_num[4]),parseInt(time_num[5])); 
                 var leftTime=endDate.getTime()-now.getTime(); 
                 var leftsecond = parseInt(leftTime/1000);
                leftsecond--;
+               console.log(leftsecond);
                if(leftsecond <= 0){
-                  $('.livelink').attr('src','http://mudu.tv/?c=activity&a=live&id=24241');
+                  $('.livelink').attr('src',livelink_url);
+                  if(live_inow){
+                    clearInterval(time_end);
+                    return false;
+                  }
                   clearInterval(time);
+                  live_inow = true;
+                  time_end = setInterval(function(){
+                        ShowCountDown(time_end_date,live_end_url);
+                    }, 1000); 
                }
             }
-            time = setInterval(ShowCountDown, interval); 
+            time = setInterval(function(){
+                ShowCountDown(time_start_date,live_start_url);
+            }, 1000); 
+            
         };
 
         $(function () {
