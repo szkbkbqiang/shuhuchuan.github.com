@@ -214,21 +214,21 @@
                 // }, 5000);
             }, 1500);
 
-           var interval = 1000;
+            // 定时直播更换链接
            var time = null;
-           function ShowCountDown(year,month,day){ 
-               var now = new Date(); 
-               var endDate = new Date(year, month-1, day, 10,19,59); 
-               var leftTime=endDate.getTime()-now.getTime(); 
-               var leftsecond = parseInt(leftTime/1000); 
+           function ShowCountDown(){ 
+                var now = new Date();
+                var time_num = '2016,11,18,10,20,00'.split(',');
+                var endDate = new Date(parseInt(time_num[0]),parseInt(time_num[1])-1, parseInt(time_num[2]), parseInt(time_num[3]),parseInt(time_num[4]),parseInt(time_num[5])); 
+                var leftTime=endDate.getTime()-now.getTime(); 
+                var leftsecond = parseInt(leftTime/1000);
+               leftsecond--;
                if(leftsecond <= 0){
-                  $('.livelink').attr('src','www.baidu.com');
+                  $('.livelink').attr('src','http://mudu.tv/?c=activity&a=live&id=24241');
                   clearInterval(time);
                }
             }
-            time = setInterval(function(){
-                ShowCountDown(2016,11,18);
-            }, interval); 
+            time = setInterval(ShowCountDown, interval); 
         };
 
         $(function () {
