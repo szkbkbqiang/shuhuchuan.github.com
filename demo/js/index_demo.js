@@ -1,4 +1,4 @@
-$(document).ready(function(){
+window.onload =function(){
 	Vue.filter('isImg',function(input,type){
 		if(type == 'image'){
 			return '<img src="'+input+'"/>';
@@ -31,7 +31,4 @@ $(document).ready(function(){
 	    }
 	});
 
-
-
-
-});
+};
