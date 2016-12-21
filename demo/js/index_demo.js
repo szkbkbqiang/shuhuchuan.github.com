@@ -12,15 +12,14 @@ window.onload =function(){
 	      list : ''
 	    },
 	    created:function(){
-	     
+	      var _self = this;
+	      var url = "../demo/js/1.json";
+	      _self.$http.get(url).then(function (res) {
+	        var data = res.data;
+	         _self.list = data.content;
+	      });
 	    },
 	    ready : function(){
-	    	var _self = this;
-	    	var url = "../demo/js/1.json";
-	    	_self.$http.get(url).then(function (res) {
-	    	  var data = res.data;
-	    	   _self.list = data.content;
-	    	});
 	    	setTimeout(function(){
 	    		swiperTimer();
 	    		$('.details p').find('img').eq(0).parent().next().nextAll().hide();
