@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html id="list_tips">
+
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<title>{{list.bnbWowcontent.title}}</title>
+		<link href="style/style.css" rel="stylesheet">
+		<link href="style/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="style/swiper.min.css">
+		<script>
+			shareId = 10089;
+			shareTitle = '仰天湖山庄';
+			shareSub = '在海拔800米的山林醒来';
+			shareImg = 'http://cdn.timekiss.cn/uploads_1481182451.4806';
+			window.BMap_loadScriptTime = (new Date).getTime();
+		</script>
+		<style>
+			.banner,.banner img{ width: 100%; height: 32rem;}
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+				}
+		  .swiper-pagination{ margin-left: 10px; color: #fff; text-align: left; font-size: 0.7rem; padding-left: 25px; background: url('http://m.timekiss.cn/images/num.png') no-repeat; background-size: 1.5rem; background-position: 0.1rem;}
+			#swiper-container1 .swiper-slide img{ width: 100%;}
+			.details{ overflow: hidden;}
+			.details p img{ width: 115%; margin: -10px -20px;}
+			.content_text{ text-align: center;}
+			#swiper-container1 {
+        width: 100%;
+        height: 100%;
+    }
+			#swiper-container2 {
+	        width: 100%;
+	        height: 100%;
+					margin-left: 20px;
+	    }
+	    #swiper-container2 .swiper-slide {
+	        font-size: 18px;
+	        background: #fff;
+	        width: 80%;
+	    }
+			.nearbyHotel{ overflow: hidden;}
+			#swiper-container2 .swiper-slide p img{ width: 100%;}
+			#swiper-container2 .swiper-slide p{ font-size: 14px; text-align: justify;}
+			#swiper-container2 .swiper-slide h3{ font-size: 18px; font-weight: none;}
+		</style>
+	</head>
+
+	<body class="pt-body" style="background-color: #fff;" onselectstart="return false;">
+
+		<div class="wapper tkPage detailPage" style="margin-bottom: 50px;">
+			<div class="banner">
+			    <div class="swiper-container" id="swiper-container1">
+			        <div class="swiper-wrapper">
+	            		<div class="swiper-slide"><img :src="list.cover"></div>
+			            <div class="swiper-slide" v-for="items in list.album"><img :src="items"></div>
+			        </div>
+			        <div class="swiper-pagination"></div>
+			    </div>
+			</div>
+
+			<div class="bgwhite">
+				<div class="tag">
+					<span v-for="items in list.tags">{{items}}</span>
+				</div>
+				<div class="details3">
+					<h2>{{list.bnbWowcontent.title}}</h2>
+					<p style="text-align: center;"></p>
+					<div style="border-bottom: 2px solid #00d96e; width: 4%; margin-left: 48%;"> </div>
+					<p></p>
+					<p style="margin: 15px 20px; color: #888; text-align: justify;">{{list.bnbWowcontent.content}}</p>
+				</div>
+				<div class="package">
+					<hr />
+					<div class="packages" v-for="items in list.package">
+						<p>{{items.name}}</p>
+						<span class="cor1">{{items.min_price}}</span>
+						<span class="cor2">{{items.dis_price}}</span>
+						<a href="javascript:;">
+							<div class="more">
+								<em><img src="images/hot.png" style="width: 100%;"></em>
+								<i>已售{{items.number}}</i>
+								<em><img src="images/more.png" style="width: 100%;"></em>
+							</div>
+						</a>
+					</div>
+					<hr />
+				</div>
+				<div class="details">
+					<h2>民宿详情</h2>
+					<div class="details_img">
+						<a :href="list.bnb3d.video"><img :src="list.bnb3d.cover" alt="" width="100%"></a>
+					</div>
+					<div style="text-align: center;" class="sleeper">
+						<img :src="list.sleepMaster.avatar_thumbnail" style="width: 60px; height: 60px; border-radius: 30px;">
+						<div>
+							<label style="color: #222; padding: 10px 0 0 0;">{{list.sleepMaster.username}}</label>
+						</div>
+						<div>
+							<label style="color: #222; font-size: 10px;">{{list.sleepMaster.profession}}</label>
+						</div>
+						<p style="text-align: left; padding:10px 20px; color: #888;">{{list.sleepMaster.slogan}}</p>
+					</div>
+					<p style="text-align: left; padding:10px 20px; color: #888;" type="text" v-for="items in list.contentFormat" v-html="items.content | isImg items.type"></p>
+				</div>
+				<div class="content_text">
+					<div class="add_details" style="padding-bottom:10px;"><a href="javascript:;"><img src="images/add.png" width="4%" style="margin-right:5px;">查看全部睡文</a></div>
+					<div style="border-bottom: 2px solid #00d96e; width: 4%; margin-left: 48%;"> </div>
+					<p style=" padding-top:20px;">地址</p>
+					<p>{{list.bnb.address}}</p>
+				</div>
+				<hr />
+				<div class="address" style="position: relative; border-bottom:1px solid #f4f4f4; padding-bottom: 10px;">
+					<label style="font-size: 18px; color: #666; margin: 10px 0 10px 20px; padding: 10px 0 0 0; border-bottom: 1px solid #666;">房东说</label>
+					<div style="text-align: center; margin: 20px 0;">
+						<img :src="list.cover" style="width: 60px; height: 60px; border-radius: 30px;">
+						<div>
+							<label style="color: #999; padding: 10px 0 0 0;">{{list.bnbWowcontent.title}}</label>
+						</div>
+					</div>
+					<p class="pur" style="color: #888; padding: 0 20px 0 20px; line-height: 23px; text-align:justify;">{{list.bnbWowcontent.content}}</p>
+				</div>
+
+				<div class="nearbyHotel" style="margin: 10px 0 20px 0; padding-bottom: 15px; ">
+					<span style="font-size: 18px; color: #666; margin: 10px 0 10px 20px; padding: 10px 0 0 0; border-bottom: 1px solid #666;">相似必住</span>
+					<div style="width: 100%;  margin: 15px 0 10px 0;"></div>
+					<div class="swiper-container" id="swiper-container2">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide" v-for="items in list.similars">
+										<p><img :src="items.cover" /></p>
+										<h3>{{items.title}}</h3>
+										<p>{{items.subTitle1}}</p>
+									</div>
+			        </div>
+			    </div>
+				</div>
+			</div>
+			<div id="details3">
+				<hr style="margin: 5px;">
+				<p style="text-align: center; margin: 11px 10px;"><span style="padding: 0; font-size: 12px; color: rgb(127, 127, 127);">如何诗意地浪费时间？让度假住宿充满惊喜，连接风景还有你。</span></p>
+				<p style="text-align: center;"></p>
+				<div style="border-bottom: 2px solid #00d96e; width: 4%; margin-top: 20px; margin-bottom: 20px; margin-left: 48%;"> </div>
+				<p></p>
+				<p style="text-align: center;"><span style="padding: 0; color: rgb(127, 127, 127); font-size: 12px;">态客必住精品民宿指南版权所有，转载请注明出处：）</span></p>
+			</div>
+			<div class="part8">
+				<div class="part8_l_1">
+					<div>
+						<img src="http://m.timekiss.cn/images/logo_1.jpg?v=2" id="logo" width="100%">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="appdownload" style="display: none; position: fixed; bottom: 0; background-color: rgba(0,0,0,0.85); width: 100%; height: 60px;">
+			<img src="http://m.timekiss.cn/images/appimport.png" style="width: 40%; padding: 13px 0 0 10px;">
+			<span onclick="appdownloadmaskshow()" style="color: floralwhite; position: absolute; right: 15px; bottom: 12px; line-height: 30px; border: 1px solid #00d96e; padding: 1px 12px; font-size: 14px;">立即下载体验</span>
+		</div>
+		<div id="appdownloadmask" style="display: none; width: 100%; text-align: center; z-index: 999; background-color: rgba(0, 0, 0, 0.74902); position: fixed; top: 0px; height: 790px; line-height: 790px;">
+			<img src="http://m.timekiss.cn/images/chart.jpg" style="width: 80%; border-radius: 10px; margin-top: 30%;">
+			<img src="http://m.timekiss.cn/images/canel_2.png" style="width: 40px; position: fixed; left: 87%; margin-top: 23%;" onclick="appdownloadmaskhide()">
+		</div>
+		<script src="js/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<script type="text/javascript" src="js/vue-resource.js" ></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/baidu.js"></script>
+		<script src="js/jquery.lazyload.js"></script>
+		<script src="js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="js/index_demo.js" ></script>
+		<script>
+			function swiperTimer(){
+				var swiper1 = new Swiper('#swiper-container1', {
+			        pagination: '.swiper-pagination',
+			        paginationType: 'fraction'
+			    });
+
+				var swiper2 = new Swiper('#swiper-container2', {
+		        slidesPerView: 'auto',
+		        paginationClickable: true,
+		        spaceBetween: 5
+		    });
+			}
+			
+		</script>
+		<script>
+			function init() {
+				if(isIPhone()) {
+					$('#appdownload').show();
+				}
+				$('#appdownloadmask').css('height', window.innerHeight).css('line-height', window.innerHeight + 'px');
+				$('.des p').css({
+					margin: '15px 20px'
+				});
+			}
+
+			function openService() {
+				$num = $('#services img').length;
+				if($('#services').css('height') == '127px') {
+					$('#services').animate({
+						height: Math.ceil($num / 5) * 67 + 60 + 'px'
+					}, 300);
+				} else {
+					$('#services').animate({
+						height: '127px'
+					}, 300);
+				}
+
+			}
+
+			function isIPhone() {
+				var ua = window.navigator.userAgent.toLowerCase();
+				var s = ua.match(/IPhone/i);
+				if(s == null) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+
+			function appdownloadmaskhide() {
+				$('#appdownloadmask').fadeOut();
+			}
+
+			function appdownloadmaskshow() {
+				$('#appdownloadmask').fadeIn();
+			}
+
+		</script>
+		<script src="js/site.js"></script>
+	</body>
+
+</html>

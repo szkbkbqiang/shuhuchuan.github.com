@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.7.2.js" ></script>
+		<script>
+			$(document).ready(function(){
+				var imgLen = parseInt($('.banner-show li').length);
+				$('.banner-tab p span:last').html(imgLen);
+				var Img = parseInt(imgLen);
+			    var iNow = 0, index = 1, nStartX = 0;
+			    var oBanner = document.getElementById('banner-box');
+			    bannerShow();
+			    $(window).resize(function(){
+			        bannerShow();
+			    });
+			    oBanner.addEventListener('touchstart', function(event) {
+			        event.preventDefault();
+			        nStartX = event.targetTouches[0].pageX ;
+			    }, false);    
+			    oBanner.addEventListener('touchend', function(event) {
+			        event.preventDefault();
+			        var mw = $('.banner-show li').width(); // 获取可视区域宽度
+			        var _l = mw + $('.banner-show').position().left%mw, _w = mw/2, _m = $('.banner-show li').length - 1;
+			        var ml = $('.banner-show').position().left; //这里要重新获取left值
+			        if(_l <= _w){ //中点判断
+			            ml = ml - _l
+			        }else{
+			            ml = ml + (mw - _l)
+			        }
+			        if(ml >= 0){
+			            ml = 0;
+			        }else if (ml <= -mw * _m){
+			            ml = -mw * _m;
+			        }
+			        $('.banner-show').animate({'left': ml}, 200);
+			        var _now = parseInt(-ml/mw);
+			        $('.banner-tab p span:first').html($('.banner-show li').eq(_now).attr('data-t'));
+			    }, false);    
+			    oBanner.addEventListener('touchmove', function(event) {
+			        event.preventDefault();
+			        var touch = event.targetTouches[0];
+			        var _l = $('.banner-show').position().left + touch.pageX - nStartX;
+			        nStartX = touch.pageX;
+			        $('.banner-show').css('left', _l);
+			    }, false);
+			    //自动切换
+				function tabBanner(n){
+				    $('.banner-show').animate({'left': -n * $(window).width()});
+				    $('.banner-tab p span:first').html($('.banner-tab li').eq(n).attr('data-title'));
+				}
+				
+				function bannerShow(){
+				    var _w = $(window).width();
+				    var _h = _w * 1;
+				    $('.banner-box').height(_h);
+				    $('.banner-show').width(_w * imgLen);
+				    $('.banner-show li').width(_w);
+				};
+			});
+			
+			
+		</script>
+		<style>
+			*{ margin: 0; padding: 0;}
+			ul,li{ list-style: none;}
+			#banner { position:relative;}
+			.banner-box { position:relative; height:100%; margin:0 auto; overflow:hidden}
+			.banner-show { position:absolute; width:100%; min-height:160px; left:0}
+			.banner-show li { position:relative; float:left;}
+			.banner-show img { width:100%; height:100%;}
+			
+			.banner-tab { width:100%; height:3rem; left:0; bottom:0; position:absolute}
+			.banner-tab p { position:absolute; font-size:3rem; left:12px; color:#fff}
+		</style>
+	</head>
+	<body>
+		<div id="banner">
+		    <div class="banner-box" id="banner-box">
+		        <ul class="banner-show">
+		            <li data-t="1"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424117.3688"></a></li>
+		            <li data-t="2"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424139.9591"></a></li>
+		            <li data-t="3"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424076.9456"></a></li>
+		            <li data-t="4"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424117.3688"></a></li>
+		            <li data-t="5"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424117.3688"></a></li>
+		            <li data-t="6"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424117.3688"></a></li>
+		            <li data-t="7"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424117.3688"></a></li>
+		            <li data-t="8"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424117.3688"></a></li>
+		            <li data-t="9"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424117.3688"></a></li>
+		            <li data-t="10"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424117.3688"></a></li>
+		            <li data-t="11"><a href=""><img src="http://cdn.timekiss.cn/uploads_1469424117.3688"></a></li>
+		        </ul>
+		        <div class="banner-tab">
+		        	<p><span>1</span>/<span>2</span></p>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
