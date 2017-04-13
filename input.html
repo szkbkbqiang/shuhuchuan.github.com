@@ -8,13 +8,16 @@
 	<script>
 		var iskeyboard = false;
 		var wHeight = window.document.body.innerHeight;   //获取初始可视窗口高度 
-		$('input').on('focus',function(){
-			setTimeout(function(){
-				var sHeight = window.document.body.innerHeight;
-				alert(wHeight);
-				alert(sHeight);
-			},200);
-		});
+		$(function(){
+			$('input').on('focus',function(){
+				setTimeout(function(){
+					var sHeight = window.document.body.innerHeight;
+					alert(wHeight);
+					alert(sHeight);
+				},200);
+			});
+		})
+		
 	</script>
 </head>
 <body>
