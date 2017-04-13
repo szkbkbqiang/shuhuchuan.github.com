@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script>
+		var iskeyboard = false;
+		var wHeight = window.innerHeight;   //获取初始可视窗口高度 
+		window.addEventListener('resize', function(){       //监测窗口大小的变化事件  
+		    var hh = window.innerHeight;     //当前可视窗口高度  
+		    var viewTop = $(window).scrollTop();   //可视窗口高度顶部距离网页顶部的距离  
+		    if(wHeight > hh){           //可以作为虚拟键盘弹出事件  
+		        iskeyboard = true;
+		    }else{         //可以作为虚拟键盘关闭事件  
+		        iskeyboard = false;
+		    }  
+		    wHeight = hh;
+		});
+		console.log(iskeyboard);
+	</script>
+</head>
+<body>
+	<input type="text">
+</body>
+</html>
