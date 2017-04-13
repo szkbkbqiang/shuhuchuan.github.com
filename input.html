@@ -12,8 +12,8 @@
 			$('input').on('focus',function(){
 				setTimeout(function(){
 					var sHeight = window.innerHeight;
-					alert(wHeight);
-					alert(sHeight);
+					$('span').html(wHeight);
+					$('strong').html(sHeight);
 				},200);
 			});
 		})
@@ -22,5 +22,7 @@
 </head>
 <body>
 	<input type="text">
+	<span></span><br>
+	<strong></strong>
 </body>
 </html>
