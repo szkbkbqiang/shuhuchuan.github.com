@@ -7,8 +7,9 @@
 	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
 		var iskeyboard = false;
-		var wHeight = $(document.body).height();   //获取初始可视窗口高度 
+		   //获取初始可视窗口高度 
 		$(function(){
+			var wHeight = $(document.body).height();
 			$('input').on('focus',function(){
 				setTimeout(function(){
 					var sHeight = $(document.body).height();
