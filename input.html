@@ -9,10 +9,10 @@
 		var iskeyboard = false;
 		   //获取初始可视窗口高度 
 		$(function(){
-			var wHeight = $(document.body).height();
+			var wHeight = $(document).height();
 			$('input').on('focus',function(){
 				setTimeout(function(){
-					var sHeight = $(document.body).height();
+					var sHeight = $(document).height();
 					$('span').html(wHeight);
 					$('strong').html(sHeight);
 				},200);
