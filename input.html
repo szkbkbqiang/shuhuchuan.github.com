@@ -9,11 +9,12 @@
 		var iskeyboard = false;
 		   //获取初始可视窗口高度 
 		$(function(){
-			var wHeight = document.body.offsetHeight;
+			var wHeight = window.screen.height;
+			$('span').html(wHeight);
 			$('input').on('focus',function(){
 				setTimeout(function(){
-					var sHeight = document.body.offsetHeight;
-					$('span').html(wHeight);
+					var sHeight = window.screen.height;
+					$('p').html(wHeight);
 					$('strong').html(sHeight);
 				},200);
 			});
@@ -21,9 +22,9 @@
 		
 	</script>
 </head>
-<body>
-	<input type="text">
-	<span></span><br>
+<body style="height:500px">
+	<input type="text"><span></span>
+	<p></p>
 	<strong></strong>
 </body>
 </html>
