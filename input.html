@@ -4,25 +4,17 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
 		var iskeyboard = false;
-		var wHeight = window.innerHeight;   //获取初始可视窗口高度 
-		window.addEventListener('resize', function(){       //监测窗口大小的变化事件  
-			alert('触发事件');
-		    var hh = window.innerHeight;     //当前可视窗口高度  
-		    var viewTop = $(window).scrollTop();   //可视窗口高度顶部距离网页顶部的距离  
-		    alert(wHeight);
-		    alert(hh);
-		    if(wHeight > hh){           //可以作为虚拟键盘弹出事件  
-		    	alert('键盘弹起了');
-		        iskeyboard = true;
-		    }else{         //可以作为虚拟键盘关闭事件  
-		    	alert('键盘关闭了');
-		        iskeyboard = false;
-		    }  
-		    wHeight = hh;
+		var wHeight = window.document.body.innerHeight;   //获取初始可视窗口高度 
+		$('input').on('focus',function(){
+			setTimeout(function(){
+				var sHeight = window.document.body.innerHeight;
+				alert(wHeight);
+				alert(sHeight);
+			},200);
 		});
-		alert(iskeyboard);
 	</script>
 </head>
 <body>
