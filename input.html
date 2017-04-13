@@ -8,11 +8,16 @@
 		var iskeyboard = false;
 		var wHeight = window.innerHeight;   //获取初始可视窗口高度 
 		window.addEventListener('resize', function(){       //监测窗口大小的变化事件  
+			alert('触发事件');
 		    var hh = window.innerHeight;     //当前可视窗口高度  
 		    var viewTop = $(window).scrollTop();   //可视窗口高度顶部距离网页顶部的距离  
+		    alert(wHeight);
+		    alert(hh);
 		    if(wHeight > hh){           //可以作为虚拟键盘弹出事件  
+		    	alert('键盘弹起了');
 		        iskeyboard = true;
 		    }else{         //可以作为虚拟键盘关闭事件  
+		    	alert('键盘关闭了');
 		        iskeyboard = false;
 		    }  
 		    wHeight = hh;
