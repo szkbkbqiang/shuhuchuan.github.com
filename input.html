@@ -9,11 +9,11 @@
 		var iskeyboard = false;
 		   //获取初始可视窗口高度 
 		$(function(){
-			var wHeight = window.screen.height;
+			var wHeight = document.body.clientHeight;
 			$('span').html(wHeight);
 			$('input').on('focus',function(){
 				setTimeout(function(){
-					var sHeight = window.screen.height;
+					var sHeight = document.body.clientHeight;
 					$('p').html(wHeight);
 					$('strong').html(sHeight);
 				},200);
