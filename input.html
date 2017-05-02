@@ -11,6 +11,7 @@
 <body style="height:500px">
 	<input type="text" id="txt" />
 	<div id="dv"></div>
+    <strong id="st"></strong>
 	<script>
     function IsSystem(){
         var u = navigator.userAgent;
@@ -36,10 +37,15 @@
             if (window.innerHeight > windowInnerHeight) {
                 clearInterval(timer);
                 $('#dv').html('android键盘隐藏--通过点击键盘隐藏按钮');
+                return false;
             }
         }
     }
-    $('#txt').click(eventCheck).blur(eventCheck);
+    $('#txt').click(function(e){
+        $('#st').html(eventCheck(e));
+    }).blur(function(e){
+        $('#st').html(eventCheck(e));
+    });
 </script>
 </body>
 </html>
