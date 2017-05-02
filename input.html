@@ -21,9 +21,10 @@
             return 'ios';       
         }
     };
-   var timer, windowInnerHeight;
+   var timer, windowInnerHeight,inow;
     function eventCheck(e) {
         if (e) { //blur,focus事件触发的
+            inow = false;
             $('#dv').html('android键盘' + (e.type == 'focus' ? '弹出' : '隐藏') + '--通过' + e.type + '事件');
             if (e.type == 'click') {//如果是点击事件启动计时器监控是否点击了键盘上的隐藏键盘按钮，没有点击这个按钮的事件可用，keydown中也获取不到keyCode值
                 setTimeout(function () {//由于键盘弹出是有动画效果的，要获取完全弹出的窗口高度，使用了计时器
@@ -37,14 +38,16 @@
             if (window.innerHeight > windowInnerHeight) {
                 clearInterval(timer);
                 $('#dv').html('android键盘隐藏--通过点击键盘隐藏按钮');
-                return false;
+                inow = false;
             }
         }
     }
     $('#txt').click(function(e){
-        $('#st').html(eventCheck(e));
+        eventCheck(e);
+        $('#st').html(inow);
     }).blur(function(e){
-        $('#st').html(eventCheck(e));
+        eventCheck(e);
+        $('#st').html(inow);
     });
 </script>
 </body>
