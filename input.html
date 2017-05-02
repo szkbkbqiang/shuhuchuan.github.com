@@ -30,10 +30,10 @@
             if (window.innerHeight > windowInnerHeight) {
                 clearInterval(timer);
                 $('#dv').html('android键盘隐藏--通过点击键盘隐藏按钮');
-                inow = true;
-                return inow;
+                inow = true;  
             }
         }
+        return inow;
     }
     $('#txt').click(function(){
         alert(eventCheck())
