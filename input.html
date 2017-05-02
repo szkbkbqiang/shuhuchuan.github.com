@@ -22,11 +22,13 @@
         }
     };
 
+
+
    var timer, windowInnerHeight;
     function eventCheck(e) {
-        var inow = true;
-        if (e) { 
-            inow = false;
+        var inow = false;
+        if (e) { //blur,focus事件触发的
+            $('#dv').html('android键盘' + (e.type == 'focus' ? '弹出' : '隐藏') + '--通过' + e.type + '事件');
             if (e.type == 'click') {
                 setTimeout(function () {
                     windowInnerHeight = window.innerHeight;
@@ -35,19 +37,19 @@
             }else{
                clearInterval(timer); 
             }
-        }else{ 
+        }else{ //计时器执行的，需要判断窗口可视高度，如果改变说明android键盘隐藏了
             if (window.innerHeight > windowInnerHeight) {
                 clearInterval(timer);
+                $('#dv').html('android键盘隐藏--通过点击键盘隐藏按钮');
                 inow = true;  
             }
         }
         return inow;
     }
-
     $('#txt').click(function(){
-        $('#dv').html(eventCheck())
-    }).blur(function(){
        $('#dv').html(eventCheck())
+    }).blur(function(){
+        $('#dv').html(eventCheck())
     });
 </script>
 </body>
