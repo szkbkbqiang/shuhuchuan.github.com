@@ -11,49 +11,74 @@
    }
    </style>
    <script>
+      /* android禁止微信调整字体大小 */
       (function () {
-
       　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-
-      　　handleFontSize();
-
+      　　　　handleFontSize();
       　　} else {
-      　　if (document.addEventListener) {
+         　　if (document.addEventListener) {
+         　　　　document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+         　　} else if (document.attachEvent) {
+         　　　　document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+         　　　　document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+         　　}
+         };
+         function handleFontSize() {
+         　　// 设置网页字体为默认大小
+         　　WeixinJSBridge.invoke('setFontSizeCallback', {'fontSize': 0});
+         　　// 重写设置网页字体大小的事件
+         　　WeixinJSBridge.on('menu:setfont', function () { WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0 });
 
-      　　　　document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+         　　});
+         }
+         function log( msg ) {
+              console.log(msg);
+              alert(msg);
+          }
 
-      　　} else if (document.attachEvent) {
+          var limit;
 
-      　　　　document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+          var half = '中华人民共和国'; //这里会换成中文再跑一遍
+          var str = half;
+          var sstr;
 
-      　　　　document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+          while ( 1 ) {
+              try {
+                  localStorage.clear();
+                  str += half;
+                  localStorage.setItem( 'cache', str );
+                  half = str;
+              } catch ( ex ) {
+                  break;
+              }
+          }
 
-      　　}
+          var base = str.length;
+          var off = base / 2;
+          var isLeft = 1;
 
-      }
+          while ( off ) {
+              if ( isLeft ) {
+                  end = base - (off / 2);
+              } else {
+                  end = base + (off / 2);
+              }
 
-      function handleFontSize() {
+              sstr = str.slice( 0, end );
+              localStorage.clear();
+              try {
+                  localStorage.setItem( 'cache', sstr );
+                  limit = sstr.length;
+                  isLeft = 0;
+              } catch ( e ) {
+                  isLeft = 1;
+              }
 
-      　　// 设置网页字体为默认大小
-      　　WeixinJSBridge.invoke('setFontSizeCallback', {
+              base = end;
+              off = Math.floor( off / 2 );
+          }
 
-      　　'fontSize': 0
-
-      　　});
-
-
-      　　// 重写设置网页字体大小的事件
-      　　WeixinJSBridge.on('menu:setfont', function () {
-
-      　　　　WeixinJSBridge.invoke('setFontSizeCallback', {
-
-      　　　　　　'fontSize': 0
-
-      　　　　});
-
-      　　});
-
-      　　}
+          log( 'limit: ' + limit );
       })();
    </script>
 </head>
