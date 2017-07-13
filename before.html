@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 <ul class="secretary_loding_stat_ul">
+        <li class="active"><em></em>填写就诊人信息</li>
+        <li><em></em>填写就诊人需求信息</li>
+    </ul>
+    <style>
+		.secretary_loding_stat_ul{margin:0 auto;border-bottom:1px solid #d5d5d5;margin-bottom:0.2rem;padding:.5rem .4rem;background-color:#FFF;overflow:hidden;counter-reset:step;position:relative}
+		.secretary_loding_stat_ul li{list-style-type:none;color:#000;text-transform:uppercase;font-size:.26rem;width:50%;float:left;position:relative;text-align:center}
+		.secretary_loding_stat_ul li:before{content:"●";width:.5rem;height:.5rem; text-align: center; display:block;color:#ccc;background:#fff;border-radius:100%;margin:0 auto .2rem auto;border:1px solid #ccc;}
+		.secretary_loding_stat_ul li:after{content:'';width:60%;height:1px;background:#d0d0d0;position:absolute;left:-30%;top:.27rem;}
+		.secretary_loding_stat_ul li:first-child:after{content:none}
+		.secretary_loding_stat_ul li.active:before,.secretary_loding_stat_ul li.active:after{background:#fff;border:1px solid #0dc8ba;color:#0dc8ba}
+		.secretary_loding_stat_ul li.error:before,.secretary_loding_stat_ul li.error:after{background:#fff;border:1px solid #d74436;color:#d74436}
+		.secretary_loding_stat_ul li.cancel:before,.secretary_loding_stat_ul li.cancel:after{background:#fff;border:1px solid #dc873f;color:#dc873f}
+		.secretary_loding_stat_ul li.active:after{background:#0dc8ba;border:none;color:#0dc8ba}
+		.secretary_loding_stat_ul li.active{color:#0dc8ba}
+    </style>
+    <script>
+    	(function(d,c){var e=d.documentElement,b="orientationchange" in window?"orientationchange":"resize",a=function(){var g=e.clientWidth;if(!g){return;}var f=100*(g/750);
+f>100?f=100:"";e.style.fontSize=f.toFixed(2)+"px";d.getElementsByTagName("body")[0].style.opacity="1";};if(!d.addEventListener){return;}c.addEventListener(b,a,false);
+d.addEventListener("DOMContentLoaded",a,false);})(document,window);
+    </script>
+</body>
+</html>
