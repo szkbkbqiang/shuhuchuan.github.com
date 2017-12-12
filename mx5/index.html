@@ -219,7 +219,8 @@
            var live_inow = false;
            var time = null;
            var time_start_date = '2016,11,18,22,22,00';
-           var live_start_url = 'http://mudu.tv/?c=activity&a=live&id=24241';
+           var live_start_url = 'http://mudu.tv/?c=activity&amp;a=live&amp;id=24241'.split('amp;').join('');
+           console.log(live_start_url);
            var time_end = null;
            var time_end_date = '2016,11,18,22,23,00';
            var live_end_url = 'http://player.youku.com/embed/XMTcxMDg1MzE2OA==';

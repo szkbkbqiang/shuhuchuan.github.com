@@ -1,0 +1,59 @@
+body html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: url('../img/bg.jpg') no-repeat;
+  background-size: cover
+}
+#box {
+  width: 100%;
+  overflow: hidden
+}
+#box ul li {
+  width: 100%;
+  height: auto;
+  background: url('../img/bg.jpg') no-repeat left bottom;
+  background-size: 100%;
+  display: inline-block;
+  text-align: center;
+}
+img {
+  border: none;
+  width: 100%;
+  vertical-align: top;
+}
+.line {
+  background: url('../img/guang_02.png') no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 1.25rem;
+}
+#box ul li .content {
+  padding: .15rem .25rem;
+  /*padding-bottom: .25rem;*/
+  width: 100%;
+  background-size: 100%;
+  display: inline-block;
+}
+#box ul li .content h5, #box ul li .content p {
+  font-size: .3rem;
+  color: #f5f4f4;
+  font-weight: normal;
+  line-height: .5rem;
+  text-align: left
+}
+#box ul li .content h2 {
+  font-size: .6rem;
+  /*line-height: 1rem;*/
+  padding: 0.25rem 0;
+  color: #cfa972;
+  font-weight: normal;
+  text-align: left;
+  /*white-space:nowrap;
+  overflow:hidden;
+  word-break: normal*/
+}
+#box ul li .content h2 span {
+ font-size: .3rem; 
+}
