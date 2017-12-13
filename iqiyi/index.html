@@ -6,11 +6,16 @@
   <title>百部大剧巨巨巨巨……巨长，都在爱奇艺</title>
   <link rel="stylesheet" href="./src/reset.css">
   <link rel="stylesheet" href="./src/index.css">
+  <link rel="stylesheet" href="./src/coom.css">
+  <script src="http://ossweb-img.qq.com/images/js/zepto/zepto1.2.min.js"></script>
   <script src="./src/flexible.js"></script>
+  <script src="./src/video.js"></script>
+  <!-- <script src="./src/Hp.js"></script> -->
 </head>
 
 <body>
   <div id="box">
+    <div class="vlist page" id="vlist" style="display: none;"><video src="2.mp4" x-webkit-airplay="allow" playsinline="" webkit-playsinline="" preload="auto" style="width: 100%; position: absolute; top: 0px; left: 0px; display: block; -webkit-appearance: none;"></video></div>
   	<div><img min-height="100" src="img/home.jpg" alt=""></div>
   	<!-- <div class="line"></div> -->
     <ul>
@@ -827,6 +832,27 @@
     echo.init({
       offset: 500
     });
+    (function(){
+      var media = new VideoF().init({
+          container : 'vlist',    //容器 
+          src : '2.mp4',   //视频路径
+          width : '100%',    //视频宽
+          height : '100%',   //视频高
+          speed : 1,         //视频播放速度(可忽略,主要用于在pc端调试)
+          mode : 'noborder',  //适配模式(两种视频模式，noboreder/showall, 默认是noborder)(可忽略)
+          bind : '#loading a',  //绑定按钮。即点击哪个按钮开始播放视频
+          begin : function(){  //视频播放前执行 (可忽略)
+
+          },
+          playing : function(){   //视频可以播放时执行(可忽略)
+            $('#vlist').show(); 
+          },
+          over : function(){   //视频播放完毕时执行(可忽略)
+            $('#end').show();
+          }
+       }); 
+      media.play()
+    }());
   </script>
 </body>
 
