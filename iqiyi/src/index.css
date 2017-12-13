@@ -64,7 +64,7 @@ body {
   display: none;
   bottom: 0
 }
-#share { opacity: .5; padding-top: 1.5rem; }
+#share { opacity: .3; padding-top: 1.5rem; padding-bottom:0.5rem; }
 .fixed .top { text-align: center; padding: 1.5rem 2.5rem; }
 .fixed .top img, .fixed .bottom img { width: 100% }
 .fixed .bottom { position: absolute; bottom: 0; opacity: .5;text-align: center; width: 100% }
