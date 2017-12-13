@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>百部大剧巨巨巨巨……巨长，都在爱奇艺</title>
+  <meta name="Description" content="一翻到底可能要很久很久很久">
   <link rel="stylesheet" href="./src/reset.css">
   <link href="./src/video-js.css" rel="stylesheet">
   <link rel="stylesheet" href="./src/index.css">
@@ -28,11 +29,14 @@
       width: 100%;
       /*height: 100%;*/
     }
+    .logo { position: fixed; top: .15rem; left: 0; width: 100%; color: #fff; text-align: center }
+    .logo span { display: inline-block; width: 2.8rem; height: .905rem; background: url('http://www.qiyipic.com/common/fix/public_images/logo108x35_black.png') 0 0 no-repeat; }
   </style>
 </head>
 
 <body>
   <div id="box">
+    <div class="logo"><span></span></div>
     <div id="vjs">
       <video id="my-video" class="video-js" controls preload="auto"
       poster="img/home.jpg" data-setup="{}">
