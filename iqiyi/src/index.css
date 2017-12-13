@@ -18,7 +18,7 @@ body {
   display: inline-block;
   text-align: center;
 }
-img {
+#box ul li img {
   border: none;
   width: 100%;
   vertical-align: top;
@@ -53,3 +53,17 @@ img {
 #box ul li .content h2 span {
  font-size: .3rem; 
 }
+
+.fixed {
+  background: url('../img/bg.jpg') no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  bottom: 0
+}
+.fixed .top { text-align: center; padding: 2rem 2.5rem }
+.fixed .top img, .fixed .bottom img { width: 100% }
+.fixed .bottom { position: absolute; bottom: 0 }
