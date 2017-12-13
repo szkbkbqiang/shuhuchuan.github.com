@@ -5,17 +5,40 @@
   <meta charset="utf-8">
   <title>百部大剧巨巨巨巨……巨长，都在爱奇艺</title>
   <link rel="stylesheet" href="./src/reset.css">
-  <link rel="stylesheet" href="./src/coom.css">
-  <script src="http://ossweb-img.qq.com/images/js/zepto/zepto1.2.min.js"></script>
-  <script src="./src/flexible.js"></script>
-  <script src="./src/video.js"></script>
+  <link href="./src/video-js.css" rel="stylesheet">
   <link rel="stylesheet" href="./src/index.css">
-  <!-- <script src="./src/Hp.js"></script> -->
+  <script src="http://ossweb-img.qq.com/images/js/zepto/zepto1.2.min.js"></script>
+  <script src="./src/video.min.js"></script>
+  <script src="./src/flexible.js"></script>
+  <style type="text/css">
+    #vjs {
+      /*position: fixed;*/
+      /*top: 0;*/
+      /*left: 0;*/
+      /*width: 100%;*/
+      /*height: 100%;*/
+    }
+    #vjs div {
+      /*position: absolute;*/
+      /*top: 0;*/
+      /*left: 0;*/
+      /*width: 100%;*/
+    }
+    #my-video {
+      width: 100%;
+      /*height: 100%;*/
+    }
+  </style>
 </head>
 
 <body>
   <div id="box">
-    <div class="vlist page" id="vlist"><video src="2.mp4" x-webkit-airplay="allow" playsinline="" webkit-playsinline="" preload="auto" style="width: 100%; position: absolute; top: 0px; left: 0px; display: block; -webkit-appearance: none;"></video></div>
+    <div id="vjs">
+      <video id="my-video" class="video-js" controls preload="auto"
+      poster="img/home.jpg" data-setup="{}">
+      <source src="2.mp4" type="video/mp4">
+     </video>
+    </div>
   	<div><img min-height="100" src="img/home.jpg" alt=""></div>
   	<!-- <div class="line"></div> -->
     <ul>
@@ -895,27 +918,24 @@
     echo.init({
       offset: 500
     });
-    (function(){
-      var media = new VideoF().init({
-          container : 'vlist',    //容器 
-          src : '2.mp4',   //视频路径
-          width : '100%',    //视频宽
-          height : '100%',   //视频高
-          speed : 1,         //视频播放速度(可忽略,主要用于在pc端调试)
-          mode : 'noborder',  //适配模式(两种视频模式，noboreder/showall, 默认是noborder)(可忽略)
-          bind : '#loading a',  //绑定按钮。即点击哪个按钮开始播放视频
-          begin : function(){  //视频播放前执行 (可忽略)
-
-          },
-          playing : function(){   //视频可以播放时执行(可忽略)
-            $('#vlist').show(); 
-          },
-          over : function(){   //视频播放完毕时执行(可忽略)
-            $('#end').show();
-          }
-       }); 
-      media.play()
-    }());
+    var currentTime,duration;
+    videojs("my-video").ready(function(){
+      var myPlayer = this;
+      myPlayer.play();
+      myPlayer.on('timeupdate', function () {  
+        duration = myPlayer.duration()
+        currentTime = myPlayer.currentTime();
+        // if (currentTime > 0) {
+        //   $('.loading').hide(400);
+        //   $('.skip').show(400);
+        // }
+        // 如果 currentTime() === duration()，则视频已播放完毕
+        if (duration != 0 && currentTime === duration) {
+          // 播放结束
+          $('#vjs').hide(200).remove()
+        }
+      });
+    });
   </script>
 </body>
 
