@@ -56,7 +56,7 @@ body {
 
 .fixed {
   /*background: #000 url('../img/bg1.jpg') no-repeat;*/
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -64,7 +64,7 @@ body {
   display: none;
   bottom: 0
 }
-#share { opacity: .3; padding-top: 1.5rem; padding-bottom:0.5rem; }
+#share { opacity: .5; padding-top: 1.5rem; padding-bottom:0.5rem; }
 .fixed .top { text-align: center; padding: 1.5rem 2.5rem; }
 .fixed .top img, .fixed .bottom img { width: 100% }
 .fixed .bottom { position: absolute; bottom: 0; opacity: .5;text-align: center; width: 100% }
