@@ -55,7 +55,7 @@ body {
 }
 
 .fixed {
-  background: url('../img/bg.jpg') no-repeat;
+  background: url('../img/bg1.jpg') no-repeat;
   background-size: cover;
   position: fixed;
   top: 0;
@@ -64,6 +64,7 @@ body {
   display: none;
   bottom: 0
 }
+#share { opacity: .5 }
 .fixed .top { text-align: center; padding: 2rem 2.5rem }
 .fixed .top img, .fixed .bottom img { width: 100% }
-.fixed .bottom { position: absolute; bottom: 0 }
+.fixed .bottom { position: absolute; bottom: 0; opacity: .5 }
