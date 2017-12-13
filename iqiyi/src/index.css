@@ -31,10 +31,6 @@ img {
 }
 #box ul li .content {
   padding: .15rem .25rem;
-  /*padding-bottom: .25rem;*/
-  width: 100%;
-  background-size: 100%;
-  display: inline-block;
 }
 #box ul li .content h5, #box ul li .content p {
   font-size: .3rem;
