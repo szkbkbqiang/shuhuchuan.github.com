@@ -18,7 +18,7 @@ body {
   display: inline-block;
   text-align: center;
 }
-#box ul li img {
+#box ul li img, .home img {
   border: none;
   width: 100%;
   vertical-align: top;
