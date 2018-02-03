@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>1</title>
+ <script src="./src/video.min.js"></script>
+</head>
+
+<body>
+  <div id="box">
+  	<div><img min-height="100" src="img/home.jpg" alt=""></div>
+  	<!-- <div class="line"></div> -->
+    <video id="my-video" class="video-js vjs-big-play-centered vjs-default-skin" x5-video-player-type="h5" x5-video-player-fullscreen="true" autoplay preload="auto" >
+      <source src="aiqiyi_1.mp4" type="video/mp4">
+     </video> 
+  </div>
+  <script>
+    var mypaly = videojs('my-video',{
+      'controls':false,
+      'posterImage':true
+    })
+    mypaly.ready(function(){
+        var myPlayer = this;
+        myPlayer.play();
+    });
+  </script>
+</body>
+
+</html>
