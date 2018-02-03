@@ -93,6 +93,6 @@
     <input type="file" accept="video/*" capture="camcorder">
     <input type="file" accept="audio/*" capture="microphone">
 	<div id="dv">测试调整字体大小</div>
-	<div style="width:100%;height:800px; position:absolute;top:0;left:0;background:rgba(0,0,0,0.5);color:#fff;text-align:center;" id="box">大家好</div>
+	<div style="width:100%;height:800px; position:absolute;top:0;left:0;background:rgba(0,0,0,0.5);color:#fff;text-align:center;display:none;" id="box">大家好</div>
 </body>
 </html>
