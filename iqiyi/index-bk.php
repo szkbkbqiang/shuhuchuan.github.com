@@ -28,7 +28,9 @@ $signPackage = Robert::GetWechatsign();
       z-index: 8;
     }
     #my-video {
-      margin-top: -1000px;
+      width: 100%;
+      z-index: 9;
+      /*height: 100%;*/
     }
     .logo { position: fixed; top: .35rem; right: .35rem; color: #fff; }
     .logo span { display: inline-block; width: 8.25rem; height: 2.725rem; background: url('img/logo.png') 0 0 no-repeat; }
@@ -42,7 +44,6 @@ $signPackage = Robert::GetWechatsign();
       right: 0;
       bottom: 0;
       background: #000;
-      z-index: 998
     }
     .loading{
       position: absolute;
@@ -85,15 +86,7 @@ $signPackage = Robert::GetWechatsign();
   .loading span:nth-child(5){
       -webkit-animation-delay:0.8s;
   }
-    .pull {
-    position: fixed;
-    width: .6rem;
-    height: .2rem;
-    bottom: .5rem;
-    left: 50%;
-    margin-left: -.3rem;
-  }
-  .pull img { width: 100% }
+
   </style>
   <script>
 	var _hmt = _hmt || [];
@@ -109,7 +102,7 @@ $signPackage = Robert::GetWechatsign();
 
 <body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-  <!-- <div class="full_loading">
+  <div class="full_loading">
     <div class="loading">
       <span></span>
       <span></span>
@@ -117,15 +110,14 @@ $signPackage = Robert::GetWechatsign();
       <span></span>
       <span></span>
     </div>
-  </div> -->
-  
+  </div>
   <div id="box">
     <div class="logo"><img src="img/logo.png"></div>
     <!-- <div id="vjs">
-     <video id="my-video" class="video-js vjs-big-play-centered vjs-default-skin" height="320" webkit-playsinline="playsinline" playsinline="true" x5-playsinline="true" autoplay="autoplay">
+     <video id="my-video" class="video-js vjs-big-play-centered vjs-default-skin" controls autoplay preload="auto" height="320">
       <source src="aiqiyi_1.mp4" type="video/mp4">
-     </video> --> 
-    <!-- </div> -->
+     </video> 
+    </div> -->
   	<div class="home"><img min-height="100" src="img/home.jpg" alt=""></div>
   	<!-- <div class="line"></div> -->   
     <ul>
@@ -482,7 +474,7 @@ $signPackage = Robert::GetWechatsign();
         <img min-height="100" src="img/blank.gif" data-echo="img/38.jpg">
         <div class="content">
           <h2>半生缘</h2>
-          <h5>艺人阵容:刘嘉玲，蒋欣，郑元畅，郭晓东</h5>
+          <h5>艺人阵容:刘嘉玲，郑元畅，蒋欣，郭晓东</h5>
           <p>·张爱玲大IP，老上海、爱恨情仇、视觉享受、重塑经典；<br>·刘嘉玲演反派虐蒋欣，看点足。</p>
         </div>
         <div class="line"></div>
@@ -1119,14 +1111,9 @@ $signPackage = Robert::GetWechatsign();
         <img src="img/footer.png" alt="">
       </div> -->
     </div>
-    <div class="pull"><div class="animated bounce infinite"><img src="img/pull.png" alt=""></div></div>
   </div>
   <script src="src/echo.min.js"></script>
   <script>
-  $('document').scrollTop(0)
-  $(window).scroll(function (e) {
-    $('.pull').hide(1000)
-  })
     $('#share').click(function(){
       $('.fixed').show()
     })
@@ -1136,36 +1123,38 @@ $signPackage = Robert::GetWechatsign();
     echo.init({
       offset: 500
     });
-      // $('#vjs').show(200)
-      // $('#my-video').css({width: $(window).width(), height: $(window).height(), marginTop: 0})
-      // var myPlayer = videojs('my-video',{
-      //   "controls": false
-      //  });
-      //  myPlayer.ready(function(){
-      //   myPlayer.width($(window).width());
-      //   myPlayer.height($(window).height());
+    setTimeout(function () {
+      $('.full_loading').hide()
+      // $('#vjs').show()
+      var currentTime,duration;
+      // videojs("my-video").ready(function(){
 
+      //   var myPlayer = this;
       //   myPlayer.play();
+      //   // if (myPlayer.currentTime){
 
-      //   document.addEventListener("WeixinJSBridgeReady", function () {
-      //      $('.full_loading').hide()
-      //       myPlayer.play();
-      //   }, false);
-      //   myPlayer.play();
-      //   myPlayer.on('timeupdate', function () {  
-      //     duration = myPlayer.duration()
-      //     currentTime = myPlayer.currentTime();
-      //     if (currentTime > 0) {
-      //        $('.full_loading').hide()
-      //     }
-      //     // 如果 currentTime() === duration()，则视频已播放完毕
-      //     if (duration != 0 && currentTime === duration) {
-      //       // 播放结束
-      //       $('#my-video').hide(200).remove()
-      //       $('#vjs').hide(200)
-      //     }
-      //   });
+      //   //   myPlayer.pause();
+      //   //   //这里的定时器你可以不需要，也可以变成你需要的事件，而且也不一定在这个位置，主要是里面的play
+      //   //  setTimeout(function(){
+      //   //      myPlayer.play();
+      //   //  },1000)  
+      //   // }
+      //   // myPlayer.on('timeupdate', function () {  
+      //   //   duration = myPlayer.duration()
+      //   //   currentTime = myPlayer.currentTime();
+      //   //   // if (currentTime === 0) {
+      //   //   //   myPlayer.pause()
+      //   //   //   myPlayer.play()
+      //   //   // }
+      //   //   // 如果 currentTime() === duration()，则视频已播放完毕
+      //   //   if (duration != 0 && currentTime === duration) {
+      //   //     // 播放结束
+      //   //     $('#vjs').hide(200).remove()
+      //   //   }
+      //   // });
       // });
+    }, 2000)
+    
   </script>
 
 <script>
