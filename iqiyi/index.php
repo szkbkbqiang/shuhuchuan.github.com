@@ -157,6 +157,7 @@ $signPackage = Robert::GetWechatsign();
         <div class="line"></div>
       </li>
       <li>
+<<<<<<< HEAD
         <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
         <div class="content">
           <h2>冒险王卫斯理之支离人</h2>
@@ -178,6 +179,13 @@ $signPackage = Robert::GetWechatsign();
           <h2>冒险王卫斯理之无名发</h2>
           <h5> </h5>
           <p></p>
+=======
+        <img min-height="100" src="img/blank.gif" data-echo="img/4.jpg">
+        <div class="content">
+          <h2>冒险王卫斯理之支离人</h2>
+          <h5>艺人阵容:余文乐、胡然、文咏珊、杨蓉</h5>
+          <p>中国科幻文学教父，倪匡人气榜首IP改编，著名导演王晶首次触电网剧，埃及、东京跨国取景，打造科幻动作冒险新奇观。</p>
+>>>>>>> 7b65b20d70c9aed18e5892d6c9a5a306aaf40759
         </div>
         <div class="line"></div>
       </li>
@@ -792,6 +800,26 @@ $signPackage = Robert::GetWechatsign();
         </div>
         <div class="line"></div>
       </li>
+<<<<<<< HEAD
+=======
+	  <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>冒险王卫斯理之蓝血人</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li><li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>冒险王卫斯理之无名发</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+>>>>>>> 7b65b20d70c9aed18e5892d6c9a5a306aaf40759
       <li>
          <!--<img min-height="100" src="img/blank.gif" data-echo="img/66.jpg">-->
         <div class="content">

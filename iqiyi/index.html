@@ -3,10 +3,41 @@
 
 <head>
   <meta charset="utf-8">
-  <title>1</title>
+  <title>百部大剧巨巨巨巨……巨长，都在爱奇艺</title>
+  <meta name="Description" content="一翻到底可能要很久很久很久">
+  <meta name="sharecontent" data-msg-img="" data-msg-title="百部大剧巨巨巨巨……巨长，都在爱奇艺" data-msg-content="翻到底可能要很久很久很久" data-msg-callBack="" data-line-img="你的缩略图地址" data-line-title="你的标题" data-line-callBack=""/>
   <link rel="stylesheet" href="./src/reset.css">
+  <link href="./src/video-js.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/animate.css">
   <link rel="stylesheet" href="./src/index.css">
+  <script src="http://ossweb-img.qq.com/images/js/zepto/zepto1.2.min.js"></script>
+  <script src="./src/video.min.js"></script>
   <script src="./src/flexible.js"></script>
+  <style type="text/css">
+    #vjs {
+      /*position: fixed;*/
+      /*top: 0;*/
+      /*left: 0;*/
+      /*width: 100%;*/
+      /*height: 100%;*/
+      display: none
+    }
+    #vjs div {
+      /*position: absolute;*/
+      /*top: 0;*/
+      /*left: 0;*/
+      /*width: 100%;*/
+    }
+    #my-video {
+      width: 100%;
+      /*height: 100%;*/
+    }
+    .logo { position: fixed; top: .35rem; right: .35rem; color: #fff; }
+    .logo span { display: inline-block; width: 8.25rem; height: 2.725rem; background: url('img/logo.png') 0 0 no-repeat; }
+    .logo img {
+      width: 2rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,7 +53,14 @@
 </style>
  <div class="animated pulse pull"><img src="img/pull.png" alt=""></div>
   <div id="box">
-  	<div><img min-height="100" src="img/home.jpg" alt=""></div>
+    <div class="logo"><img src="img/logo.png"></div>
+    <div id="vjs">
+      <video id="my-video" class="video-js" controls preload="auto"
+      poster="img/home.jpg" data-setup="{}">
+      <source src="2.mp4" type="video/mp4">
+     </video>
+    </div>
+  	<div class="home"><img min-height="100" src="img/home.jpg" alt=""></div>
   	<!-- <div class="line"></div> -->
     <ul>
       <li>
@@ -55,7 +93,7 @@
       <li>
         <img min-height="100" src="img/blank.gif" data-echo="img/4.jpg">
         <div class="content">
-          <h2>冒险王卫斯理</h2>
+          <h2>卫斯理传奇之支离人、卫斯理传奇之蓝血人、卫斯理传奇之无名发</h2>
           <h5>艺人阵容:余文乐、胡然、文咏珊、杨蓉</h5>
           <p>中国科幻文学教父，倪匡人气榜首IP改编，著名导演王晶首次触电网剧，埃及、东京跨国取景，打造科幻动作冒险新奇观。</p>
         </div>
@@ -191,7 +229,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/19.jpg">
         <div class="content">
           <h2>美人鱼</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>华人喜剧大师周星驰超级IP，《美人鱼》再现荧屏。</p>
         </div>
         <div class="line"></div>
@@ -200,7 +238,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/20.jpg">
         <div class="content">
           <h2>《盗墓笔记》之<蛇沼鬼蜮>、<阴山古楼>、<邛笼石影>、<谜海归巢></h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>《盗墓笔记》四重奏连环轰炸，谜团套谜团全新盗墓体验。</p>
         </div>
         <div class="line"></div>
@@ -236,7 +274,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/24.jpg">
         <div class="content">
           <h2>夜旅人</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>1937年民国律师与2017年女法医超越时空的爱。</p>
         </div>
         <div class="line"></div>
@@ -263,7 +301,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/27.jpg">
         <div class="content">
           <h2>明君修炼记</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>群穿+双向穿越的新鲜定位，顶级团队加盟，联手打造融合古今奇幻盛宴。</p>
         </div>
         <div class="line"></div>
@@ -281,7 +319,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/29.jpg">
         <div class="content">
           <h2>以你为名的青春</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>《我的少女时代》原班团队打造台湾风格的校园青春剧，继《最好的我们》《你好，旧时光》后的又一校园风格力作。更有台湾摇滚天团五月天演唱剧中插曲，带你回到那个青春悸动的年代。</p>
         </div>
         <div class="line"></div>
@@ -326,7 +364,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/35.jpg">
         <div class="content">
           <h2>我真是大明星</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>著名编剧秦雯为知名网文IP执笔，呈现更燃都市科幻。</p>
         </div>
         <div class="line"></div>
@@ -461,7 +499,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/50.jpg">
         <div class="content">
           <h2>仙侠奇缘之杀阡陌</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>剧王《花千骨》前传，原著果果及南派三叔鼎力护航。</p>
         </div>
         <div class="line"></div>
@@ -485,7 +523,7 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/53.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/53.jpg">-->
         <div class="content">
           <h2>归去来</h2>
           <h5>艺人阵容:唐嫣、罗晋</h5>
@@ -515,7 +553,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/56.jpg">
         <div class="content">
           <h2>源宇宙</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>南派三叔与《花千骨》作者果果强强联手，打造新领域科幻题材。</p>
         </div>
         <div class="line"></div>
@@ -524,7 +562,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/57.jpg">
         <div class="content">
           <h2>谁的青春不迷茫·我在未来等你</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>畅销书跨界作家刘同最新力作，金牌电影团队倾力打造，带你重返17岁，安放青春的遗憾。</p>
         </div>
         <div class="line"></div>
@@ -533,7 +571,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/58.jpg">
         <div class="content">
           <h2>仙剑奇侠传4</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>最具时代影响力的仙侠超级IP，高燃人气基础。</p>
         </div>
         <div class="line"></div>
@@ -542,7 +580,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/59.jpg">
         <div class="content">
           <h2>灵域</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>逆苍天知名IP改编,动漫版本破9亿播放。</p>
         </div>
         <div class="line"></div>
@@ -551,7 +589,7 @@
         <img min-height="100" src="img/blank.gif" data-echo="img/62.jpg">
         <div class="content">
           <h2>大主宰</h2>
-          <h5></h5>
+          <h5>艺人阵容：待定</h5>
           <p>全网排名第一玄幻IP改编，网文之王天蚕土豆最强力作，被誉为“东方版哈利波特”。白一骢监制，当红青春小生出演，有望打造成为《权力的游戏》类型的东方玄幻史诗。</p>
         </div>
         <div class="line"></div>
@@ -620,42 +658,6 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/66.jpg">
-        <div class="content">
-          <h2>梦想合伙人</h2>
-          <h5>艺人阵容:李光洁、高露、袁文康、刘天佐</h5>
-          <p></p>
-        </div>
-        <div class="line"></div>
-      </li>
-      <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/86.jpg">
-        <div class="content">
-          <h2>欲望之城</h2>
-          <h5>艺人阵容:吴秀波、杨颖、任重、蒋勤勤、陈道明特别出演</h5>
-          <p></p>
-        </div>
-        <div class="line"></div>
-      </li>
-      <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/87.jpg">
-        <div class="content">
-          <h2>大江大河</h2>
-          <h5>艺人阵容:王凯、杨烁</h5>
-          <p></p>
-        </div>
-        <div class="line"></div>
-      </li>
-      <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/88.jpg">
-        <div class="content">
-          <h2>都挺好</h2>
-          <h5>艺人阵容:姚晨、倪大红</h5>
-          <p></p>
-        </div>
-        <div class="line"></div>
-      </li>
-      <li>
         <img min-height="100" src="img/blank.gif" data-echo="img/89.jpg">
         <div class="content">
           <h2>烈火海洋</h2>
@@ -683,28 +685,10 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/92.jpg">
-        <div class="content">
-          <h2>壮志高飞</h2>
-          <h5>艺人阵容:陈乔恩、郑恺、朱梓骁、吕一、胡兵、赵子琪、王佳宇</h5>
-          <p></p>
-        </div>
-        <div class="line"></div>
-      </li>
-      <li>
         <img min-height="100" src="img/blank.gif" data-echo="img/93.jpg">
         <div class="content">
           <h2>火柴小姐和美味先生</h2>
           <h5>艺人阵容:陈晓、陈意涵</h5>
-          <p></p>
-        </div>
-        <div class="line"></div>
-      </li>
-      <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/94.jpg">
-        <div class="content">
-          <h2>和平饭店</h2>
-          <h5>艺人阵容:雷佳音，陈数</h5>
           <p></p>
         </div>
         <div class="line"></div>
@@ -719,7 +703,64 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/97.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/66.jpg">-->
+        <div class="content">
+          <h2>梦想合伙人</h2>
+          <h5>艺人阵容:李光洁、高露、袁文康、刘天佐</h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/86.jpg">-->
+        <div class="content">
+          <h2>欲望之城</h2>
+          <h5>艺人阵容:吴秀波、杨颖、任重、蒋勤勤、陈道明特别出演</h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/87.jpg">-->
+        <div class="content">
+          <h2>大江大河</h2>
+          <h5>艺人阵容:王凯、杨烁</h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/88.jpg">-->
+        <div class="content">
+          <h2>都挺好</h2>
+          <h5>艺人阵容:姚晨、倪大红</h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      
+      <li>
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/92.jpg">-->
+        <div class="content">
+          <h2>壮志高飞</h2>
+          <h5>艺人阵容:陈乔恩、郑恺、朱梓骁、吕一、胡兵、赵子琪、王佳宇</h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      
+      <li>
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/94.jpg">-->
+        <div class="content">
+          <h2>和平饭店</h2>
+          <h5>艺人阵容:雷佳音，陈数</h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      
+      <li>
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/97.jpg">-->
         <div class="content">
           <h2>越活越来劲</h2>
           <h5>艺人阵容:闫学晶、范明、邵峰、乔杉、修睿</h5>
@@ -728,7 +769,7 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/99.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/99.jpg">-->
         <div class="content">
           <h2>小欢喜</h2>
           <h5>艺人阵容:黄磊</h5>
@@ -737,7 +778,7 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/71.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/71.jpg">-->
         <div class="content">
           <h2>悍城</h2>
           <h5> </h5>
@@ -746,7 +787,7 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/73.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/73.jpg">-->
         <div class="content">
           <h2>无主之城（天机）</h2>
           <h5> </h5>
@@ -755,7 +796,7 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/74.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/74.jpg">-->
         <div class="content">
           <h2>坑王驾到</h2>
           <h5> </h5>
@@ -764,7 +805,7 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/75.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/75.jpg">-->
         <div class="content">
           <h2>霍元甲</h2>
           <h5> </h5>
@@ -773,7 +814,7 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/76.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/76.jpg">-->
         <div class="content">
           <h2>刑侦五局</h2>
           <h5> </h5>
@@ -782,7 +823,7 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/77.jpg">
+        <!--<img min-height="100" src="img/blank.gif" data-echo="img/77.jpg">-->
         <div class="content">
           <h2>万古仙穹</h2>
           <h5> </h5>
@@ -791,7 +832,7 @@
         <div class="line"></div>
       </li>
       <li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/78.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/78.jpg">-->
         <div class="content">
           <h2>新白娘子传奇</h2>
           <h5> </h5>
@@ -799,7 +840,7 @@
         </div>
         <div class="line"></div>
       </li><li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/81.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/81.jpg">-->
         <div class="content">
           <h2>战争传说</h2>
           <h5> </h5>
@@ -807,7 +848,7 @@
         </div>
         <div class="line"></div>
       </li><li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/85.jpg">
+         <!--<img min-height="100" src="img/blank.gif" data-echo="img/85.jpg">-->
         <div class="content">
           <h2>尉官正年轻</h2>
           <h5> </h5>
@@ -815,14 +856,15 @@
         </div>
         <div class="line"></div>
       </li><li>
-        <img min-height="100" src="img/blank.gif" data-echo="img/95.jpg">
+        <!--<img min-height="100" src="img/blank.gif" data-echo="img/95.jpg">-->
         <div class="content">
           <h2>爱情没有暂住证</h2>
           <h5> </h5>
           <p></p>
         </div>
         <div class="line"></div>
-      </li><li>
+      </li>
+      <!-- <li>
         <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg">
         <div class="content">
           <h2>大汉夜郎歌1/2</h2>
@@ -830,13 +872,129 @@
           <p></p>
         </div>
         <div class="line"></div>
+      </li> -->
+      <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>莽荒纪</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>亚洲教父</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>《新大头儿子和小头爸爸》</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>《希望使命》</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>《后妈的春天》</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>  《突击再突击》</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>《我曾爱过你，想起就心酸》</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>《双枪》</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <!-- <img min-height="100" src="img/blank.gif" data-echo="img/30.jpg"> -->
+        <div class="content">
+          <h2>《哪吒与杨戬》</h2>
+          <h5> </h5>
+          <p></p>
+        </div>
+        <!-- <div class="line"></div> -->
+        <div id="share">
+          <img src="img/footer.png" alt="">
+        </div>
       </li>
     </ul>
+    <div class="fixed">
+      <div class="animated pulse infinite top">
+        <img src="img/share1.png" alt="">
+      </div>
+      <!-- <div class="bottom">
+        <img src="img/footer.png" alt="">
+      </div> -->
+    </div>
   </div>
   <script src="src/echo.min.js"></script>
   <script>
+    $('#share').click(function(){
+      $('.fixed').show()
+    })
+    $('.fixed').click(function(){
+      $('.fixed').hide()
+    })
     echo.init({
       offset: 500
+    });
+    var currentTime,duration;
+    videojs("my-video").ready(function(){
+      var myPlayer = this;
+      myPlayer.play();
+      myPlayer.on('timeupdate', function () {  
+        duration = myPlayer.duration()
+        currentTime = myPlayer.currentTime();
+        // if (currentTime > 0) {
+        //   $('.loading').hide(400);
+        //   $('.skip').show(400);
+        // }
+        // 如果 currentTime() === duration()，则视频已播放完毕
+        if (duration != 0 && currentTime === duration) {
+          // 播放结束
+          $('#vjs').hide(200).remove()
+        }
+      });
     });
   </script>
 </body>

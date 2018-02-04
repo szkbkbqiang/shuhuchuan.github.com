@@ -1,0 +1,487 @@
+.right-top{
+  width: 0.3rem;
+  height: 0.45rem;
+  display: inline-block;
+  margin-left: 0.2rem;
+  vertical-align: top;
+}
+
+.pro-title{
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding-left: 0.75rem;
+    padding-top: 0.675rem;
+}
+.pro-describe{
+  font-size: 0.65rem;
+  padding-left: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #d7d7d7;
+  color: #666;
+}
+.pro-datails-img{
+  padding-top: 1.75rem;
+}
+.pro-tab-list{
+  padding-top: 0.75rem;
+}
+.pro-tab-list ul{
+  padding:0 0.75rem;
+}
+.pro-tab-list ul li{
+  font-size: 0.7rem;
+  color: #666;
+  padding:0.56rem 0;
+}
+.pro-tab-list ul li span.text-right{
+  float: right;
+  color: #333;
+}
+.pro-h2-title{
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-top: 1.625rem;
+  margin-bottom: 1rem;
+  color: #222;
+  padding-left: 1.125rem;
+  position: relative;
+}
+.pro-h2-title::after{
+  content: "";
+  position: absolute;
+  width: 0.15rem;
+  height: 0.85rem;
+  border-radius: 35%;
+  left:0.5rem;
+  top: 0;
+  background: #639ddd;
+}
+.pro-table-list{
+  padding:0 0.75rem;
+}
+.pro-table-list table{
+  border:1px solid #ccc;
+  border-bottom: 0;
+  border-right: 0;
+  width: 100%;
+}
+.pro-table-list table th,.pro-table-list table td{
+  padding:0.55rem 0.2rem;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  font-size: 0.6rem;
+}
+.pro-table-list table th{
+  background: #fcf2f2;
+}
+.pro-table-list table td.flex-span span{
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  line-height: 0.8rem;
+  padding-right: 0.2rem;
+}
+.pro-a-xy{
+  padding-top: 0.75rem;
+  padding-left: 0.75rem;
+}
+.pro-a-xy p{
+  color: #666;
+  font-size: 0.6rem;
+  padding-bottom: 0.5rem;
+}
+.pro-a-xy a{
+  display: inline-block;
+  font-size: 0.6rem;
+  width: 100%;
+  color: #4199f4;
+  padding-bottom: 0.5rem;
+}
+.pro-tel-bot{
+  background: #f0f0f0;
+  text-align: center;
+  width:16.5rem;
+  height: 2.25rem;
+  margin:0 auto;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.pro-tel-bot p{
+  padding-top: 0.4rem;
+  color: #999;
+  font-size: 0.45rem;
+  line-height: 0.8rem;
+}
+.pro-tel-bot p a{
+  color: #4199f4;
+}
+.pro-shop{
+  border:1px solid #ccc;
+  height: 2.25rem;
+  display: flex;
+  border-left: 0;
+  border-right: 0;
+}
+.pro-shop span{
+  flex: 1;
+  text-align: center;
+  line-height: 2.25rem;
+}
+.pro-shop span.pro-Price{
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #dd3333;
+}
+.pro-shop span.pro-Price em{
+  font-size: 0.65rem;
+}
+.pro-shop span.pro-shop-btn{
+  background: #dd3333;
+  color:#fff;
+  font-size: 0.75rem;
+}
+
+/* 保险条款 */
+.clauses-title{
+  height: 3.25rem;
+  line-height: 3.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  box-shadow: 0 0 20px #333;
+}
+.clauses-center{
+  border-top: 0.5rem solid #f0f0f0;
+}
+.clauses-center h2{
+  line-height: 2.25rem;
+  padding-left: 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.8rem;
+}
+.clauses-text{
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.7rem;
+  line-height: 1.15rem;
+}
+
+/* 信息填写 */
+.clauses-center .form-ul{
+
+}
+.clauses-center .form-ul li{
+  height: 2.25rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding:0 0.5rem;
+  position: relative;
+}
+.clauses-center .form-ul li span.form-label{
+  font-size: 0.7rem;
+  line-height: 2.25rem;
+}
+.clauses-center .form-ul li span.form-label em{
+  color: #f03333;
+  vertical-align: middle;
+}
+.clauses-center .form-ul li span.text-right{
+  float: right;
+  position: relative;
+}
+.clauses-center .form-ul li span.text-right .form-input{
+  border:0;
+  line-height: 1.5rem;
+  margin-top:0.375rem;
+  width: 11.5rem;
+  text-align: right;
+  font-size: 0.7rem;
+  display: inline-block;
+}
+.select-opacity{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  direction: rtl;
+}
+.form-checked{
+  background:#f0f0f0;
+  color: #999;
+  display: inline-block;
+  line-height: 1.5rem;
+  margin-top: 0.375rem;
+  padding:0 0.5rem;
+  border-radius: 0.8rem;
+}
+.form-moey{
+  padding:0 0.75rem;
+  padding-top: 1rem;
+}
+.form-moey p{
+  font-size: 0.7rem;
+  color: #818181;
+  padding-bottom: 0.75rem;
+}
+.form-moey p span{
+  float: right;
+}
+.text-data{
+  padding:1rem;
+}
+.text-data a{
+  display: inline-block;
+  width: 100%;
+  color: #2453eb;
+  line-height: 1.5rem;
+}
+.checkbox-box{
+  line-height: 2.25rem;
+  font-size: 0.7rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 0.75rem;
+}
+.checkbox-form{
+  width:0.5rem;
+  height: 0.5rem;
+  display: inline-block;
+  border:2px solid #f03333;
+  vertical-align: top;
+  margin-top: 0.8rem;
+  border-radius: 3px;
+  margin-right: 0.25rem;
+  position: relative;
+}
+
+.weixin-pro{
+  text-align: center;
+  width: 100%;
+  padding-top: 3rem;
+  line-height: 1.5rem;
+  font-size: 0.7rem;
+}
+.weixin-pro img{
+  width: 2.9rem;
+  display: inline-block;
+}
+.success{
+  text-align: center;
+}
+.success img{
+  width: 2.85rem;
+  margin-top: 4.25rem;
+}
+.success p{
+  color: #999;
+  font-size: 0.65rem;
+  padding-top: 1.25rem;
+}
+.success p.success-text{
+  font-size: 0.85rem;
+  color: #82baf9;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+/* 医生绑定 */
+.register-box{
+  padding-top: 5rem;
+}
+.register-box ul {
+  padding:0 2.875rem;
+}
+.register-box ul li{
+  height: 3rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.register-box ul li.reg-btn-box{
+  border: 0;
+  padding-top: 2.25rem;
+}
+.register-box .reg-input{
+  line-height: 1.5rem;
+  margin-top: 0.725rem;
+  border: 0;
+  background: none;
+  text-align: center;
+  width: 100%;
+  font-size: 0.7rem;
+}
+.register-box ul li.reg-btn-box .reg-btn{
+  background: #dd3333;
+  width: 100%;
+  height: 2.25rem;
+  border: 0;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.7rem;
+}
+
+/* 我的账户 */
+.my-hader{
+  height: 6.5rem;
+  background: #2670c2;
+  margin-top: 0.25rem;
+  overflow: hidden;
+  position: relative;
+}
+.myphoto{
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.my-name-box{
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.my-name-box p{
+  font-size: 0.7rem;
+  color: #fff;
+  padding-top: 0.6rem;
+}
+.my-name-box p.my-name{
+  font-size: 1rem;
+  padding-top: 0.75rem;
+}
+.my-hader .edit-my-z{
+  position: absolute;
+  right: 0;
+  top: 2.375rem;
+  width: 3.5rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  background: #fff;
+  text-align: center;
+  color: #666;
+  font-size: 0.7rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.my-hader .edit-my-z .right-top{
+  margin-top: 0.55rem;
+}
+.my-er-ma{
+  line-height: 2.5rem;
+  font-size: 0.7rem;
+  color: #666;
+  padding:0 0.75rem;
+}
+.my-er-ma a{
+  float: right;
+
+}
+.my-er-ma a .ma{
+  width: 1rem;
+  height: 1rem;
+}
+.my-er-ma a .right-top{
+  margin-top: 1.1rem;
+  margin-left: 0.5rem;
+}
+.my-order-box{
+  border-top: 0.5rem solid #f0f0f0;
+}
+.my-order-box .my-order-title{
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 2.6rem;
+  padding:0 0.75rem;
+  padding-right: 1.4rem;
+  font-size: 0.75rem;
+  color: #222;
+}
+.my-order-box .my-order-title span{
+  float: right;
+  color: #666;
+  font-size: 0.7rem;
+}
+.my-order-box .my-order-title span em{
+  color: #ff6600;
+}
+.my-order-list{
+
+}
+.my-order-list li{
+  padding-left: 0.75rem;
+  padding-right: 1.4rem;
+  border-bottom: 1px solid #f0f0f0;
+  height: 3.5rem;
+  position: relative;
+}
+.my-order-list li .li-right{
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+  width: 1rem;
+  height: 0.45rem;
+}
+.my-order-list li p{
+  color: #767575;
+  font-size: 0.6rem;
+  padding-top: 0.5rem;
+}
+.my-order-list li p.order-name{
+  padding-top: 0.75rem;
+  font-size: 0.7rem;
+  color: #666;
+}
+.my-order-list li p .span-right{
+  float: right;
+}
+.my-order-list li p.order-name span{
+  color: #ff6600;
+}
+.order-data-no{
+  padding-top: 1.75rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666;
+}
+.order-data-no img{
+  width: 7.1rem;
+  margin-bottom: 0.75rem;
+}
+/* 二维码 */
+.ma-box{
+  background: #fff;
+  width: 16rem;
+  margin:1.6rem 1.56rem;
+}
+.ma-box h3{
+  line-height: 3.25rem;
+  background: #fbfbfb;
+  font-size: 0.75rem;
+  color: #222;
+  text-align: center;
+}
+.ma-box .ma-img{
+  padding:3.5rem 1.8rem;
+}
+.ma-box .ma-img img{
+  width: 12.75rem;
+}
+
+/* 订单详情 */
+.order-datails-list{
+
+}
+.order-datails-list li{
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding:0 0.75rem;
+  font-size: 0.7rem;
+  color: #666;
+}
+.order-datails-list li span{
+  display: inline-block;
+  width: 4rem;
+}

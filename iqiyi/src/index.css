@@ -53,7 +53,19 @@ body {
 #box ul li .content h2 span {
  font-size: .3rem; 
 }
+<<<<<<< HEAD
 
+=======
+.pull {
+    position: fixed;
+    width: .6rem;
+    height: .2rem;
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -.3rem;
+  }
+  .pull img { width: 100% }
+>>>>>>> 7b65b20d70c9aed18e5892d6c9a5a306aaf40759
 .fixed {
   /*background: #000 url('../img/bg1.jpg') no-repeat;*/
   background: rgba(0, 0, 0, 0.5);

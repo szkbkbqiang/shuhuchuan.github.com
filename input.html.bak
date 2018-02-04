@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+   <style>
+   body { /* IOS禁止微信调整字体大小 */
+       -webkit-text-size-adjust: 100% !important;
+   }
+   </style>
+   <script>
+      /* android禁止微信调整字体大小 */
+      (function () {
+      　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+      　　　　handleFontSize();
+      　　} else {
+         　　if (document.addEventListener) {
+         　　　　document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+         　　} else if (document.attachEvent) {
+         　　　　document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+         　　　　document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+         　　}
+         };
+         function handleFontSize() {
+         　　// 设置网页字体为默认大小
+         　　WeixinJSBridge.invoke('setFontSizeCallback', {'fontSize': 0});
+         　　// 重写设置网页字体大小的事件
+         　　WeixinJSBridge.on('menu:setfont', function () { WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0 });
+
+         　　});
+         }
+         function log( msg ) {
+              console.log(msg);
+              alert(msg);
+          }
+
+          var limit;
+
+          var half = '中华人民共和国'; //这里会换成中文再跑一遍
+          var str = half;
+          var sstr;
+
+          while ( 1 ) {
+              try {
+                  localStorage.clear();
+                  str += half;
+                  localStorage.setItem( 'cache', str );
+                  half = str;
+              } catch ( ex ) {
+                  break;
+              }
+          }
+
+          var base = str.length;
+          var off = base / 2;
+          var isLeft = 1;
+
+          while ( off ) {
+              if ( isLeft ) {
+                  end = base - (off / 2);
+              } else {
+                  end = base + (off / 2);
+              }
+
+              sstr = str.slice( 0, end );
+              localStorage.clear();
+              try {
+                  localStorage.setItem( 'cache', sstr );
+                  limit = sstr.length;
+                  isLeft = 0;
+              } catch ( e ) {
+                  isLeft = 1;
+              }
+
+              base = end;
+              off = Math.floor( off / 2 );
+          }
+
+          log( 'limit: ' + limit );
+      })();
+	  $(function(){
+			$('$dv').on('click',function(){
+				$('#box').show();
+			})
+	  })
+   </script>
+</head>
+<body style="height:500px">
+	<video style="width:300px;height:300px;"  src="http://sto.tslsmart.com/activity/20161016terminus.mp4"  controls="" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" preload="auto"></video>
+	<input type="file" accept="image/*" capture="camera">
+    <input type="file" accept="video/*" capture="camcorder">
+    <input type="file" accept="audio/*" capture="microphone">
+	<div id="dv">测试调整字体大小</div>
+	<div style="width:100%;height:800px; position:absolute;top:0;left:0;background:rgba(0,0,0,0.5);color:#fff;text-align:center;display:none;" id="box">大家好</div>
+</body>
+</html>
