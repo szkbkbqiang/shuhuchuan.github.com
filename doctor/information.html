@@ -12,136 +12,219 @@
     <script src="src/js/base.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="clauses-title">信息填写</div>
-    <div class="clauses-center">
-      <h2>手术信息</h2>
-      <ul class="form-ul">
-        <li>
-          <span class="form-label"><em>*</em>医院名称:</span>
-          <span class="text-right">
-              <span class="form-input">北京协和医院</span>
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>病历号码:</span>
-          <span class="text-right">
-              <input class="form-input" type="text" name="" value="" placeholder="请输入病历号码">
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>手术主治医生:</span>
-          <span class="text-right">
-              <input class="form-input" type="text" name="" value="" placeholder="请输入手术主治医生">
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>手术名称:</span>
-          <span class="text-right">
-              <input class="form-input" type="text" name="" value="" placeholder="请输入手术名称">
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>手术并发症:</span>
-          <span class="text-right">
-            <span class="form-input">查看手术并发症></span>
-            <select class="form-input select-opacity" name="" dir="rtl">
-              <option value="">查看手术并发症</option>
-              <option value="">查看手术并发症</option>
-              <option value="">查看手术并发症</option>
-            </select>
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>病人年龄:</span>
-          <span class="text-right">
-              <em class="form-checked">0-3周岁</em>
-              <em class="form-checked">4-59周岁</em>
-              <em class="form-checked">60-70周岁</em>
-              <input type="hidden">
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>产品选择:</span>
-          <span class="text-right">
-              <em class="form-checked">10+2万</em>
-              <em class="form-checked">15+2万</em>
-              <em class="form-checked">20+2万</em>
-              <em class="form-checked">30+2万</em>
-              <input type="hidden">
-          </span>
-        </li>
-      </ul>
-      <div class="form-moey">
-        <p>意外身故、残疾保险金<span>10万</span></p>
-        <p>手术意外并发症医疗保险<span>2万</span></p>
+    <form class="submiForm">
+      <div class="clauses-title">信息填写</div>
+      <div class="clauses-center">
+        <h2>手术信息</h2>
+        <ul class="form-ul">
+          <li>
+            <span class="form-label"><em>*</em>医院名称:</span>
+            <span class="text-right">
+                <span class="form-input">北京协和医院</span>
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>病历号码:</span>
+            <span class="text-right">
+                <input class="form-input" type="text" name="" value="" placeholder="请输入病历号码">
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>手术主治医生:</span>
+            <span class="text-right">
+                <input class="form-input" type="text" name="" value="" placeholder="请输入手术主治医生">
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>手术名称:</span>
+            <span class="text-right">
+                <input class="form-input selece-box" type="text" name="" value="" placeholder="请输入手术名称">
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>手术并发症:</span>
+            <span class="text-right">
+              <span class="form-input">查看手术并发症></span>
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>病人年龄:</span>
+            <span class="text-right checkbox-list">
+                <em data-id="1" class="form-checked">0-3周岁</em>
+                <em data-id="2" class="form-checked">4-59周岁</em>
+                <em data-id="3" class="form-checked">60-70周岁</em>
+                <input type="hidden">
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>产品选择:</span>
+            <span class="text-right checkbox-list">
+                <em data-id="1" class="form-checked">10+2万</em>
+                <em data-id="2" class="form-checked">15+2万</em>
+                <em data-id="3" class="form-checked">20+2万</em>
+                <em data-id="4" class="form-checked">30+2万</em>
+                <input type="hidden">
+            </span>
+          </li>
+        </ul>
+        <div class="form-moey">
+          <p>意外身故、残疾保险金<span>10万</span></p>
+          <p>手术意外并发症医疗保险<span>2万</span></p>
+        </div>
       </div>
-    </div>
-    <div class="clauses-center">
-      <h2>被保险人信息</h2>
-      <ul class="form-ul">
-        <li>
-          <span class="form-label"><em>*</em>姓名:</span>
-          <span class="text-right">
-              <input class="form-input" type="text" name="" value="" placeholder="请输入姓名">
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>身份证号码:</span>
-          <span class="text-right">
-              <input class="form-input" type="text" name="" value="" placeholder="请输入身份证号码">
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>手机号码:</span>
-          <span class="text-right">
-              <input class="form-input" type="text" name="" value="" placeholder="请输入手机号码">
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>电子邮箱:</span>
-          <span class="text-right">
-              <input class="form-input" type="text" name="" value="" placeholder="用于接收电子保单">
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>拍摄身份证照片(正面):</span>
-          <span class="text-right">
-            <span style="width:5rem;" class="form-input">请拍照或者上传</span>
-            <input class="form-input select-opacity" type="file">
-          </span>
-        </li>
-        <li>
-          <span class="form-label"><em>*</em>拍摄身份证照片(反面):</span>
-          <span class="text-right">
-            <span style="width:5rem;" class="form-input">请拍照或者上传</span>
-            <input class="form-input select-opacity" type="file">
-          </span>
-        </li>
-      </ul>
-    </div>
-    <div class="clauses-center">
-      <h2>投保人信息</h2>
-      <div class="text-data">和被保险人为同一人</div>
-    </div>
-    <div class="clauses-center">
-      <h2>收益人信息</h2>
-      <div class="text-data">法定受益人</div>
-    </div>
-    <div class="clauses-center">
-      <h2>保险期间</h2>
-      <div class="text-data">投保后至首次手术治疗结束时止</div>
-    </div>
-    <div class="clauses-center">
-      <div class="checkbox-box"><span class="checkbox-form"><input class="select-opacity" type="checkbox"></span>本人已认真阅读并同意以下条款和声明</div>
-      <div class="text-data" style="padding:0.5rem;">
-        <a href="javascript:;">《手术意外伤害保险条款》</a>
-        <a href="javascript:;">《附加手术意外并发症医疗费用保险条款》</a>
+      <div class="clauses-center">
+        <h2>被保险人信息</h2>
+        <ul class="form-ul">
+          <li>
+            <span class="form-label"><em>*</em>姓名:</span>
+            <span class="text-right">
+                <input class="form-input" type="text" name="" value="" placeholder="请输入姓名">
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>身份证号码:</span>
+            <span class="text-right">
+                <input class="form-input card" type="text" name="" value="" placeholder="请输入身份证号码">
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>手机号码:</span>
+            <span class="text-right">
+                <input class="form-input phone" type="text" name="" value="" placeholder="请输入手机号码">
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>电子邮箱:</span>
+            <span class="text-right">
+                <input class="form-input" type="text" name="" value="" placeholder="用于接收电子保单">
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>拍摄身份证照片(正面):</span>
+            <span class="text-right">
+              <span style="width:5rem;" class="form-input">请拍照或者上传</span>
+              <input class="form-input select-opacity" type="file" accept="image/*" capture="camera">
+            </span>
+          </li>
+          <li>
+            <span class="form-label"><em>*</em>拍摄身份证照片(反面):</span>
+            <span class="text-right">
+              <span style="width:5rem;" class="form-input">请拍照或者上传</span>
+              <input class="form-input select-opacity" type="file" accept="image/*" capture="camera">
+            </span>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div style="background:#f0f0f0;height:3rem;"></div>
-    <div class="pro-shop" >
-      <span class="pro-Price"><em>￥</em>168.00</span>
-      <span class="pro-shop-btn">下一步</span>
-    </div>
+      <div class="clauses-center">
+        <h2>投保人信息</h2>
+        <div class="text-data">和被保险人为同一人</div>
+      </div>
+      <div class="clauses-center">
+        <h2>收益人信息</h2>
+        <div class="text-data">法定受益人</div>
+      </div>
+      <div class="clauses-center">
+        <h2>保险期间</h2>
+        <div class="text-data">投保后至首次手术治疗结束时止</div>
+      </div>
+      <div class="clauses-center">
+        <div class="checkbox-box"><span class="checkbox-form checked-active"><input id="checked-xy" checked="chcked" class="select-opacity" type="checkbox"></span>本人已认真阅读并同意以下条款和声明</div>
+        <div class="text-data" style="padding:0.5rem;">
+          <a href="javascript:;">《手术意外伤害保险条款》</a>
+          <a href="javascript:;">《附加手术意外并发症医疗费用保险条款》</a>
+        </div>
+      </div>
+      <div style="background:#f0f0f0;height:3rem;"></div>
+      <div class="pro-shop" >
+        <span class="pro-Price"><em>￥</em>168.00</span>
+        <span class="pro-shop-btn">下一步</span>
+      </div>
+    </form>
+    <script type="text/javascript">
+      $(function(){
+          var reg = {
+              phone:/^[1][3,4,5,6,7,8][0-9]{9}$/,
+              card:/(^\d{15}$)|(^\d{17}([0-9]|X)$)/
+          };
+          function submitForm(){
+            var checkSwitch = true;
+            var inputText = $('input[type=text]');
+            $.each($('input[type=text],input[type=hidden],input[type=file]'),function(){
+                  var val = $(this).val();
+                  var text = $(this).parent().prev().text().replace('*','').replace(':','');
+                  if(val == ''){
+                     BaseFun.pop({text:text+'不能为空'});
+                     $(this).focus();
+                     checkSwitch = false;
+                     return false;
+                  }else{
+                    if($(this).hasClass('phone') && !reg.phone.test(val)){
+                      BaseFun.pop({text:text+'格式不正确'});
+                      $(this).focus();
+                      checkSwitch = false;
+                      return false;
+                    }
+                    if($(this).hasClass('card') && !reg.card.test(val)){
+                      BaseFun.pop({text:text+'格式不正确'});
+                      $(this).focus();
+                      checkSwitch = false;
+                      return false;
+                    }
+                  }
+            });
+            return checkSwitch;
+          };
+
+          $('.checkbox-list').on('click','.form-checked',function(){
+              $(this).addClass('checked-check').siblings().removeClass('checked-check');
+              $(this).parent().find('input[type=hidden]').val($(this).attr('data-id'));
+          });
+          $('.selece-box').on('input',function(){
+              var val = $.trim($(this).val());
+              if(val){
+                  $.ajax({
+                      url:'xxxx',
+                      type:'POST',
+                      data:{val:val},
+                      dataType:'json',
+                      success:function(data){
+                        if(data.code == '000000'){
+
+                        }else{
+                          BaseFun.pop({text:data.error_msg});
+                        }
+                      }
+                  });
+              }else{
+                  $(this).val('');
+              }
+          });
+          $('.checkbox-form').on('click',function(){
+              $(this).toggleClass('checked-active');
+          });
+
+          $('.pro-shop-btn').on('click',function(){
+              if(submitForm()){
+                  if($('#checked-xy').is(':checked')){
+                      $.ajax({
+                          url:'xxxx',
+                          type:'POST',
+                          data:$('.submiForm').serialize(),
+                          dataType:'json',
+                          success:function(data){
+                            if(data.code == '000000'){
+
+                            }else{
+                              BaseFun.pop({text:data.error_msg});
+                            }
+                          }
+                      });
+                  }else{
+                    BaseFun.pop({text:'您还没有同意条款和声明'});
+                  }
+              };
+          });
+      });
+    </script>
   </body>
 </html>
