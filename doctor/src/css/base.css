@@ -1,0 +1,127 @@
+/*公用弹窗*/
+.popbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.1);
+    z-index: 111111;
+}
+.popcenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2rem;
+  line-height: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 30px;
+  margin-top: -1rem;
+  padding:0 1rem;
+}
+/* 文字弹出框 */
+.text-pop-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 111111;
+}
+.text-pop-center{
+  width: 14rem;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -8rem;
+  top: 50%;
+  padding:1rem;
+  border-radius: 10px;
+}
+.text-pop-title{
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 0.75rem;
+}
+.text-pop-center p{
+  padding:0.5rem;
+  line-height: 1rem;
+  font-size: 0.65rem;
+  color: #666;
+}
+.text-pop-center .text-pop-close{
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.4rem;
+  bottom:-0.75rem;
+  border:1px solid #ccc;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.75rem;
+  background: #fff;
+  font-size: 0.65rem;
+  color: #ccc;
+}
+/*公用confirm弹框 开始*/
+.dialog-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 11199;
+}
+.dialog-center{
+    width: 13.45rem;
+    height: 7rem;
+    border-radius: 0.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -6.725rem;
+    margin-top: -3.5rem;
+    background: white;
+}
+.dialog-title{
+    padding-top: 1.2rem;
+    font-size: 0.85rem;
+    color:#131313;
+    text-align: center;
+    font-weight: bold;
+}
+.dialog-text{
+    text-align: center;
+    line-height: 2.675rem;
+    font-size: 0rem;
+}
+.dialog-text span{
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1rem;
+    font-size: 0.65rem;
+}
+.dialog-btn{
+    width: 100%;
+    height:2.25rem;
+    display: -webkit-box;
+    border-top: 1px solid #cacace;
+}
+.dialog-btn a{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-size: 0.75rem;
+    color: #007aff;
+}
+.dialog-btn a.dialog-confirm{
+    border-left: 1px solid #cacace;
+}
+/*公用confirm弹框 结束*/

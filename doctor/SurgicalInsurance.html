@@ -6,7 +6,10 @@
     <title>手术意外伤害保险</title>
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/insurance.css">
+    <link rel="stylesheet" href="src/css/base.css">
+    <script src="src/js/jquery.js" charset="utf-8"></script>
     <script src="src/js/view.js" charset="utf-8"></script>
+    <script src="src/js/base.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="pro-banner">
@@ -57,18 +60,18 @@
         <tbody>
           <tr>
             <td rowspan="2">主险</td>
-            <td>意外身故</td>
+            <td class="color-blue yw-sg-btn">意外身故</td>
             <td rowspan="2">10万</td>
             <td rowspan="2">15万</td>
             <td rowspan="2">20万</td>
             <td rowspan="2">30万</td>
           </tr>
           <tr>
-            <td>意外伤残</td>
+            <td class="color-blue yw-sc-btn">意外伤残</td>
           </tr>
           <tr>
             <td rowspan="3">附险</td>
-            <td>并发症医疗报销</td>
+            <td class="color-blue yw-bx-btn">意外伤害医疗保险</td>
             <td>2万</td>
             <td>2万</td>
             <td>2万</td>
@@ -106,5 +109,27 @@
       <span class="pro-Price"><em>￥</em>168<em>起</em></span>
       <span class="pro-shop-btn">我要够买</span>
     </div>
+    <script type="text/javascript">
+      $(function(){
+          $('.yw-sg-btn').on('click',function(){
+              BaseFun.textpop({
+                  title:'意外身故',
+                  text:'在保险期间内，以该次手术医疗意外或医疗损害为直接原因身故的，保险人按本保险合同载明的保险金额给付身故保险金，对该被保险人的保险责任终止'
+              });
+          });
+          $('.yw-sc-btn').on('click',function(){
+              BaseFun.textpop({
+                  title:'意外伤残',
+                  text:'在保险期间内，以该次手术医疗意外或医疗损害为直接原因身故的，保险人按本保险合同载明的保险金额给付身故保险金，对该被保险人的保险责任终止'
+              });
+          });
+          $('.yw-bx-btn').on('click',function(){
+              BaseFun.textpop({
+                  title:'意外伤害医疗保险',
+                  text:'在保险期间内，以该次手术医疗意外或医疗损害为直接原因身故的，保险人按本保险合同载明的保险金额给付身故保险金，对该被保险人的保险责任终止'
+              });
+          });
+      });
+    </script>
   </body>
 </html>
