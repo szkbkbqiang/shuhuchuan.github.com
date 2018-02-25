@@ -505,3 +505,27 @@ option{
   background: url(../images/checked.png) center center no-repeat;
   background-size: 0.75rem 0.75rem;
 }
+
+.form-moey .span-label{
+   width: 5rem;
+   display: inline-block;
+   line-height: 1rem;
+   padding-top: 0.5rem;
+   color: #818181;
+   font-size: 0.7rem;
+}
+.form-moey .text-right{
+  float: right;
+}
+.form-moey .text-right .form-checked{
+  line-height: 0.85rem;
+  padding:0.5rem;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+}
+.span-add{
+  height: auto;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+}
