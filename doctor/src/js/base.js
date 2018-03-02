@@ -16,8 +16,10 @@ var BaseFun = {
       $(document.body).append(TextHmtl);
       var marginLefts = '-'+$('.text-pop-center').innerHeight()/2+'px';
       $('.text-pop-center').css({'margin-top':marginLefts});
-      $('.text-pop-close').on('click',function(){
-        _this.removeTextPop();
+      $('.text-pop-close,.text-pop-box').on('click',function(e){
+        if(this == e.target){
+            _this.removeTextPop();
+        }      
       });
     },
   // 错误警告提示框
