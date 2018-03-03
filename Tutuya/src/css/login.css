@@ -1,13 +1,7 @@
-.border-bottom{
-  border-bottom: 1px solid #ccc;
-}
-.weui-label{
-  /* text-align:justify; text-align-last:justify;
-  padding-right: 1rem; */
-}
 .logo{
-  width:
+  width:100%;
 }
-.padding-top{
-  padding-top: 30px;
+
+.align_right .weui-footer__link:before{
+  border:0;
 }

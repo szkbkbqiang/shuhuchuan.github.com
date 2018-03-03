@@ -1,0 +1,163 @@
+.position_relative{
+  position: relative;
+}
+.user-photo{
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  left: 35px;
+  top: 35px;
+  background: rgba(255,255,255,1);
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 10;
+}
+.user-photo img{
+  width: 100%;
+  vertical-align: middle;
+}
+.user-box{
+  position: absolute;
+  left: 135px;
+  top: 55px;
+  z-index: 10;
+}
+.user-box p{
+  color: #fff;
+  font-size: 14px;
+}
+.user-box p.user-name{
+  font-size: 16px;
+}
+.user-edit{
+  position: absolute;
+  right: 0px;
+  width: 80px;
+  height: 40px;
+  line-height: 43px;
+  background: rgba(255,255,255,0.8);
+  color: #666;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  text-align: center;
+  top: 55px;
+  font-size: 14px;
+  padding-left: 10px;
+  z-index: 10;
+}
+
+.balance-box{
+  background: #fff;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+.balance{
+  width: 65%;
+  text-align: center;
+  color: #f43530;
+  font-size: 24px;
+  height: 60px;
+  line-height: 63px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.balance span{
+  font-size: 14px;
+  color: #000;
+  font-weight: normal;
+}
+.detailed{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  vertical-align: top;
+  line-height: 15px;
+  margin-top: 13px;
+}
+
+.iconfont{
+  margin-right: 5px;
+  font-size: 18px;
+}
+.icon-gengduo{
+  font-size: 12px;
+  margin-right: 0;
+}
+.detailed .iconfont{
+  font-size: 32px;
+  /* color: #ea5504; */
+}
+
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+  background-image: -webkit-linear-gradient(bottom, #19bca1 20%, #19bca1 80%);
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 400%;
+    overflow: hidden;
+    height: 150px;
+    bottom:-20px;
+}
+.bgTop {
+    z-index: 6;
+    opacity: 0.1;
+}
+.bgMiddle {
+    z-index: 4;
+    opacity: 0.1;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation:move_wave 10s linear infinite;;
+   -webkit-animation: move_wave 10s linear infinite;;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 20s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+    opacity: 0.1;
+    animation: move_wave 35s linear infinite;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 35s linear infinite;
+}
