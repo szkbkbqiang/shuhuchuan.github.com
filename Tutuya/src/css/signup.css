@@ -20,3 +20,9 @@
 .padding_46{
   padding-bottom: 56px;
 }
+.signup-pop:after, .signup-pop:before{
+  border:0
+}
+.signup-pop .weui-cell:before{
+  border:0
+}

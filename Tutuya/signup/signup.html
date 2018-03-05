@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="../src/css/weui-1.1.2/weui.min.css">
     <link rel="stylesheet" type="text/css" href="../src/css/font_9iumh6hg98qnz5mi/iconfont.css">
     <link rel="stylesheet" href="../src/js/swiper/swiper-4.1.6.min.css?v=1">
-    <link rel="stylesheet" href="../src/css/base.css?v=4">
+    <link rel="stylesheet" href="../src/css/base.css?v=5">
     <link rel="stylesheet" href="../src/css/signup.css?v=2">
-
+    <script src="../src/js/jquery.min.js" charset="utf-8"></script>
     <script src="../src/js/weui-1.1.2/weui.min.js" charset="utf-8"></script>
     <script src="../src/js/swiper/swiper-4.1.6.min.js" charset="utf-8"></script>
   </head>
@@ -25,7 +25,10 @@
     </div>
     <div class="page__bd padding_46">
       <article class="weui-article">
-            <h1 class="position_relative border_bottom1px">春天来啦旅游快来哟</h1>
+            <h1 class="position_relative margin0">春天来啦旅游快来哟</h1>
+            <div class="price-cell border_bottom1px">
+              ￥12000 <em>￥15000</em>
+            </div>
             <section>
                 <h2 class="title">课程形式：</h2>
                 <section>
@@ -52,8 +55,7 @@
             </section>
         </article>
     </div>
-    <a href="javascript:;" class="weui-btn weui-btn_warn">我要报名</a>
-
+    <a href="javascript:;" class="weui-btn weui-btn_warn signup-btn">我要报名</a>
 
     <script type="text/javascript">
       var mySwiper = new Swiper ('.swiper-container', {
@@ -63,7 +65,45 @@
         pagination: {
           el: '.swiper-pagination',
         },
-      })
+      });
+
+      $(function(){
+        $('.signup-btn').on('click',function(){
+          weui.confirm('<div class="weui-cells weui-cells_checkbox signup-pop" style="margin-top:0">\
+            <label class="weui-cell weui-check__label" for="s11">\
+                <div class="weui-cell__hd">\
+                    <input type="radio" class="weui-check" name="checkbox1" id="s11" checked="checked">\
+                    <i class="weui-icon-checked"></i>\
+                </div>\
+                <div class="weui-cell__bd">\
+                    <p>叶孤城</p>\
+                </div>\
+            </label>\
+            <label class="weui-cell weui-check__label" for="s12">\
+                <div class="weui-cell__hd">\
+                    <input type="radio" name="checkbox1" class="weui-check" id="s12">\
+                    <i class="weui-icon-checked"></i>\
+                </div>\
+                <div class="weui-cell__bd">\
+                    <p>鬼见愁</p>\
+                </div>\
+            </label>\
+          </div>',{
+        	     title: '宝宝选择',
+        	     buttons: [{
+        	         label: '取消',
+        	         type: 'default',
+        	         onClick: function(){ console.log('no') }
+        	     }, {
+        	         label: '立即支付',
+        	         type: 'primary',
+        	         onClick: function(){
+
+                  }
+        	     }]
+        	 })
+        })
+      });
     </script>
   </body>
 </html>

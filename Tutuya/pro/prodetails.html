@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>礼包详情</title>
+    <link rel="stylesheet" href="../src/css/weui-1.1.2/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/font_9iumh6hg98qnz5mi/iconfont.css">
+    <link rel="stylesheet" href="../src/js/swiper/swiper-4.1.6.min.css?v=1">
+    <link rel="stylesheet" href="../src/css/base.css?v=5">
+
+    <script src="../src/js/jquery.min.js" charset="utf-8"></script>
+    <script src="../src/js/weui-1.1.2/weui.min.js" charset="utf-8"></script>
+  </head>
+  <body ontouchstart>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img height="260" src="../src/image/pic_article.png" alt=""></div>
+            <div class="swiper-slide"><img height="260" src="../src/image/pic_article.png" alt=""></div>
+            <div class="swiper-slide"><img height="260" src="../src/image/pic_article.png" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="page__bd padding_46">
+      <article class="weui-article">
+            <h1 class="position_relative margin0">春天来啦旅游快来哟</h1>
+            <div class="price-cell border_bottom1px">
+              ￥12000 <em>￥15000</em>
+            </div>
+            <section>
+                <h2 class="title">礼包详情：</h2>
+                <section>
+                    <p>
+                        有“北美巴黎”美称的蒙特利尔，是世界上除巴黎以外最大的法语城市，也是加拿大金融和商业中心，全国第二大城市。蒙特利尔具有多元文化交融的传统，学习生活颇具特色，它以极其宽松的氛围迎接世界各地的人们。
+                    </p>
+                    <p>
+                        <img src="../src/image/pic_article.png" alt="">
+                        <img src="../src/image/pic_article.png" alt="">
+                    </p>
+                </section>
+            </section>
+        </article>
+    </div>
+    <a href="javascript:;" class="weui-btn weui-btn_warn signup-btn">立即抢购</a>
+
+    <script type="text/javascript">
+      var mySwiper = new Swiper ('.swiper-container', {
+        loop: true,
+        autoplay: true,
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+
+      $(function(){
+
+      });
+    </script>
+  </body>
+</html>

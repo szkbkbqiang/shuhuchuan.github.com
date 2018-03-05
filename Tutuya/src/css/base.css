@@ -70,3 +70,20 @@ body,html{height:100%;-webkit-tap-highlight-color:transparent}body{font-family:-
     -webkit-transform: scaleY(.5);
     transform: scaleY(.5);
 }
+.price-cell{
+  line-height: 40px;
+  font-size: 18px;
+  color: #e64340;
+  position: relative;
+  margin-bottom: 10px;
+}
+.price-cell em{
+  text-decoration:line-through;
+  font-size: 14px;
+  color: #999;
+  font-style: normal;
+  padding-left: 10px;
+}
+.weui-article h1.margin0{
+  margin:0;
+}
