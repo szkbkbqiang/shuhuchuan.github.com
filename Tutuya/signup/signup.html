@@ -58,49 +58,68 @@
     <a href="javascript:;" class="weui-btn weui-btn_warn signup-btn">我要报名</a>
 
     <script type="text/javascript">
-      var mySwiper = new Swiper ('.swiper-container', {
-        loop: true,
-        autoplay: true,
-        // 如果需要分页器
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      });
+      var babyHtml = '<div class="weui-cells weui-cells_checkbox signup-pop" style="margin-top:0">\
+      <label class="weui-cell weui-check__label" for="s11">\
+          <div class="weui-cell__hd">\
+              <input type="radio" class="weui-check" name="checkbox1" id="s11" checked="checked">\
+              <i class="weui-icon-checked"></i>\
+          </div>\
+          <div class="weui-cell__bd">\
+              <p>叶孤城</p>\
+          </div>\
+      </label>\
+      <label class="weui-cell weui-check__label" for="s12">\
+          <div class="weui-cell__hd">\
+              <input type="radio" name="checkbox1" class="weui-check" id="s12">\
+              <i class="weui-icon-checked"></i>\
+          </div>\
+          <div class="weui-cell__bd">\
+              <p>鬼见愁</p>\
+          </div>\
+      </label>\
+    </div>';
+    var mapHtml = '2131';
+    var mySwiper = new Swiper ('.swiper-container', {
+      loop: true,
+      autoplay: true,
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
 
       $(function(){
         $('.signup-btn').on('click',function(){
-          weui.confirm('<div class="weui-cells weui-cells_checkbox signup-pop" style="margin-top:0">\
-            <label class="weui-cell weui-check__label" for="s11">\
-                <div class="weui-cell__hd">\
-                    <input type="radio" class="weui-check" name="checkbox1" id="s11" checked="checked">\
-                    <i class="weui-icon-checked"></i>\
-                </div>\
-                <div class="weui-cell__bd">\
-                    <p>叶孤城</p>\
-                </div>\
-            </label>\
-            <label class="weui-cell weui-check__label" for="s12">\
-                <div class="weui-cell__hd">\
-                    <input type="radio" name="checkbox1" class="weui-check" id="s12">\
-                    <i class="weui-icon-checked"></i>\
-                </div>\
-                <div class="weui-cell__bd">\
-                    <p>鬼见愁</p>\
-                </div>\
-            </label>\
-          </div>',{
-        	     title: '宝宝选择',
-        	     buttons: [{
-        	         label: '取消',
-        	         type: 'default',
-        	         onClick: function(){ console.log('no') }
-        	     }, {
-        	         label: '立即支付',
-        	         type: 'primary',
-        	         onClick: function(){
+          weui.dialog({
+            title:'宝宝选择',
+            content:babyHtml,
+            buttons: [{
+	                label: '取消',
+	                type: 'default',
+	                onClick: function () {  }
+	          }, {
+	                label: '下一步',
+	                type: 'primary',
+	                onClick: function () {
+                      setTimeout(function(){
+                        weui.dialog({
+                          title:'地址选择',
+                          content:mapHtml,
+                          buttons:[{
+                            label: '取消',
+          	                type: 'default',
+          	                onClick: function () {  }
+                          },{
+                            label: '立即支付',
+          	                type: 'primary',
+          	                onClick: function () {
 
+                            }
+                          }]
+                        })
+                      },500);
                   }
-        	     }]
+	            }]
         	 })
         })
       });
