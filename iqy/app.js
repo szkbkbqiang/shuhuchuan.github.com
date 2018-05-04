@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://192.168.31.178:8010/";
+/******/ 	__webpack_require__.p = "http://shuhuchuan.github.io/iqy/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -81,6 +81,66 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
+__WEBPACK_IMPORTED_MODULE_3_jquery___default()(function(){
+
+  setTimeout(function(){
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#banner').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#home').show();
+  },10000);
+
+  __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#banner').on('click',function(){
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#banner').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#home').show();
+  });
+
+  __WEBPACK_IMPORTED_MODULE_3_jquery___default()('.nav_btn').on('click',function(){
+    if(__WEBPACK_IMPORTED_MODULE_3_jquery___default()('#nav').hasClass('active')){
+      __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#app').css('right','0');
+      __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#nav').css('right','-6.55rem').removeClass('active');
+    }else{
+      __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#app').css('right','6.55rem');
+      __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#nav').css('right','0').addClass('active');
+    }
+  });
+
+  __WEBPACK_IMPORTED_MODULE_3_jquery___default()('.nav_list').on('click','li',function(){
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()(this).toggleClass('active').siblings().removeClass('active');
+  });
+
+  __WEBPACK_IMPORTED_MODULE_3_jquery___default()('.zongyi_btn').on('click',function(){
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#zongyi').show();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#yule').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#daju').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#back').show();
+  });
+
+  __WEBPACK_IMPORTED_MODULE_3_jquery___default()('.daju_btn').on('click',function(){
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#zongyi').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#yule').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#daju').show();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#back').show();
+  });
+
+  __WEBPACK_IMPORTED_MODULE_3_jquery___default()('.yule_btn').on('click',function(){
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#zongyi').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#yule').show();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#daju').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#back').show();
+  });
+
+  __WEBPACK_IMPORTED_MODULE_3_jquery___default()('.back_btn').on('click',function(){
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#zongyi').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#yule').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#daju').hide();
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#back').hide();
+  });
+
+  __WEBPACK_IMPORTED_MODULE_3_jquery___default()('.yule_nav').on('click','li',function(){
+    __WEBPACK_IMPORTED_MODULE_3_jquery___default()(this).addClass('active').siblings().removeClass('active');
+  })
+})
 
 
 /***/ }),
