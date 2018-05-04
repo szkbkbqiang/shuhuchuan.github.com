@@ -44,6 +44,8 @@ i,b{display: block;font-weight: normal;}
 input[type="button"]{cursor: pointer;}
 body{
   background-color: #1b1b1b;
+  overflow: hidden;
+  position: fixed;
 }
 
 #app{

@@ -82,7 +82,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
+__WEBPACK_IMPORTED_MODULE_3_jquery___default()(document.body).css('width',__WEBPACK_IMPORTED_MODULE_3_jquery___default()(window).width());
 __WEBPACK_IMPORTED_MODULE_3_jquery___default()(function(){
 
   setTimeout(function(){
