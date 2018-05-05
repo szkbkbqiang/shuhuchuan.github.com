@@ -47,7 +47,63 @@ body{
   overflow: hidden;
   position: fixed;
 }
-
+.loading{
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+.loading_img{
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -2.5rem;
+  margin-left: -2.5rem;
+  text-align: center;
+  line-height: 5rem;
+  font-size: .75rem;
+  color: #fff;
+  z-index: 2;
+  background: url(http://shuhuchuan.github.io/iqy/images/127cf5cd43dee1c2237dc91412c54f14.gif) left top no-repeat;
+  background-size: 100%;
+}
+.loading img{
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.video_paly{
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -2.5rem;
+  margin-left: -2.5rem;
+  text-align: center;
+  line-height: 5rem;
+  font-size: .75rem;
+  color: #fff;
+  z-index: 2;
+  background: url(http://shuhuchuan.github.io/iqy/images/50c969943c3dfe10f0ac11c82757802f.gif) left top no-repeat;
+  background-size: 100%;
+  display: none;
+}
+.video_paly img{
+  margin-top: 1.7rem;
+  margin-left: .4rem;
+}
+video{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 #app{
   width: 100%;
   height: 100%;
@@ -55,6 +111,7 @@ body{
   right: 0rem;
   top: 0;
   transition: .5s;
+  display: none;
 }
 #nav{
   width: 6.55rem;
@@ -98,6 +155,7 @@ body{
   font-size: 0.45rem;
   color: #666;
   margin-right: .3rem;
+  transition: .5s;
 }
 .nav_list li.active p em{
   transform: rotate(90deg);
@@ -105,7 +163,10 @@ body{
 .nav_list .nav_list_list{
   padding-left: .9rem;
   color: #fff;
+  height: auto;
+  overflow: hidden;
   display: none;
+  transition: .5s;
 }
 .nav_list li.active .nav_list_list{
   display: block;
@@ -116,7 +177,7 @@ body{
   padding:0.3rem 0;
 }
 #banner{
-  background: url(http://shuhuchuan.github.io/iqy/images/f573d8e9eed469f179690cbeef74abf8.jpg) left top no-repeat;
+  background: url(http://shuhuchuan.github.io/iqy/images/e57bc628506661df19992dd87f063ca9.jpg) left top no-repeat;
   background-size:100% 100%;
   width: 100%;
   height: 100%;
@@ -739,7 +800,7 @@ body{
   position: absolute;
   top: 1.125rem;
   left: 50%;
-  margin-left: -5.5rem;
+  margin-left: -4.625rem;
   text-align: center;
   z-index: 2;
   display: flex;
@@ -765,7 +826,7 @@ body{
   overflow-y: scroll;
   box-sizing: border-box;
   padding-bottom: .8rem;
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
 }
 .yule_list_details{
   padding-left: 1.125rem;
@@ -828,4 +889,14 @@ body{
   line-height: 0.7rem;
   color: #1b1b1b;
   font-weight: bold;
+}
+.yule_nav_bg{
+  position: absolute;
+  height: 3rem;
+  width: 16.125rem;
+  background: url(http://shuhuchuan.github.io/iqy/images/a0e8829005b80c4d30723a708e1977d1.jpg) left top no-repeat;
+  background-size: 100%;
+  z-index: 2;
+  top: .5rem;
+  left: -.55rem;
 }
