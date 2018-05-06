@@ -113,7 +113,7 @@ window.onload = function(){
       __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#banner').hide();
       __WEBPACK_IMPORTED_MODULE_3_jquery___default()('#home').show();
     },10000);
-  },6000);
+  },6500);
 
   // }
 };
