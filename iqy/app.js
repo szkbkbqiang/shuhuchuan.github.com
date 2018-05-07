@@ -170,15 +170,16 @@ var win = w;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_animate_min_css__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_animate_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_animate_min_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_style_css__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_view_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_view_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__js_view_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__css_swiper_min_css__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__css_swiper_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__css_swiper_min_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_swiper_min_css__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_swiper_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_swiper_min_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_style_css__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__css_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__js_view_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__js_view_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__js_view_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_swiper__ = __webpack_require__(7);
+
 
 
 
@@ -190,7 +191,8 @@ var daju_name_list = [];
 var zongyi_name_list = [];
 var yule_name_list = [];
 var time = 0;
-var setTime = null
+var setTime = null;
+var mySwiper4 = null;
 setTime = setInterval(function(){
   time+=parseInt(Math.random()*10);
   if(time >= 95){
@@ -277,8 +279,26 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default.a.ajax({
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#zongyi').hide();
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#yule').show();
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#daju').hide();
-            yulehtml(id);
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_nav li').removeClass('active').eq(__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index()).addClass('active');
+            if(mySwiper4 == null){
+              mySwiper4 = new __WEBPACK_IMPORTED_MODULE_5_swiper__["a" /* default */]('#swiper-container4', {
+                initialSlide:__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index(),
+                autoplay: false,//可选选项，自动滑动
+                speed:500,
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+                on:{
+                  slideChange:function(){
+                    yulehtml(__WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_top_tab .swiper-slide').eq(this.activeIndex).attr('data-id'));
+                    __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_nav li').eq(this.activeIndex).addClass('active').siblings().removeClass('active');
+                  }
+                }
+              });
+            }else{
+              mySwiper4.slideTo(__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index(), 500, false);
+            }
           }
           __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#back').show();
           __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#app').css('right','0');
@@ -366,8 +386,26 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default.a.ajax({
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#zongyi').hide();
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#yule').show();
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#daju').hide();
-            yulehtml(id);
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_nav li').removeClass('active').eq(__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index()).addClass('active');
+            if(mySwiper4 == null){
+              mySwiper4 = new __WEBPACK_IMPORTED_MODULE_5_swiper__["a" /* default */]('#swiper-container4', {
+                initialSlide:__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index(),
+                autoplay: false,//可选选项，自动滑动
+                speed:500,
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+                on:{
+                  slideChange:function(){
+                    yulehtml(__WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_top_tab .swiper-slide').eq(this.activeIndex).attr('data-id'));
+                    __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_nav li').eq(this.activeIndex).addClass('active').siblings().removeClass('active');
+                  }
+                }
+              })
+            }else{
+              mySwiper4.slideTo(__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index(), 500, false);
+            }
           }
           __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#back').show();
           __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#app').css('right','0');
@@ -399,15 +437,6 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default.a.ajax({
 
       __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_nav li').eq(0).addClass('active');
 
-      var mySwiper4 = new __WEBPACK_IMPORTED_MODULE_5_swiper__["a" /* default */]('#swiper-container4', {
-      	autoplay: false,//可选选项，自动滑动
-        speed:500,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      })
-
       __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.nav_list_list').on('click','span',function(e){
         if(this == e.target){
           var type = __WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).attr('data-type');
@@ -424,8 +453,26 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default.a.ajax({
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#zongyi').hide();
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#yule').show();
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#daju').hide();
-            yulehtml(id);
             __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_nav li').removeClass('active').eq(__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index()).addClass('active');
+            if(mySwiper4 == null){
+              mySwiper4 = new __WEBPACK_IMPORTED_MODULE_5_swiper__["a" /* default */]('#swiper-container4', {
+                initialSlide:__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index(),
+                autoplay: false,//可选选项，自动滑动
+                speed:500,
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+                on:{
+                  slideChange:function(){
+                    yulehtml(__WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_top_tab .swiper-slide').eq(this.activeIndex).attr('data-id'));
+                    __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_nav li').eq(this.activeIndex).addClass('active').siblings().removeClass('active');
+                  }
+                }
+              })
+            }else{
+              mySwiper4.slideTo(__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index(), 500, false);
+            }
           }
           __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#back').show();
           __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#app').css('right','0');
@@ -538,16 +585,19 @@ window.onload = function(){
       __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#home').show();
 
       var mySwiper1 = new __WEBPACK_IMPORTED_MODULE_5_swiper__["a" /* default */]('#swiper-container1', {
+        effect : 'fade',
       	autoplay: true,//可选选项，自动滑动
         speed:500
       });
 
       var mySwiper2 = new __WEBPACK_IMPORTED_MODULE_5_swiper__["a" /* default */]('#swiper-container2', {
+        effect : 'fade',
       	autoplay: true,//可选选项，自动滑动
         speed:500
       });
 
       var mySwiper3 = new __WEBPACK_IMPORTED_MODULE_5_swiper__["a" /* default */]('#swiper-container3', {
+        effect : 'fade',
       	autoplay: true,//可选选项，自动滑动
         speed:500
       })
@@ -558,7 +608,6 @@ window.onload = function(){
 
 __WEBPACK_IMPORTED_MODULE_4_jquery___default()(document.body).css('width',__WEBPACK_IMPORTED_MODULE_4_jquery___default()(window).width());
 __WEBPACK_IMPORTED_MODULE_4_jquery___default()(function(){
-
 
   __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#banner').on('click',function(){
     __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#banner').hide();
@@ -601,6 +650,22 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default()(function(){
     __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#yule').show();
     __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#daju').hide();
     __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#back').show();
+    if(mySwiper4 == null){
+      mySwiper4 = new __WEBPACK_IMPORTED_MODULE_5_swiper__["a" /* default */]('#swiper-container4', {
+        autoplay: false,//可选选项，自动滑动
+        speed:500,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        on:{
+          slideChange:function(){
+            yulehtml(__WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_top_tab .swiper-slide').eq(this.activeIndex).attr('data-id'));
+            __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_nav li').eq(this.activeIndex).addClass('active').siblings().removeClass('active');
+          }
+        }
+      })
+    }
   });
 
   __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.back_btn').on('click',function(){
@@ -613,7 +678,7 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default()(function(){
   __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.yule_nav').on('click','li',function(){
     var id = __WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).attr('data-id');
     __WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).addClass('active').siblings().removeClass('active');
-    yulehtml(id);
+    mySwiper4.slideTo(__WEBPACK_IMPORTED_MODULE_4_jquery___default()(this).index(), 500, false);
   })
 })
 
@@ -632,6 +697,12 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default()(function(){
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports) {
 
 function reset() {
@@ -676,12 +747,6 @@ function IsPC() {
     return flag;
 }
 
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 6 */
