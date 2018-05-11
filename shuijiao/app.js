@@ -197,13 +197,19 @@ window.onload = function(){
     __WEBPACK_IMPORTED_MODULE_2_jquery___default()("html,body").animate({"scrollTop":0},500)
   });
   __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.addvip_btn').on('click',function(){
+    __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.erweima_pop').removeClass('show');
     __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.addvip_pop').show();
   });
   __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.addvip_pop').on('click',function(){
     __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this).hide();
   });
   __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.weixin_ma_btn').on('click',function(){
-    __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this).find('.erweima_pop').addClass('show');
+    if(__WEBPACK_IMPORTED_MODULE_2_jquery___default()(this).find('.erweima_pop').hasClass('show')){
+      __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.erweima_pop').removeClass('show');
+    }else{
+      __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.erweima_pop').removeClass('show');
+      __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this).find('.erweima_pop').addClass('show');
+    }
   });
   __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.erweima_pop').on('click',function(e){
     __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this).removeClass('show');
