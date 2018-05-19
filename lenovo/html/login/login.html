@@ -24,18 +24,23 @@
     <p>We Wow Our Customers.</p>
     <p class="fonts">说到做到，尽心尽力，成就客户</p>
   </div>
-  <div class="loginbg blur"></div>
+  <div class="loginbg"></div>
+  <div class="blur"></div>
   <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript">
     var oLoginBtn = document.querySelector('.logo-btn');
     var oError = document.querySelector('.error-dialog');
     oLoginBtn.onclick = function(){
       if($('#user').val() != '' && $('#pass').val() != ''){
-        window.location.href = 'http://shuhuchuan.github.io/lenovo/home/index.html';
+        window.location.href = 'http://shuhuchuan.github.io/lenovo/html/home/index.html';
       }else{
         oError.style.display = 'block';
       }
     }
+    setTimeout(function(){
+      $('.blur').css('opacity',0);
+      $('.login').show()
+    },2000)
   </script>
 </body>
 </html>
