@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lenovo-登录</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <div class="login">
+    <div class="login-slogan">Hello,Lenovo!</div>
+    <p><input type="text" placeholder="IT code:" id="user"></p>
+    <p>
+      <input type="password" placeholder="AD Password：" id="pass">
+      <a class="logo-btn" href="javascript:;"><img src="../../images/loginbtn.png" alt=""></a>
+    </p>
+    <span class="error-dialog">错误的用户名或密码！</span>
+  </div>
+  <div class="login-logo">
+    <p class="logoimg"><img src="../../images/login-logo.png" alt=""></p>
+    <p>We Do What We Say.</p>
+    <p>We Own What We Do.</p>
+    <p>We Wow Our Customers.</p>
+    <p class="fonts">说到做到，尽心尽力，成就客户</p>
+  </div>
+  <div class="loginbg blur"></div>
+  <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    var oLoginBtn = document.querySelector('.logo-btn');
+    var oError = document.querySelector('.error-dialog');
+    oLoginBtn.onclick = function(){
+      if($('#user').val() != '' && $('#pass').val() != ''){
+        window.location.href = 'http://shuhuchuan.github.io/lenovo/home/index.html';
+      }else{
+        oError.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
