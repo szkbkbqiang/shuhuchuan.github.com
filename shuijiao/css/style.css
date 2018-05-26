@@ -996,7 +996,7 @@ th {
 }
 .joinin_title{
   padding-top: 60px;
-  width: 480px;
+  width: 550px;
 }
 .joinin_title .title{
   line-height: 50px;
@@ -1209,8 +1209,9 @@ th {
 }
 
 .fazhan_list{
-  margin-left: 250px;
-  border-left: 2px solid #b9a981;
+  /* margin-left: 250px; */
+  /* border-left: 2px solid #b9a981; */
+  text-align: center;
 }
 .fazhan_list dl{
   padding-left: 25px;
@@ -1483,4 +1484,29 @@ th {
   box-shadow: 1px 8px 1px rgba(0,0,0,0.2);
   padding-left: 50px;
   margin-bottom: 100px;
+}
+
+.add_se_img{
+  text-align: center;
+  padding:20px 0;
+  border-bottom: 2px dashed #c0c0c0;
+}
+.joinin_banner{
+  position: relative;
+  height:360px;
+  overflow: hidden;
+}
+.joinin_banner img{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -960px;
+}
+.joinus_list_data{
+  height: auto;
+  overflow: hidden;
+}
+.joinin_ul{
+  float: left;
+  width: 50%;
 }
