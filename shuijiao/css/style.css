@@ -997,11 +997,19 @@ th {
   position: relative;
   overflow: hidden;
 }
+
 .store_map img{
   position: absolute;
   top: 0;
   left: 50%;
   margin-left: -960px;
+}
+.store_map .search{
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  margin: 0;
 }
 .store_map_list{
   width: 1120px;
