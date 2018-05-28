@@ -214,6 +214,35 @@ window.onload = function(){
   __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.erweima_pop').on('click',function(e){
     __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this).removeClass('show');
     e.stopPropagation();
+  });
+
+  __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.select-span').on('click',function(){
+    __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.map-select-list').toggleClass('hidden');
+  });
+  __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.map-select-list').on('click','li',function(){
+    var id = __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this).attr('data-id');
+    var values = __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this).text();
+    __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.select-span').text(values);
+    __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.select-hidden').val(id);
+    __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.map-select-list').addClass('hidden');
+  })
+  __WEBPACK_IMPORTED_MODULE_2_jquery___default()(document).on('click',function(e){
+    if(!__WEBPACK_IMPORTED_MODULE_2_jquery___default()(e.target).hasClass('select-span')){
+      __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.map-select-list').addClass('hidden');
+    }
+  })
+
+
+  __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.search-btn').on('click',function(){
+    __WEBPACK_IMPORTED_MODULE_2_jquery___default.a.ajax({
+      url:'mapsearch.php',
+      type:'POST',
+      data:__WEBPACK_IMPORTED_MODULE_2_jquery___default()('search-form').serialize(),
+      dataType:'json',
+      success:function(data){
+        console.log(data);
+      }
+    })
   })
 }
 
