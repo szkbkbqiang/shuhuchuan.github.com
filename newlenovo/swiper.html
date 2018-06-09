@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lenovo-登录</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="js/jquery.min.js" charset="utf-8"></script>
+  <script src="js/swiper.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="login">
+    <div class="swiper-tab-text"><a class="active" href="javascript:;">文化大家谈</a><a href="javascript:;">带着We Are Lenovo去旅行</a><a href="javascript:;">我身边的文化楷模</a><a href="javascript:;">线下活动抢先看</a></div>
+  <div class="swiper-box">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="javascript:;">
+            <h2>联想文化365-文化大家谈</h2>
+            <div class="slide-1">
+              <p>你怎么理解联想文化？</p>
+              <p>你如何看待客户导向，团队合作，创业和创新精神？</p>
+              <p>在日常的工作中，你是否时常会为身边同事践行联想人精神的故事所感动？</p>
+              <p>但也时时会看到种种有悖于联想文化倡导的行为，并感到烦恼和困惑？</p>
+              <p>&nbsp;</p>
+              <p>那就快来文化大家谈吧！</p>
+              <p>与万千联想人共同探讨联想文化的核心真谛，</p>
+              <p>用你的真实声音，与遍布全球的联想人来一场关于文化的思想碰撞！</p>
+              <p>在思辨中，厘清我们共同认可的文化行为，</p>
+              <p>在实践中，推动”We Are Lenovo“的生根发芽！</p>
+              <p>&nbsp;</p>
+              <p>来，让我们一起畅谈文化，相互启发，激发行动!</p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:;">
+            <h2>联想文化365-带着卡片去旅行</h2>
+            <div class="slide-2">
+              <p>你怎么理解联想文化？</p>
+              <p>你如何看待客户导向，团队合作，创业和创新精神？</p>
+              <p>在日常的工作中，你是否时常会为身边同事践行联想人精神的故事所感动？</p>
+              <p>但也时时会看到种种有悖于联想文化倡导的行为，并感到烦恼和困惑？</p>
+              <p>&nbsp;</p>
+              <p>那就快来文化大家谈吧！</p>
+              <p>与万千联想人共同探讨联想文化的核心真谛，</p>
+              <p>用你的真实声音，与遍布全球的联想人来一场关于文化的思想碰撞！</p>
+              <p>在思辨中，厘清我们共同认可的文化行为，</p>
+              <p>在实践中，推动”We Are Lenovo“的生根发芽！</p>
+              <p>&nbsp;</p>
+              <p>来，让我们一起畅谈文化，相互启发，激发行动!</p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="javascript:;">
+            <h2>联想文化365-线下活动抢先看</h2>
+            <div class="slide-3">
+              <p>北美、拉美、亚太、中国和EMEA，</p>
+              <p>你所在的区域正在举办哪些文化活动？</p>
+              <p>你又期待怎样的活动发生？</p>
+              <p>快来报名参加culture 365线下活动，</p>
+              <p>让我们紧密协作，为文化添彩！</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+    <div class="bottom-text">Lenovo Culture 365</div>
+
+    <div class="span-block span-1 animation-delay1s animated bounceInDown"><span class="color-block"></span><span class="color-block color-3e8ddd"></span><span class="color-block color-005568"></span><br /><span class="color-block"></span></div>
+
+    <div class="span-block span-5 animation-delay1s animated bounceInDown"><span class="color-block color-fee600"></span><span class="color-block color-ff6a00"></span><span class="zwei"></span><span class="color-block color-f6aa00"></span></div>
+
+    <div class="span-block span-16 animated bounceInDown"><span class="color-block color-3e8ddd"></span><span class="zwei"></span><span class="color-block "></span><span class="color-block color-46c8e1"></span></div>
+
+    <div class="span-block span-17 animated bounceInDown"><span class="zwei"></span><span class="color-block color-df1514"></span><span class="zwei"></span><span class="color-block color-f04187"></span><span class="color-block color-f04187"></span><span class="color-block color-ff6a00"></span></div>
+
+  </div>
+  <div class="login-bottom-text">
+    <p class="title">We Do What We Say,We Own What We Do,We Wow Our Customers</p>
+    <p>说到做到，尽心尽力，成就客户</p>
+  </div>
+
+  <script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+      // autoplay: true,//可选选项，自动滑动
+      initialSlide:0,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on:{
+        slideChange: function(){
+          $('.swiper-tab-text a').eq(this.activeIndex).addClass('active').siblings().removeClass('active');
+        },
+      },
+    });
+    $('.swiper-tab-text a').on('click',function(){
+      if($(this).index() < 3){
+        mySwiper.slideTo($(this).index(), 500, false);
+      }
+    })
+  </script>
+  <style>
+  .swiper-button-next, .swiper-button-prev{
+    width: 60px;
+    height: 80px;
+    margin:0 20px;
+    margin-top:-54px;
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    background-image: url(images/prev.png);
+    background-size: 60px;
+  }
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    background-image: url(images/next.png);
+    background-size: 60px;
+  }
+  </style>
+</body>
+</html>
